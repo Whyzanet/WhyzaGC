@@ -49,6 +49,7 @@ Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2 on Ubuntu Linux desktop 20.
 At the top of the ino file are the variables that will need changing for your specific enviroment.
 
 Input is via 5 button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi.
+
 Note: I am no coder expert and have basiclly fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more effecient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
 ## Hardware considerations:
