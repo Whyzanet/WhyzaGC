@@ -7,6 +7,8 @@ title: README
 
 Arduino code for the Adafruit Feather HUZZAH ESP8266 with Adafruit 128x64 OLED FeatherWing to interface with the MightyOhm Gieger Counter
 
+https://mightyohm.com/blog/products/geiger-counter/
+
 ## Description:
 
 Inspired by Dan's post. Please read in full as there is vital information there that I have not duplicated.
