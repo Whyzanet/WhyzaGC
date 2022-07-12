@@ -54,7 +54,7 @@ At the top of the ino file are the variables that will need changing for your sp
 
 Input is via 5 button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi.
 
-web data is available via the ESP8266 on port 80.
+web diagnostic data is available via the ESP8266 IP address on port 80.
 Monitor easily via the following linux command or similar
 
 watch -n 10 curl -s 192.168.0.x
