@@ -29,6 +29,8 @@ Button inputs for 4 display modes showing different data formats and for disabli
 
 radmon.org data upload every 60 secs
 
+https://radmon.org/index.php
+
 Web server diagnostics  available on http port 80 ( Data, radmon.org upload status, Debug, uptime )
 
 NTP client for OLED and web server time display
