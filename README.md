@@ -76,7 +76,7 @@ Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so t
 
 ## Issues
 
-The only issue outstanding is that when the ESP8266 is performing the TCP connection setup and get request for the radmon.org update, the single CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and closing takes around 1.5 seconds in my enviroment, it means that the ESP8266 will miss 1 line of serial data from the MightyOhm. Simply it will miss one line of data for every second that the upload takes. This is not really a big issue as the unit is reading and uploading the CPM value, which is itself averaged by the MightyOhm. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulars without success.....when the CPU is busy...its busy. Nothing a schedular can do it seemed.
+The only issue outstanding is that when the ESP8266 is performing the TCP connection setup and get request for the radmon.org update, the single CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes around 1.5 seconds in my enviroment, it means that the ESP8266 will miss 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading and uploading the CPM value, which is itself averaged by the MightyOhm. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulars without success.....when the CPU is busy...its busy. Nothing a schedular can do it seemed.
 
 I have just received a Feather Huzzah 32 V2
 
