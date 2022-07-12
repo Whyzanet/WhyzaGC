@@ -232,10 +232,10 @@ void buttons () {
       case 3: // Large count stats and background graph ( max 28 cpm ) - Button C
         buttonc();
         break;
-      case 4: //Toggle WIFI on/off - Buttons A&B
+      case 4: //Toggle WIFI on/off - Buttons B&C
         buttonbc();
         break;
-      case 5: //Graph Data, autoscale max 16, 32, 64, 128, 256 - Buttons B&C
+      case 5: //Graph Data, autoscale max 16, 32, 64, 128, 256 - Buttons A&B
         buttonab();
         break;
     }
