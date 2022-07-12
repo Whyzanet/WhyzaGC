@@ -437,7 +437,6 @@ void buttonab () { //Graph Data, autoscale max 16, 32, 64, 128, 256
     oled.fillRect( i + 12 , 65 - (int(scale * xpoints[i])) , 1 , (int(scale * xpoints[i])) , WHITE);
     //    Serial.print(xpoints[i]);
     //    Serial.println(int(scale * xpoints[i]));
-    //    xpoint = xpoints.last();
     for (decltype(xpoints)::index_t i = 0; i <= xpoints.size(); i++) {
       if (xpoints[i] >= 129 ) {
         recenthi = 5;
