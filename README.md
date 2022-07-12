@@ -84,3 +84,8 @@ https://www.adafruit.com/product/3405
 
 My next project is to migrate my code to the newer ESP32 platform and see if the dual CPU resolves this issue.
 
+## Latest Version
+
+The latest version of this code is available via:
+
+https://github.com/Whyzanet/WhyzaGC
