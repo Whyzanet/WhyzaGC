@@ -27,13 +27,13 @@ I upgraded the Featherwing OLED to the 128x64 version which you will need if you
 
 Button inputs for 4 display modes showing different data formats and for disabling/enabling wifi. Includes simple meter strength graphs and histogram. I found the buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
+radmon.org data upload every 60 secs
+
 Web server diagnostics  available on http port 80 ( Data, radmon.org upload status, Debug, uptime )
 
 NTP client for OLED and web server time display
 
 remote syslog messages to your syslog server
-
-radmon.org data upload every 60 secs
 
 Blue LED heartbeat, RED led CPS
 
