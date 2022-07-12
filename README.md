@@ -19,7 +19,9 @@ Inspired by Dan's post. Please read in full as there is vital information there 
 
 http://syncchannel.blogspot.com/2016/01/wi-fi-and-oled-upgrade-for-mightyohm.html
 
-I found that the post was quite old and decided I would rewrite from scratch the required code to not only gain OLED functionality with the Mightohm, but also a few other features I desired. I upgraded the Featherwing OLED to the 128x64 version which you will need if you are to use this code as I make use of all the available screen real estate.
+I found that the post was quite old and decided I would rewrite from scratch the required code to not only gain OLED functionality with the Mightohm, but also a few other features I desired. 
+
+I upgraded the Featherwing OLED to the 128x64 version which you will need if you are to use this code as I make use of all the available screen real estate.
 
 ## Features:
 
