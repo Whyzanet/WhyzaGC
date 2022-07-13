@@ -61,7 +61,7 @@ watch -n 10 curl -s 192.168.0.x
 
 where 192.168.0.x is replaced by your ESP8266 IP address.
 
-USB serial port is set to 9600 8N1 and will display MightyOhm Gieger serial output.
+USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output.
 
 Note: I am no coder expert and have basiclly fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more effecient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
