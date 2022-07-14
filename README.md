@@ -82,7 +82,7 @@ I have basically followed Dan's hardware setup with a few mods.
 
 Feather Huzzah ESP8266
 
-I have connected the MightOhm geiger serial TX pin to GPIO pin 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right.
+I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right.
 
 In addition, I wanted USB serial connectivity when the display was mounted in the MightyOhm for updates, so I have connected an Arduino usb/serial board to the Huzzah's RX and TX, along with RTS to pin En ( 2nd on top from left to right), and DTR to GPIO pin 0 ( pin 8 on top from left to right ).
 You will need a usb/serial board that exposes the DTR pin for you to use to enable automated code uploading. Through this additional usb/serial board I am able to upload code to the ESP8266 without performing a manual reset. The plan is to mount it sideways using hot glue at the end of the Feather ESP8266 for rear access on the MightyOhm.
@@ -100,7 +100,7 @@ Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so t
 
 Feather HUzzah ESP32 v2
 
-With the differences between the ESP2866 and ESP32 pinouts, I have changed the MightOhm geiger serial TX pin to GPIO pin 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32.
+With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32.
 
 ## ESP8266 and ESP32 differences
 
