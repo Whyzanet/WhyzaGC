@@ -47,7 +47,7 @@ NTP client for OLED and web server time display
 
 Remote syslog messages to your syslog server
 
-Blue/Neopixel LED heartbeat, RED LED CPS
+Blue/Neopixel LED heartbeat, Red LED CPS
 
 Monitoring of MightOhm's serial data for disconnections.
 
