@@ -102,7 +102,7 @@ Feather HUzzah ESP32 v2
 
 With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32.
 
-## ESP8266 and ESP32 differences
+## ESP8266/ESP32/OLED hardware considerations
 
 Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), hardware ( Blue LED vs Neopixel RGB LED ) and pinouts, the Feather Huzzah ESP32 CPU is dual core.
 
@@ -113,6 +113,8 @@ This solves an issue on the ESP8266 platform due to it's single CPU. While perfo
 This is not a problem on the ESP32 where the radmon.org update ( and the functions it calls ) will run on CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
 
 The only other difference between the ESP8266 and the ESP32 code is that the ESP32 Neopixel will flash green for a successful radmon.org update attempt, and flash red for an unsuccessful update attempt.
+
+The only other hardware consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. Despite the contrast reduced, the screen with burn in does look duller than a new screen with the same settings.
 
 ## Latest Version
 
