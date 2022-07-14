@@ -55,7 +55,7 @@ Enable/Disable Wifi through buttons B&C for portable/low power use. Will disable
 
 ## How to use:
 
-Download the correct ino file and upload to either your Feather Huzzah ESP8266 or Feather Huzzah 32 v2. Check the list of libraries included in the ino file and ensure they are all installed.
+Download the correct ino file and upload to either your Feather Huzzah ESP8266 or Feather Huzzah ESP32 v2. Check the list of libraries included in the ino file and ensure they are all installed.
 If I recall correctly all libraries are available via the Arduino Library Manager.
 
 Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 Arduino on Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
