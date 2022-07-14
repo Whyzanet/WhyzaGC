@@ -46,7 +46,7 @@ movingAvg timerdelaydayavg(1440);
 CircularBuffer<int, 115> xpoints;  // mode 5 histogram graph data
 unsigned long uploadcpm = 0;
 unsigned long cpmhour = 0;
-unsigned long uploaddelay = 0;  // measure the radmon upload time. Updated Gieger Serial data over this period will be lost.
+unsigned long uploaddelay = 0;  // measure the radmon upload time.
 unsigned long lastupdate = 0;
 unsigned long avgdelay = 0;
 unsigned long logdelay = 0;
