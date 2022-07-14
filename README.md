@@ -41,7 +41,7 @@ radmon.org data upload every 60 secs
 
 https://radmon.org/index.php
 
-Web server diagnostics  available on http port 80 ( data, radmon.org upload status, debug, uptime )
+Web server diagnostics  available on http over port 80 ( data, radmon.org upload status, debug, uptime )
 
 NTP client for OLED and web server time display
 
@@ -64,10 +64,11 @@ At the top of the ino file are the variables that will need changing for your sp
 
 Input is via 5 button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi.
 
-web diagnostic data is available via the ESP8266/ESP32 IP address on port 80. IP address is shown on Button A display.
-Monitor easily via the following linux command or similar
+HTTP diagnostic data is available via the ESP8266/ESP32 IP address on port 80. Huzzah IP address is shown via Button A display.
 
-watch -n 10 curl -s 192.168.0.x
+Monitor easily via the following linux command or your web browser
+
+watch -n 1 curl -s 192.168.0.x
 
 where 192.168.0.x is replaced by your ESP8266 IP address.
 
