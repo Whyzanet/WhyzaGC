@@ -45,7 +45,7 @@ Web server diagnostics  available on http port 80 ( data, radmon.org upload stat
 
 NTP client for OLED and web server time display
 
-remote syslog messages to your syslog server
+Remote syslog messages to your syslog server
 
 Blue/Neopixel LED heartbeat, RED LED CPS
 
