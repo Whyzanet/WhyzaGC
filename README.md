@@ -35,7 +35,7 @@ I upgraded the Featherwing OLED to the 128x64 version which you will need if you
 
 Feather Huzzah ESP8266 and ESP32 v2 support
 
-Button inputs for 4 display modes showing different data formats and for disabling/enabling wifi. Includes simple meter strength graphs and histogram. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
+Button inputs for 4 display modes showing different data formats and for disabling/enabling wifi. Includes simple meter strength graphs and auto scaling histogram. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
 radmon.org data upload every 60 secs
 
