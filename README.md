@@ -103,7 +103,7 @@ With the differences between the ESP2866 and ESP32 pinouts, I have changed the M
 
 ## Issues
 
-The only issue outstanding is that when the ESP8266/ESP32 is performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes around 1.5 seconds in my enviroment, it means that the ESP8266/ESP32 will miss 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading and uploading the CPM value, which is itself averaged by the MightyOhm. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulars without success under the ESP8266.....when the CPU is busy...its busy. Nothing a schedular can do it seemed.
+The only issue outstanding is that when the ESP8266/ESP32 is performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes around 1.5 seconds in my enviroment, it means that the ESP8266/ESP32 will miss 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading and uploading the CPM value, which is itself averaged by the MightyOhm. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers without success under the ESP8266.....I plan to see if this can be resolved under the ESP32 dual core with a scheduler.
 
 ## Latest Version
 
