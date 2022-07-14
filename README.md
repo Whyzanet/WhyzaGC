@@ -19,7 +19,7 @@ https://www.adafruit.com/product/3405
 
 with 
 
-https://learn.adafruit.com/adafruit-128x64-oled-featherwing
+https://www.adafruit.com/product/4650
 
 ## Description:
 
