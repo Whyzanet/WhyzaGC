@@ -101,7 +101,7 @@ Feather HUzzah ESP32 v2
 
 With the differences between the ESP2866 and ESP32 pinouts, I have changed the MightOhm geiger serial TX pin to GPIO pin 27 on the Huzzah ESP32 v2. This is also pin 6 on the top from left to right on the ESP32.
 
-## ESP8266 and ESP32 code differences
+## ESP8266 and ESP32 differences
 
 Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ) and hardware ( Blue LED vs Neopixel RGB LED ), the Feather Huzzah ESP32 is also dual core.
 
