@@ -114,7 +114,7 @@ This is not a problem on the ESP32 where the radmon.org update ( and the functio
 
 The other difference between the ESP8266 and the ESP32 code is that the ESP32 Neopixel will flash green for a successful radmon.org update attempt, and flash red for an unsuccessful update attempt.
 
-The other hardware consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with burn in will always look duller than a new screen regardless of settings.
+The other hardware consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with burn in will always be not as bright as a new screen, regardless of any settings.
 
 ## Latest Version
 
