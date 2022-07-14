@@ -1,5 +1,5 @@
 # WhyzaGC
-Feather Huzzah ESP2866/ESP32 v2 + Featherwing 128x64 OLED Arduino addon to MightyOhm Gieger
+Feather Huzzah ESP2866/ESP32 v2 + Featherwing 128x64 OLED Arduino addon to MightyOhm Gieger Counter
 ---
 permlink: /README.md/
 title: README
