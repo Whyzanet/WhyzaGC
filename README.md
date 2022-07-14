@@ -111,6 +111,8 @@ The solves an issue on the ESP8266 platform which is single CPU. While performin
 
 This is not a problem on the ESP32 where the radmon.org update runs on CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
 
+The only other difference between the ESP8266 and the ESP32 code is that the ESP32 Neopixel will flash green for a successful radmon.org update attempt, and flash red for an unsuccessful update attempt.
+
 ## Latest Version
 
 The latest version of this code is available via:
