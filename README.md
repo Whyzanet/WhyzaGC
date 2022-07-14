@@ -1,15 +1,23 @@
 # WhyzaGC
-ESP2866 + OLED Arduino addon to Mightohm Gieger
+Feather Huzzah ESP2866/ESP32 v2 + Featherwing 128x64 OLED Arduino addon to Mightohm Gieger
 ---
 permlink: /README.md/
 title: README
 ---
 
-Arduino code for the Adafruit Feather HUZZAH ESP8266 with Adafruit 128x64 OLED FeatherWing to interface with the MightyOhm Gieger Counter
+Arduino code for the Adafruit Feather HUZZAH ESP8266/ESP32 v2 with Adafruit 128x64 OLED FeatherWing to interface with the MightyOhm Gieger Counter
 
 https://mightyohm.com/blog/products/geiger-counter/
 
+plus either
+
 https://www.adafruit.com/product/2821
+
+or
+
+https://www.adafruit.com/product/3405
+
+with 
 
 https://learn.adafruit.com/adafruit-128x64-oled-featherwing
 
@@ -25,6 +33,8 @@ I upgraded the Featherwing OLED to the 128x64 version which you will need if you
 
 ## Features:
 
+ESP8266 and ESP32 support
+
 Button inputs for 4 display modes showing different data formats and for disabling/enabling wifi. Includes simple meter strength graphs and histogram. I found the buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
 radmon.org data upload every 60 secs
@@ -37,7 +47,7 @@ NTP client for OLED and web server time display
 
 remote syslog messages to your syslog server
 
-Blue LED heartbeat, RED led CPS
+Blue/RGB LED heartbeat, RED led CPS
 
 Monitoring of MightOhm's serial data for disconnections.
 
@@ -45,16 +55,16 @@ Enable/Disable Wifi through buttons B&C for portable/low power use. Will disable
 
 ## How to use:
 
-Download the ino file and upload to your Feather Huzzah ESP8266. Check the list of libraries included in the ino file and ensure they are all installed.
+Download the correct ino file and upload to your Feather Huzzah ESP8266 or Feather Huzzah 32 v2. Check the list of libraries included in the ino file and ensure they are all installed.
 If I recall correctly all libraries are available via the Arduino Library Manager.
 
-Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2 on Ubuntu Linux desktop 20.04.
+Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2 on Ubuntu Linux desktop 20.04 with Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
 At the top of the ino file are the variables that will need changing for your specific enviroment.
 
 Input is via 5 button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi.
 
-web diagnostic data is available via the ESP8266 IP address on port 80.
+web diagnostic data is available via the ESP8266/ESP32 IP address on port 80. IP address is shown on Button A display.
 Monitor easily via the following linux command or similar
 
 watch -n 10 curl -s 192.168.0.x
@@ -68,6 +78,8 @@ Note: I am no coder expert and have basiclly fumbled my way through getting some
 ## Hardware considerations:
 
 I have basically followed Dan's hardware setup with a few mods.
+
+Fether Huzzah ESP8266
 
 I have connected the MightOhm geiger serial TX pin to GPIO pin 13 on the Huzzah as Dan also did. This is pin 6 on the top from left to right.
 
@@ -85,15 +97,14 @@ I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH co
 
 Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurances of high CPS's when I am interested.
 
+Feather HUzzah ESP32 v2
+
+With the difference between the ESP2866 and ESP32 pinouts, I have changed the MightOhm geiger serial TX pin to GPIO pin 27 on the Huzzah ESP32 v2. This is also pin 6 on the top from left to right on the ESP32.
+
+
 ## Issues
 
-The only issue outstanding is that when the ESP8266 is performing the TCP connection setup and get request for the radmon.org update, the single CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes around 1.5 seconds in my enviroment, it means that the ESP8266 will miss 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading and uploading the CPM value, which is itself averaged by the MightyOhm. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulars without success.....when the CPU is busy...its busy. Nothing a schedular can do it seemed.
-
-I have just received a Feather Huzzah 32 V2
-
-https://www.adafruit.com/product/3405
-
-My next project is to migrate my code to the newer ESP32 platform and see if the dual CPU resolves this issue.
+The only issue outstanding is that when the ESP8266/ESP32 is performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes around 1.5 seconds in my enviroment, it means that the ESP8266/ESP32 will miss 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading and uploading the CPM value, which is itself averaged by the MightyOhm. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulars without success under the ESP8266.....when the CPU is busy...its busy. Nothing a schedular can do it seemed.
 
 ## Latest Version
 
