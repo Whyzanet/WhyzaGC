@@ -105,11 +105,11 @@ With the differences between the ESP2866 and ESP32 pinouts, I have changed the M
 
 Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ) and hardware ( Blue LED vs Neopixel RGB LED ), the Feather Huzzah ESP32 is also dual core.
 
-As such in the ESP32 code I have set the radmon.org upate code to use CPU0 rather than the default CPU1 which everything runs on by default. 
+As such in the ESP32 code I have set the radmon.org update code to use CPU0 rather than the default CPU1 which everything runs on by default. 
 
-The solves the only issue outstanding on the ESP8266 platform which is single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes around 1.5 seconds in my enviroment, it means that the ESP8266 will miss 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading and uploading the CPM value, which is itself averaged by the MightyOhm. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers without success under on the ESP8266.....
+The solves an issue on the ESP8266 platform which is single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes around 1.5 seconds in my enviroment, it means that the ESP8266 will miss 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading and uploading the CPM value, which is itself averaged by the MightyOhm. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers without success under on the ESP8266.....
 
-This is not a problem on the ESP32 where the radmon.org update runs on CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm.
+This is not a problem on the ESP32 where the radmon.org update runs on CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
 
 ## Latest Version
 
