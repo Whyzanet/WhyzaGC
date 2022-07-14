@@ -51,7 +51,7 @@ Blue/Neopixel LED heartbeat, Red LED CPS
 
 Monitoring of MightOhm's serial data for disconnections.
 
-Enable/Disable Wifi through buttons B&C for portable/low power use. Will disable radmon.org updates and requires a reboot to renable radmon.org uploads if enabled.
+Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to renable radmon.org uploads if enabled.
 
 ## How to use:
 
