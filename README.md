@@ -106,7 +106,7 @@ With the differences between the ESP2866 and ESP32 pinouts, I have connected the
 
 ## ESP8266/ESP32/OLED hardware considerations
 
-Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), hardware ( Blue LED vs Neopixel RGB LED ) and pinouts, the Feather Huzzah ESP32 CPU is dual core.
+Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), hardware ( Blue LED vs Neopixel RGB LED ) and pinouts, the Feather Huzzah ESP32 CPU is also dual core.
 
 As such in the ESP32 code I have set the radmon.org update function to use CPU0 rather than CPU1 which everything runs on by default. 
 
