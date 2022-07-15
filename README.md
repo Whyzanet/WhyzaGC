@@ -68,7 +68,7 @@ HTTP diagnostic data is available via the ESP8266/ESP32 IP address on port 80. H
 
 Monitor easily via the following linux command or your web browser
 
-watch -n 1 curl -s 192.168.0.x
+watch -n 10 curl -s 192.168.0.x
 
 where 192.168.0.x is replaced by your ESP8266 IP address.
 
