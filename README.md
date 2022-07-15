@@ -41,7 +41,7 @@ radmon.org data upload every 60 secs
 
 https://radmon.org/index.php
 
-Web server diagnostics  available on HTTP over port 80 ( data, radmon.org upload status, debug, uptime )
+Web server diagnostics  available via HTTP over port 80 ( data, radmon.org upload status, debug, uptime )
 
 NTP client for OLED and web server time display
 
