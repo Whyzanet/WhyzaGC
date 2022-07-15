@@ -60,7 +60,7 @@ If I recall correctly all libraries are available via the Arduino Library Manage
 
 Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 Arduino on Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
-At the top of the ino file are the variables that will need changing for your specific enviroment.
+At the top of the ino file are the variables that will need changing for your specific environment.
 
 Input is via 5 button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi.
 
@@ -74,7 +74,7 @@ where 192.168.0.x is replaced by your ESP8266 IP address.
 
 USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output.
 
-Note: I am no coder expert and have basiclly fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more effecient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
+Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
 ## Hardware considerations:
 
@@ -96,7 +96,7 @@ https://mightyohm.com/forum/viewtopic.php?t=3504
 
 I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH connecting to the J6 pulse header connections on the MightyOhm.
 
-Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurances of high CPS's when I am interested.
+Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurences of high CPS's when I am interested.
 
 Feather HUzzah ESP32 v2
 
@@ -108,7 +108,7 @@ Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8
 
 As such in the ESP32 code I have set the radmon.org update function to use CPU0 rather than CPU1 which everything runs on by default. 
 
-This solves an issue on the ESP8266 platform due to it's single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5 seconds in my enviroment ( and up to 4+ secs ), it means that the ESP8266 will miss at least 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading the MightyOhm CPM which is averaged and uploading the resulting 1 minute rolling average CPM value. So the impact is negligble. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers without success on the ESP8266.....
+This solves an issue on the ESP8266 platform due to it's single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5 seconds in my environment ( and up to 4+ secs ), it means that the ESP8266 will miss at least 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading the MightyOhm CPM which is averaged and uploading the resulting 1 minute rolling average CPM value. So the impact is negligible. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers without success on the ESP8266.....
 
 This is not a problem on the ESP32 where the radmon.org update ( and the functions it calls ) will run on CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
 
