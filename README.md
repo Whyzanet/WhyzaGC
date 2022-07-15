@@ -78,7 +78,7 @@ Blue Heartbeat LED is triggered by an EOL from the Gieger serial output. Should 
 
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
-## Hardware considerations:
+## Hardware setup:
 
 I have basically followed Dan's hardware setup with a few mods.
 
