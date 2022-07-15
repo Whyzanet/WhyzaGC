@@ -70,7 +70,7 @@ Monitor easily via the following linux command or your web browser
 
 watch -n 10 curl -s 192.168.0.x
 
-where 192.168.0.x is replaced by your ESP8266 IP address.
+where 192.168.0.x is replaced by your Huzzah IP address.
 
 USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output.
 
