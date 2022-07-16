@@ -114,7 +114,7 @@ This solves an issue on the ESP8266 platform due to it's single CPU. While perfo
 
 This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) is pinned to CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
 
-The other difference between the ESP8266 and the ESP32 code is that the ESP32 Neopixel will flash green for a successful radmon.org update attempt, and flash red for an unsuccessful update attempt.
+The other difference between the ESP8266 and the ESP32 code is that the ESP32 Neopixel will flash red once when starting the radmon.org update and then flash green for a successful update attempt, and flash red for an unsuccessful update attempt.
 
 The other hardware consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with contrast deviation from burn in will always be not as bright ( or white as in this case ) as a new screen, with the same settings. The color temperature is different and the whole screen is affected. You can increase the contrast of a burnt screen to somewhat compensate, but this may make the problem worse depending on your setting and will not change the color temperature.
 
