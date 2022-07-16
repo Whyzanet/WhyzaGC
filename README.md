@@ -78,7 +78,7 @@ Blue Heartbeat LED is triggered by an EOL from the Gieger serial output. Should 
 
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
-## ESP8266/ESP32/OLED hardware considerations
+## ESP8266/ESP32/OLED software differences
 
 Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), hardware ( Blue LED vs Neopixel RGB LED ) and pinouts, the Feather Huzzah ESP32 CPU is also dual core.
 
