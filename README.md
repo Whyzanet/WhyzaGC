@@ -96,7 +96,7 @@ The other hardware consideration is that I can confirm that OLED screen burn in 
 
 I have basically followed Dan's hardware setup with a few mods.
 
-Feather Huzzah ESP8266
+# Feather Huzzah ESP8266
 
 I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right.
 
@@ -114,7 +114,7 @@ I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH co
 
 Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurences of high CPS's when I am interested.
 
-Feather HUzzah ESP32 v2
+# Feather Huzzah ESP32 v2
 
 With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32.
 
