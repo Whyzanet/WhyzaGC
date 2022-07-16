@@ -207,7 +207,7 @@ void radmon (void * ptParameters ) {
         }
         else {
           pixels.clear();
-          pixels.setPixelColor(0, pixels.Color(100, 0, 0));
+          pixels.setPixelColor(0, pixels.Color(100, 0, 100));
           pixels.show();
           delay(80);
           pixels.clear();
