@@ -212,6 +212,12 @@ void radmon (void * ptParameters ) {
           delay(80);
           pixels.clear();
           pixels.show();
+          delay(80);
+          pixels.setPixelColor(0, pixels.Color(100, 0, 100));
+          pixels.show();
+          delay(80);
+          pixels.clear();
+          pixels.show();
           String ptr = "/radmon.php?function=submit";
           ptr += "&user=";
           ptr += radmonuser;
