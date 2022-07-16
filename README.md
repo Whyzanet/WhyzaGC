@@ -62,7 +62,7 @@ Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 Arduino on Ubuntu Lin
 
 At the top of the ino file are the variables that will need changing for your specific environment.
 
-Input is via 5 button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi.
+Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi.
 
 HTTP diagnostic data is available via the ESP8266/ESP32 IP address on port 80. Huzzah IP address is shown via Button A display.
 
