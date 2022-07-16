@@ -78,6 +78,20 @@ Blue Heartbeat LED is triggered by an EOL from the Gieger serial output. Should 
 
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
+## ESP8266/ESP32/OLED hardware considerations
+
+Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), hardware ( Blue LED vs Neopixel RGB LED ) and pinouts, the Feather Huzzah ESP32 CPU is also dual core.
+
+As such in the ESP32 code I have set the radmon.org update function to use CPU0 rather than CPU1 which everything runs on by default. 
+
+This solves an issue on the ESP8266 platform due to it's single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5 seconds in my environment ( and up to 4+ secs ), it means that the ESP8266 will miss at least 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading the MightyOhm CPM value which is averaged and uploading the resulting 1 minute rolling average CPM value that the Arduino calculates. So the impact is negligible. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers without success on the ESP8266.....
+
+This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) is pinned to CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
+
+The other difference between the ESP8266 and the ESP32 code is that the ESP32 Neopixel every 60 secs will flash red when starting the radmon.org update and then flash green when having completed a successful update attempt, or flash red for an unsuccessful update attempt.
+
+The other hardware consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with contrast deviation from burn in will always be not as bright ( or white as in this case ) as a new screen, with the same settings. The color temperature is different and the whole screen is affected. You can increase the contrast of a burnt screen to somewhat compensate, but this may make the problem worse depending on your setting and will not change the color temperature.
+
 ## Hardware setup:
 
 I have basically followed Dan's hardware setup with a few mods.
@@ -103,20 +117,6 @@ Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so t
 Feather HUzzah ESP32 v2
 
 With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32.
-
-## ESP8266/ESP32/OLED hardware considerations
-
-Other than the expected differences in libraries ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), hardware ( Blue LED vs Neopixel RGB LED ) and pinouts, the Feather Huzzah ESP32 CPU is also dual core.
-
-As such in the ESP32 code I have set the radmon.org update function to use CPU0 rather than CPU1 which everything runs on by default. 
-
-This solves an issue on the ESP8266 platform due to it's single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5 seconds in my environment ( and up to 4+ secs ), it means that the ESP8266 will miss at least 1 line of serial data from the MightyOhm. Simply put, it will miss one line of data for every second that the upload takes. This is not really a big issue as the code is reading the MightyOhm CPM value which is averaged and uploading the resulting 1 minute rolling average CPM value that the Arduino calculates. So the impact is negligible. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers without success on the ESP8266.....
-
-This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) is pinned to CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
-
-The other difference between the ESP8266 and the ESP32 code is that the ESP32 Neopixel every 60 secs will flash red when starting the radmon.org update and then flash green when having completed a successful update attempt, or flash red for an unsuccessful update attempt.
-
-The other hardware consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with contrast deviation from burn in will always be not as bright ( or white as in this case ) as a new screen, with the same settings. The color temperature is different and the whole screen is affected. You can increase the contrast of a burnt screen to somewhat compensate, but this may make the problem worse depending on your setting and will not change the color temperature.
 
 ## Latest Version
 
