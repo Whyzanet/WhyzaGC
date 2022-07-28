@@ -104,6 +104,7 @@ In addition, I wanted USB serial connectivity when the display was mounted in th
 You will need a usb/serial board that exposes the DTR pin for you to use to enable automated code uploading. Through this additional usb/serial board I am able to upload code to the ESP8266 without performing a manual reset. The plan is to mount it sideways using hot glue at the end of the Feather ESP8266 for rear access on the MightyOhm.
 
 I am powering the Feather ESP8266 through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
+
 I am also running the Gieger serial TX pin to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
 On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool.
 
