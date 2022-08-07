@@ -85,9 +85,7 @@ OTA upgrading of complied sketch .bin via WiFi using the following URL
 
 http://192.168.0.x/upload
 
-I had to modify my Arduino preferences.txt to specify
-
-build.path=/home/user/mybuild-dir so I cound locate the relevant .bin build file to upload.
+To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as your ino sketch file for easy access.
 
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
