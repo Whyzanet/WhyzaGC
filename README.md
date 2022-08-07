@@ -77,7 +77,7 @@ watch -n 10 curl -s 192.168.0.x
 
 where 192.168.0.x is replaced by your Huzzah IP address.
 
-USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output.
+USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output, although this port is inaccessable when the Huzzah is mounted in the MightOhm Geiger kit.
 
 Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, heartbeat will stop.
 
