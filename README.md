@@ -35,7 +35,8 @@ It seemed also a good opportunity to upgrade to the latest hardware so I utilise
 
 Feather Huzzah ESP8266 and ESP32 v2 support
 
-Button inputs for 4 display modes showing different data formats and for disabling/enabling wifi. Includes simple meter strength graphs and auto scaling histogram. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
+Button inputs for 4 display modes showing different data formats and for disabling/enabling wifi. 
+Includes bar meter strength graphs, auto scaling histogram and data.
 
 radmon.org data upload every 60 secs
 
@@ -66,7 +67,7 @@ Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 Arduino on Ubuntu Lin
 
 At the top of the ino file are the variables that will need changing for your specific environment.
 
-Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi.
+Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
 HTTP diagnostic data is available via the ESP8266/ESP32 IP address on port 80. Huzzah IP address is shown via Button A display.
 
