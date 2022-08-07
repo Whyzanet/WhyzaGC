@@ -85,7 +85,9 @@ OTA upgrading of complied sketch .bin via WiFi using the following URL
 
 http://192.168.0.x/upload
 
-To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as your ino sketch file so you can easily locate and upload the new binary file. 
+To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as the ino sketch file.
+
+WiFi updates work around the issue of losing access to the USB port due to it being inaccessable when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades.
 
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
@@ -113,13 +115,11 @@ I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) 
 
 I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the Huzzah ESP32 v2.
 
-### Other Hardware Connections:
+### Hardware Connections:
 
 I am powering the Feather Huzzah through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
 
 I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH connecting to the solder pads for the original 3v battery leads on the MightyOhm.
-
-By enabling the OTA WiFi software upgrade functionality, we are able to work around the issue of loosing access to software upgrades due to the serial port being inaccessable when the Huzzah is mounted in the MightOhm's battery location. Simply use http://x.x.x.x/upload instead of a serial link.
 
 I am also running the Gieger serial TX pin to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
 On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool.
@@ -128,8 +128,6 @@ See this link for the perl script. Read the whole page before starting.
 https://mightyohm.com/forum/viewtopic.php?t=3504
 
 Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurences of high CPS's when I am interested.
-
-
 
 ## Latest Version
 
