@@ -121,7 +121,7 @@ Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so t
 
 I am powering the Feather Huzzah through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
 
-I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH connecting to the J6 pulse header connections on the MightyOhm.
+I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH connecting to solder points for the battery leads on the MightyOhm.
 
 ### Feather Huzzah ESP8266
 
