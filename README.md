@@ -69,21 +69,23 @@ At the top of the ino file are the variables that will need changing for your sp
 
 Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
-HTTP diagnostic data is available via the ESP8266/ESP32 IP address on port 80. Huzzah IP address is shown via Button A display.
+HTTP diagnostic data is available via the ESP8266/ESP32 on port 80 via
 
-Monitor easily via the following linux command or your web browser
+http://whyzagc-esp8266.local or http://whyza-esp32.local
 
-watch -n 10 curl -s 192.168.0.x
+Monitor easily via the following linux terminal command.
 
-where 192.168.0.x is replaced by your Huzzah IP address.
+watch -n 10 curl -s whyzagc-esp8266.local  ( or  whyzagc-esp32.local depending on the version )
 
 USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output.
 
 Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, heartbeat will stop.
 
-OTA upgrading of complied sketch .bin via WiFi using the following URL
+OTA upgrading of complied sketch .bin via WiFi using one of the following URL's.
 
-http://192.168.0.x/upload
+http://whyzagc-esp8266/upload
+
+http://whyzagc-esp32/upload
 
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as the ino sketch file.
 
