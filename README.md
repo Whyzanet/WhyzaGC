@@ -45,11 +45,15 @@ Web server diagnostics  available via HTTP over port 80 ( data, radmon.org uploa
 
 NTP client for OLED and web server time display
 
+OTA Software upgrades via WiFi
+
 Remote syslog messages to your syslog server
 
 Blue/Neopixel LED heartbeat, Red LED CPS
 
 Monitoring of MightOhm's serial data for disconnections.
+
+mDNS local name registration
 
 Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to renable radmon.org uploads if enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
@@ -76,6 +80,10 @@ USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial
 
 Blue Heartbeat LED is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, heartbeat will stop.
 
+OTA upgrading of complied sketch .bin via WiFi using the following URL
+
+http://192.168.0.x/upload
+
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
 ## ESP8266/ESP32/OLED specific settings
@@ -99,9 +107,6 @@ I have basically followed Dan's hardware setup with a few mods.
 ### Feather Huzzah ESP8266
 
 I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right.
-
-In addition, I wanted USB serial connectivity when the display was mounted in the MightyOhm for updates, so I have connected an Arduino usb/serial board to the Huzzah's RX and TX, along with RTS to pin En ( 2nd on top from left to right), and DTR to GPIO pin 0 ( pin 8 on top from left to right ).
-You will need a usb/serial board that exposes the DTR pin for you to use to enable automated code uploading. Through this additional usb/serial board I am able to upload code to the ESP8266 without performing a manual reset. The plan is to mount it sideways using hot glue at the end of the Feather ESP8266 for rear access on the MightyOhm.
 
 I am powering the Feather ESP8266 through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
 
