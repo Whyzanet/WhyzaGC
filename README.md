@@ -113,7 +113,7 @@ I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) 
 
 I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the Huzzah ESP32 v2.
 
-## Connections:
+### Other Hardware Connections:
 
 I am powering the Feather Huzzah through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
 
