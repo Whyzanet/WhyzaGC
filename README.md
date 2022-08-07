@@ -124,11 +124,11 @@ I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH co
 
 ### Feather Huzzah ESP8266
 
-I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right.
+I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right on the Huzzah ESP8266.
 
 ### Feather Huzzah ESP32 v2
 
-With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is also pin 6 on the top from left to right on the ESP32. 
+With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32. 
 
 ## Latest Version
 
