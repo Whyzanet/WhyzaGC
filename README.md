@@ -46,15 +46,15 @@ Web server diagnostics  available via HTTP over port 80 ( data, radmon.org uploa
 
 NTP client for OLED and web server time display
 
-OTA Software upgrades via WiFi
-
 Remote syslog messages to your syslog server
 
 Blue/Neopixel LED heartbeat, Red LED CPS
 
 Monitoring of MightOhm's serial data for disconnections.
 
-mDNS local name registration
+mDNS local multicast name registration
+
+OTA Software upgrades via WiFi
 
 Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to renable radmon.org uploads if enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
