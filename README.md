@@ -107,13 +107,17 @@ The other consideration is that I can confirm that OLED screen burn in does occu
 
 ### Feather Huzzah ESP8266
 
-I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right on the Huzzah ESP8266.
+I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266. This is pin 6 on the top from left to right on the Huzzah ESP8266.
 
 ### Feather Huzzah ESP32 v2
 
-With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32. 
+I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the Huzzah ESP32 v2.
 
-I have basically followed Dan's hardware setup with a few mods.
+## Connections:
+
+I am powering the Feather Huzzah through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
+
+I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH connecting to the solder pads for the original 3v battery leads on the MightyOhm.
 
 By enabling the OTA WiFi software upgrade functionality, we are able to work around the issue of loosing access to software upgrades due to the serial port being inaccessable when the Huzzah is mounted in the MightOhm's battery location. Simply use http://x.x.x.x/upload instead of a serial link.
 
@@ -125,9 +129,7 @@ https://mightyohm.com/forum/viewtopic.php?t=3504
 
 Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurences of high CPS's when I am interested.
 
-I am powering the Feather Huzzah through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
 
-I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH connecting to the solder pads for the original 3v battery leads on the MightyOhm.
 
 ## Latest Version
 
