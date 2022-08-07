@@ -117,7 +117,7 @@ With the differences between the ESP2866 and ESP32 pinouts, I have connected the
 
 I have basically followed Dan's hardware setup with a few mods.
 
-Firstly, by enabling OTA WiFi software upgrades, we are able to work around the issue of loosing access to software upgrades via the serial port when the Huzzah is mounted in the MightOhm's battery location. Simply use http://x.x.x.x/upload
+By enabling the OTA WiFi software upgrade functionality, we are able to work around the issue of loosing access to software upgrades due to the serial port being inaccessable when the Huzzah is mounted in the MightOhm's battery location. Simply use http://x.x.x.x/upload instead of a serial link.
 
 I am also running the Gieger serial TX pin to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
 On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool.
