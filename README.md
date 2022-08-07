@@ -107,6 +107,14 @@ The other consideration is that I can confirm that OLED screen burn in does occu
 
 ## Hardware setup:
 
+### Feather Huzzah ESP8266
+
+I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right on the Huzzah ESP8266.
+
+### Feather Huzzah ESP32 v2
+
+With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32. 
+
 I have basically followed Dan's hardware setup with a few mods.
 
 Firstly, by enabling OTA WiFi software upgrades, we are able to work around the issue of loosing access to software upgrades via the serial port when the Huzzah is mounted in the MightOhm's battery location. Simply use http://x.x.x.x/upload
@@ -122,14 +130,6 @@ Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so t
 I am powering the Feather Huzzah through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
 
 I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH connecting to solder points for the battery leads on the MightyOhm.
-
-### Feather Huzzah ESP8266
-
-I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266 as Dan also did. This is pin 6 on the top from left to right on the Huzzah ESP8266.
-
-### Feather Huzzah ESP32 v2
-
-With the differences between the ESP2866 and ESP32 pinouts, I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the ESP32. 
 
 ## Latest Version
 
