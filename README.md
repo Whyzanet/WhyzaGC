@@ -77,7 +77,7 @@ watch -n 10 curl -s 192.168.0.x
 
 where 192.168.0.x is replaced by your Huzzah IP address.
 
-USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output, although this port is inaccessable when the Huzzah is mounted in the MightOhm Geiger kit.
+USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output.
 
 Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, heartbeat will stop.
 
@@ -87,7 +87,7 @@ http://192.168.0.x/upload
 
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as the ino sketch file.
 
-WiFi updates work around the issue of losing access to the USB port due to it being inaccessable when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades.
+WiFi updates work around the issue of losing access to the USB serial port due to it being inaccessable when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades.
 
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
