@@ -46,24 +46,25 @@ Web server diagnostics  available via HTTP over port 80 ( data, radmon.org uploa
 
 Blue LED/Neopixel heartbeat, Red LED CPS
 
-Neopixel radmon status indications. 
-
 Monitoring of MightOhm's serial data for disconnections.
 
 mDNS local multicast name registration
+
+Neopixel radmon status indications. 
 
 OTA Software upgrades via WiFi
 
 NTP client for OLED and web server time display
 
-Remote syslog messages to your syslog server
+Unix syslog messages to your syslog server
 
 ## How to use:
 
-Download the correct ino file and upload to either your Feather Huzzah ESP8266 or Feather Huzzah ESP32 v2. Check the list of libraries included in the ino file and ensure they are all installed.
-If I recall correctly all libraries are available via the Arduino Library Manager.
-
 Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 2.0.4 Arduino on Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
+
+Download the correct ino file and upload to either your Feather Huzzah ESP8266 or Feather Huzzah ESP32 v2. 
+Check the list of libraries included in the ino file and ensure they are all installed.
+If I recall correctly all libraries are available via the Arduino Library Manager.
 
 At the top of the ino file are the variables that will need changing for your specific environment.
 
