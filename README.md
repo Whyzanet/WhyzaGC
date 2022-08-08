@@ -84,9 +84,9 @@ Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output
 
 OTA upgrading of complied sketch .bin via WiFi using one of the following URL's.
 
-http://whyzagc-esp8266/upload
+http://whyzagc-esp8266.local/upload
 
-http://whyzagc-esp32/upload
+http://whyzagc-esp32.local/upload
 
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as the ino sketch file.
 
