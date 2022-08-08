@@ -70,9 +70,9 @@ At the top of the ino file are the variables that will need changing for your sp
 
 Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
-HTTP diagnostic data is available on port 80 via
+HTTP diagnostic data is available on port 80 via hostnames
 
-http://whyzagc-esp8266.local or http://whyza-esp32.local
+http://whyzagc-esp8266.local or http://whyzagc-esp32.local
 
 Monitor easily via the following linux terminal command.
 
