@@ -33,7 +33,7 @@ It seemed also a good opportunity to upgrade to the latest hardware so I utilise
 
 ## Features:
 
-Feather Huzzah ESP8266 and ESP32 v2 support
+Adafruit Feather Huzzah ESP8266 and ESP32 v2 support
 
 Button inputs for 4 display modes showing different data formats.
 Includes bar meter strength graphs, auto scaling histogram and detailed data.
@@ -42,13 +42,13 @@ radmon.org data upload every 60 secs
 
 https://radmon.org/index.php
 
-Web server diagnostics  available via HTTP over port 80 ( data, radmon.org upload status, debug, uptime )
+Web server diagnostics available via HTTP over port 80 ( data, radmon.org upload status, debug, uptime )
 
 Blue LED/Neopixel heartbeat, Red LED CPS
 
 Monitoring of MightOhm's serial data for disconnections.
 
-mDNS local multicast name registration
+mDNS multicast name registration
 
 Neopixel radmon status indications. 
 
@@ -56,11 +56,11 @@ OTA Software upgrades via WiFi
 
 NTP client for OLED and web server time display
 
-Unix syslog messages to your syslog server
+Unix syslog status messages to your syslog server
 
 ## How to use:
 
-Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 2.0.4 Arduino on Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
+Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
 Download the correct ino file and upload to either your Feather Huzzah ESP8266 or Feather Huzzah ESP32 v2. 
 Check the list of libraries included in the ino file and ensure they are all installed.
@@ -70,7 +70,7 @@ At the top of the ino file are the variables that will need changing for your sp
 
 Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
-HTTP diagnostic data is available via the ESP8266/ESP32 on port 80 via
+HTTP diagnostic data is available on port 80 via
 
 http://whyzagc-esp8266.local or http://whyza-esp32.local
 
@@ -90,7 +90,7 @@ http://whyzagc-esp32/upload
 
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as the ino sketch file.
 
-WiFi updates work around the issue of losing access to the USB serial port due to it being inaccessable when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades.
+WiFi software updates solve the problem of losing access to the USB serial port due to it being inaccessable when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades and monitoring.
 
 You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to renable radmon.org uploads if enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
@@ -110,7 +110,7 @@ This is not a problem on the ESP32 where the radmon.org function ( and the funct
 
 The other consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with contrast deviation from burn in will always be not as bright ( or white as in this case ) as a new screen, with the same settings. The color temperature is different and the whole screen is affected. You can increase the contrast of a burnt screen to somewhat compensate, but this may make the problem worse depending on your setting and will not change the color temperature.
 
-## Hardware setup:
+## MightyOhm Serial setup:
 
 ### Feather Huzzah ESP8266
 
@@ -120,7 +120,7 @@ I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) 
 
 I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the Huzzah ESP32 v2.
 
-### Hardware Connections:
+## Hardware Connections:
 
 I am powering the Feather Huzzah through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
 
