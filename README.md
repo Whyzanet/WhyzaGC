@@ -35,8 +35,8 @@ It seemed also a good opportunity to upgrade to the latest hardware so I utilise
 
 Feather Huzzah ESP8266 and ESP32 v2 support
 
-Button inputs for 4 display modes showing different data formats and for disabling/enabling wifi. 
-Includes bar meter strength graphs, auto scaling histogram and data.
+Button inputs for 4 display modes showing different data formats.
+Includes bar meter strength graphs, auto scaling histogram and detailed data.
 
 radmon.org data upload every 60 secs
 
@@ -44,11 +44,9 @@ https://radmon.org/index.php
 
 Web server diagnostics  available via HTTP over port 80 ( data, radmon.org upload status, debug, uptime )
 
-NTP client for OLED and web server time display
-
-Remote syslog messages to your syslog server
-
 Blue LED/Neopixel heartbeat, Red LED CPS
+
+Neopixel radmon status indications. 
 
 Monitoring of MightOhm's serial data for disconnections.
 
@@ -56,7 +54,9 @@ mDNS local multicast name registration
 
 OTA Software upgrades via WiFi
 
-Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to renable radmon.org uploads if enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
+NTP client for OLED and web server time display
+
+Remote syslog messages to your syslog server
 
 ## How to use:
 
@@ -90,6 +90,8 @@ http://whyzagc-esp32/upload
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as the ino sketch file.
 
 WiFi updates work around the issue of losing access to the USB serial port due to it being inaccessable when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades.
+
+You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to renable radmon.org uploads if enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
