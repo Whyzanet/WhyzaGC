@@ -7,6 +7,8 @@ title: README
 
 Arduino code for the Adafruit Feather HUZZAH ESP8266 & ESP32 v2 with Adafruit Featherwing 128x64 OLED to interface with the MightyOhm Gieger Counter
 
+![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
+
 https://mightyohm.com/blog/products/geiger-counter/
 
 plus either
