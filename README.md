@@ -59,7 +59,7 @@ https://www.adafruit.com/product/3405
 with 
 https://www.adafruit.com/product/4650
 
-I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 due to the NeoPixel and dual core functionality which is mentioned below.
+I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 due to the NeoPixel and dual core functionality, which is mentioned below.
 
 Stacking Headers for Feather - 12-pin and 16-pin female headers
 https://www.adafruit.com/product/2830
