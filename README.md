@@ -90,7 +90,7 @@ After verifying everything is functioning by connecting the Li-Po battery and ve
 
 ## Software:
 
-Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
+Tested on Arduino IDE 1.8.19 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
 Download the correct ino file and upload to either your Feather Huzzah ESP8266 or Feather Huzzah ESP32 v2. 
 Check the list of libraries included in the ino file and ensure they are all installed.
