@@ -88,7 +88,7 @@ You will notice in the above photo I have not cut off the pin for the VBUS or US
 
 After verifying everything is functioning by connecting the Li-Po battery and verifying operation, apply the double sided tape and secure the Feather Huzzah to the MightyOhm, and the battery to the rear side of the MightyOhm.
 
-## How to use:
+## Software:
 
 Tested on Arduino IDE 1.8.19 and ESP8266Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
