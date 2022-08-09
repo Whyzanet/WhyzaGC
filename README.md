@@ -21,7 +21,7 @@ It is recommend to read all of this document before commencing the project.
 Adafruit Feather Huzzah ESP8266 and ESP32 v2 support, OLED display, Li-Po battery
 
 Button inputs for 4 display modes showing different data formats.
-Includes bar meter strength graphs, auto scaling histogram and detailed data.
+Includes bar meter strength graphs, auto scaling histogram and detailed data. Photos below.
 
 radmon.org data upload every 60 secs
 
