@@ -14,7 +14,7 @@ Arduino code for the wireless Adafruit Arduino Feather HUZZAH ESP8266 & ESP32 v2
 
 This project is about adding a wireless Adafruit Arduino Feather Huzzah ESP8266 or ESP32 and OLED screen to the self assembled MightOhm Gieger Kit linked below. 
 
-I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 due to the added NeoPixel RGB LED and dual core functionality, which is discussed below.
+I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to the added NeoPixel RGB LED and dual core functionality, which is discussed below.
 
 It is recommend to read all of this document before commencing the project.
 
