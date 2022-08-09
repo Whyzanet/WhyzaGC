@@ -155,7 +155,7 @@ On one port I have configured a bash script to perform radmon.org updates for us
 See this link for the perl script. Read the whole page before starting.
 https://mightyohm.com/forum/viewtopic.php?t=3504
 
-Finally I also have the MightyOhm pulse pin ( J6 pin 2 ) connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurences of high CPS's when I need to reconfirm the randomness of the universe. 
+Finally I also have the MightyOhm pulse pin ( J6 pin 2 ) connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log occurences of high CPS's for when I need to reconfirm the randomness of the universe. 
 
 MightOhm with connections to Raspberry Pi. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
 
