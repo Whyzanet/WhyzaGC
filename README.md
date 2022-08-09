@@ -157,7 +157,7 @@ https://mightyohm.com/forum/viewtopic.php?t=3504
 
 Finally I also have the MightyOhm pulse pin ( J6 pin 2 ) connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log occurences of high CPS's for when I need to reconfirm the randomness of the universe. 
 
-MightOhm with connections to Raspberry Pi. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
+MightOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
 
 ![rpi-connections](https://user-images.githubusercontent.com/109115488/183542370-b1425d1e-df4b-43f3-ac72-6ed607074740.jpg)
 
