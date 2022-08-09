@@ -41,18 +41,6 @@ NTP client for OLED and web server time display
 
 Unix syslog status messages to your syslog server
 
-## Introduction:
-
-It is assumed you are able to assemble your MightyOhm kit using the relevant online guides. 
-
-Inspired by Dan's post.
-
-http://syncchannel.blogspot.com/2016/01/wi-fi-and-oled-upgrade-for-mightyohm.html
-
-I found that the post was quite old and would not compile without significant effort so I decided that a rewrite from scratch would be best to not only gain OLED functionality with the Mightohm, but also a few other features I desired. 
-
-It seemed also a good opportunity to upgrade to the latest hardware so I utilised the Featherwing OLED 128x64 version which you will need if you are to use this code as I not only make use of all the available screen real estate, the 128 x 64 OLED also uses a different driver to the older 128 x 32 OLED.
-
 ## Parts list
 
 MightOhm Gieger
