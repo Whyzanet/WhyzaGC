@@ -16,7 +16,7 @@ This project is about adding a wireless Feather Huzzah ESP8266 or ESP32 and OLED
 
 ## Features:
 
-Adafruit Feather Huzzah ESP8266 and ESP32 v2 support, Li-Po battery and OLED display
+Adafruit Feather Huzzah ESP8266 and ESP32 v2 support, OLED display, Li-Po battery
 
 Button inputs for 4 display modes showing different data formats.
 Includes bar meter strength graphs, auto scaling histogram and detailed data.
@@ -72,7 +72,7 @@ I would recommend the Feather Huzzah ESP32 v2 over the origianl ESP8266 due to t
 Stacking Headers for Feather - 12-pin and 16-pin female headers
 https://www.adafruit.com/product/2830
 
-Micro USB (ESP8266) or USB C (ESP32) cable to connect your PC to the Feather
+Micro USB (Huzzah ESP8266) or USB C (Huzzah ESP32 v2) cable to connect your PC to the Feather
 
 Li-Po battery to replace the original AAA battery
 
