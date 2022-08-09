@@ -105,7 +105,7 @@ Register with radmon,org first so you have all your required credentials.
 
 Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
-HTTP diagnostic data is available on port 80 via hostnames
+HTTP diagnostic data is available on port 80 via URL's
 
 http://whyzagc-esp8266.local or http://whyzagc-esp32.local
 
