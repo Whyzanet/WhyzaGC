@@ -78,13 +78,13 @@ Then connecting to your PC via the USB cable, you should be able to then load an
 
 Next we need to connect the MightOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the Mighyohm. 
 
-The first is the MightOhm geiger serial TX pin which is found on J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
+With the rear of the MightOhm accessable, the first is the MightOhm geiger serial TX pin which is found on J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
 
 Secondly connect the Huzzah's 3.3v and GND pins to the MightOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this docuemnt, or Adafruit's pinout images online.
 
 ![underside](https://user-images.githubusercontent.com/109115488/183534736-6471d7e9-a969-49c6-ac1c-33ec735b5cfa.jpg)
 
-You will notice in the above photo I have removed the stacking header pins on the bottom of the Huzzah but have not cut off the pin for the VBUS or USB connection. I have bent it at a right angle so I can power the Feather Huzzah ( and charge the battery ) through this VBUS or USB pin from a Raspberry Pi 4 5V pin on the Pi GPIO header ( or any 5v supply ), as well as a ground connection between the two. Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
+You will notice in the below photo I have removed the stacking header pins on the bottom of the Huzzah but have not cut off the pin for the VBUS/USB connection. I have bent it at a right angle so I can connect a 5v supply to power the Feather Huzzah ( and charge the battery ).
 
 Note that when the Huzzah is mounted in the MightOhm, access is lost to the onboard USB serial connection so you will need to upload the software mentioned below before final assembly. Once the software is loaded, you can use the OTA WiFi update feature if required when the Huzzah is mounted in it's final position in the MightyOhm Geiger for upgrades. 
 
@@ -143,6 +143,8 @@ This is not a problem on the ESP32 where the radmon.org function ( and the funct
 The other consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with contrast deviation from burn in will always be not as bright ( or white as in this case ) as a new screen, with the same settings. The color temperature is different and the whole screen is affected. You can increase the contrast of a burnt screen to somewhat compensate, but this may make the problem worse depending on your setting and will not change the color temperature.
 
 ## Additional Connections:
+
+I am connecting the VBUS/USB pin on the Huzzah to a Raspberry Pi 5V pin via the Pi GPIO header ( any 5v supply will suffice), as well as a ground connection between the two boards. Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
 
 I am also connecting the Gieger serial TX pin (J7 pin 4) to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
 On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool.
