@@ -92,11 +92,11 @@ After verifying everything is functioning by connecting the Li-Po battery and ve
 
 Tested on Arduino IDE 1.8.19 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
-Download the correct ino file, then compile and upload to either your Feather Huzzah ESP8266 or Feather Huzzah ESP32 v2. 
-Check the list of libraries included in the ino file and ensure they are all installed.
+Download the correct ino sketch file, then compile and upload to either your Feather Huzzah ESP8266 or Feather Huzzah ESP32 v2. 
+Check the list of libraries included in the sketch and ensure they are all installed.
 If I recall correctly all libraries are available via the Arduino Library Manager.
 
-At the top of the ino file are the variables that will need changing for your specific environment.
+At the top of the sketch are the variables that will need changing for your specific environment.
 
 Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
