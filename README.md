@@ -70,7 +70,7 @@ Li-Po battery to replace the original AAA battery
 
 Double sided tape.
 
-Female breaboard jumper wires to connect to Raspberry Pi if desired.
+Female breadboard jumper wires to connect to Raspberry Pi if desired.
 
 ## Assembly
 
