@@ -50,13 +50,13 @@ Unix syslog status messages to your syslog server
 MightOhm Gieger
 https://mightyohm.com/blog/products/geiger-counter/
 
-plus either
+plus either Feather Huzzah ESP8266
 https://www.adafruit.com/product/2821
 
-or
+or Feather Huzzah ESP32 v2
 https://www.adafruit.com/product/3405
 
-with 
+with Featherwing 128x64 OLED
 https://www.adafruit.com/product/4650
 
 Stacking Headers for Feather - 12-pin and 16-pin female headers
