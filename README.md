@@ -43,8 +43,6 @@ NTP client for OLED and web server time display
 
 Unix syslog status messages to your syslog server
 
-Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when aborting an unsuccessful update.
-
 ## Parts list
 
 MightOhm Gieger
@@ -118,6 +116,8 @@ watch -n 10 curl -s whyzagc-esp8266.local  ( or  whyzagc-esp32.local depending o
 USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output ( when accessible )
 
 Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, heartbeat will stop.
+
+Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when aborting an unsuccessful update.
 
 OTA upgrading of complied sketch .bin via WiFi using one of the following URL's.
 
