@@ -12,7 +12,7 @@ Arduino code for the wireless Adafruit Arduino Feather HUZZAH ESP8266 & ESP32 v2
 
 ## Description:
 
-This project is about adding a wireless Adafruit Arduino Feather Huzzah ESP8266 or ESP32 and OLED screen to the MightOhm Gieger Kit which is a self assembed Gieger Counter linked below. 
+This project is about adding a wireless Adafruit Arduino Feather Huzzah ESP8266 or ESP32 and OLED screen to the self assembled MightOhm Gieger Kit linked below. 
 
 It is recommend to read all of this document before commencing the project.
 
