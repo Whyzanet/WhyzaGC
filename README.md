@@ -9,29 +9,10 @@ Arduino code for the Adafruit Feather HUZZAH ESP8266 & ESP32 v2 with Adafruit Fe
 
 ![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
 
-https://mightyohm.com/blog/products/geiger-counter/
-
-plus either
-
-https://www.adafruit.com/product/2821
-
-or
-
-https://www.adafruit.com/product/3405
-
-with 
-
-https://www.adafruit.com/product/4650
 
 ## Description:
 
-Inspired by Dan's post. Please read in full as there is vital information there that I have not duplicated.
-
-http://syncchannel.blogspot.com/2016/01/wi-fi-and-oled-upgrade-for-mightyohm.html
-
-I found that the post was quite old and would not compile without significant effort so I decided that a rewrite from scratch would be best to not only gain OLED functionality with the Mightohm, but also a few other features I desired. 
-
-It seemed also a good opportunity to upgrade to the latest hardware so I utilised the Featherwing OLED 128x64 version which you will need if you are to use this code as I not only make use of all the available screen real estate, the 128 x 64 OLED also uses a different driver to the older 128 x 32 OLED.
+This project is about adding a Feather Huzzah ESP8266 or ESP32 and OLED screen to the MightOhm Gieger Kit which is a self assembed Gieger Counter linked above. 
 
 ## Features:
 
@@ -59,6 +40,65 @@ OTA Software upgrades via WiFi
 NTP client for OLED and web server time display
 
 Unix syslog status messages to your syslog server
+
+## Introduction:
+
+It is assumed you are able to assemble your MightyOhm kit using the relevant online guides. 
+
+Inspired by Dan's post.
+
+http://syncchannel.blogspot.com/2016/01/wi-fi-and-oled-upgrade-for-mightyohm.html
+
+I found that the post was quite old and would not compile without significant effort so I decided that a rewrite from scratch would be best to not only gain OLED functionality with the Mightohm, but also a few other features I desired. 
+
+It seemed also a good opportunity to upgrade to the latest hardware so I utilised the Featherwing OLED 128x64 version which you will need if you are to use this code as I not only make use of all the available screen real estate, the 128 x 64 OLED also uses a different driver to the older 128 x 32 OLED.
+
+## Parts list
+
+MightOhm Gieger
+https://mightyohm.com/blog/products/geiger-counter/
+
+plus either
+https://www.adafruit.com/product/2821
+
+or
+https://www.adafruit.com/product/3405
+
+with 
+https://www.adafruit.com/product/4650
+
+I would recommend the Feather Huzzah ESP32 v2 over the origianl ESP8266 due to the dual core functionality which is mentioned below.
+
+Stacking Headers for Feather - 12-pin and 16-pin female headers
+https://www.adafruit.com/product/2830
+
+Micro USB (ESP8266) or USB C (ESP32) cable to connect your PC to the Feather
+
+Li-Po battery to replace the original AAA battery
+
+Double sided tape.
+
+Female breaboard jumper wires to connect to Raspberry Pi if desired.
+
+## Assembly
+
+While assembling your MightOhm if you are yet to do so, do not install the AAA battery holder as this is where the Feather Huzzah is to be placed. If you have assembled your kit, you will need to remove the battery holder.
+
+Start by soldering the stacking headers to the Huzzah and the supplied headers on the Featherwing OLED as documented at the Adafruit's online guide. 
+
+Then connecting to your PC via the USB cable, you should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify functionality. 
+
+Next we need to connect the MightOhm Geiger to the HUzzah. You can use a breadboard to test your setup if desired or you can simply dive in and connect the required 3 wires between the Huzzah and the Mighyohm. 
+
+The first is the MightOhm geiger serial TX pin which is J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
+
+Secondly connect the Huzzah's 3.3 and GND pins to the MightOhm's battery connections which are the red and black wires below.....Refer to Adafruit's pinout images online.
+
+![underside](https://user-images.githubusercontent.com/109115488/183534736-6471d7e9-a969-49c6-ac1c-33ec735b5cfa.jpg)
+
+You will notice in the above photo I have not cut off the pin for the VBUS or USB connection. I have bent it at a right angle so I can power the Feather Huzzah ( and charge the battery ) through this VBUS or USB pin from a Raspberry Pi 4 5V pin on the Pi GPIO header, as well as a ground connection between the two. Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
+
+After verifying everything is functioning by connecting the Li-Po battery and verifying operation, apply the double sided tape and secure the Feather Huzzah to the MightyOhm, and the battery to the rear side of the MightyOhm.
 
 ## How to use:
 
@@ -112,29 +152,31 @@ This is not a problem on the ESP32 where the radmon.org function ( and the funct
 
 The other consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with contrast deviation from burn in will always be not as bright ( or white as in this case ) as a new screen, with the same settings. The color temperature is different and the whole screen is affected. You can increase the contrast of a burnt screen to somewhat compensate, but this may make the problem worse depending on your setting and will not change the color temperature.
 
-## MightyOhm Serial setup:
+## Additional Connections:
 
-### Feather Huzzah ESP8266
-
-I have connected the MightOhm geiger serial TX pin to GPIO 13 ( softSerial RX ) on the Huzzah ESP8266. This is pin 6 on the top from left to right on the Huzzah ESP8266.
-
-### Feather Huzzah ESP32 v2
-
-I have connected the MightOhm geiger serial TX pin to GPIO 27 ( softSerial RX ) on the Huzzah ESP32 v2. This is pin 6 on the top from left to right on the Huzzah ESP32 v2.
-
-## Hardware Connections:
-
-I am powering the Feather Huzzah through the USB pin ( 3rd from top left to right ) from a Raspberry Pi 4 5V pin on the Pi GPIO header ( as well as a ground connection between the two ). Current is usually around 110 mA, though will peak around 300 mA when charging the Li battery.
-
-I am powering the MightyOhm Geiger via the 3V3 and the GND pins on the HUZZAH connecting to the solder pads for the original 3v battery leads on the MightyOhm.
-
-I am also running the Gieger serial TX pin to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
+I am also connecting the Gieger serial TX pin (J7 pin 4) to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
 On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool.
 
 See this link for the perl script. Read the whole page before starting.
 https://mightyohm.com/forum/viewtopic.php?t=3504
 
-Finally I also have the MightyOhm pulse pin connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurences of high CPS's when I am interested.
+Finally I also have the MightyOhm pulse pin ( J6 pin 2 ) connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log rare occurences of high CPS's when I am interested.
+
+MightOhm with connections to Raspberry Pi. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
+
+![rpi-connections](https://user-images.githubusercontent.com/109115488/183542370-b1425d1e-df4b-43f3-ac72-6ed607074740.jpg)
+
+Button A display
+
+![a](https://user-images.githubusercontent.com/109115488/183542943-c080e2a9-8f17-4930-82a1-04a2702ff9c8.jpg)
+
+Button B display
+
+![b](https://user-images.githubusercontent.com/109115488/183542952-a5c750ff-7dba-4f3e-952d-4732805959bd.jpg)
+
+Button C display
+![c](https://user-images.githubusercontent.com/109115488/183542965-d20e37c1-c1be-48f8-adb3-025e99516f57.jpg)
+
 
 ## Latest Version
 
