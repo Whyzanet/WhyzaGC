@@ -76,7 +76,7 @@ While assembling your MightOhm if you are yet to do so, do not install the AAA b
 
 Start by soldering the stacking headers to the Huzzah and the supplied headers on the Featherwing OLED as documented at the Adafruit's online guide. 
 
-Then connecting to your PC via the USB cable, you should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify functionality. 
+Then connecting to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200.  You should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
 
 Next we need to connect the MightOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the Mighyohm. 
 
