@@ -181,6 +181,6 @@ Adafruit Feather Huzzah ESP32 v2 pinout
 
 ## Latest Version
 
-The latest version of this code is available via:
+The latest version of this document and project is available via:
 
 https://github.com/Whyzanet/WhyzaGC
