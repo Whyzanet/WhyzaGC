@@ -80,7 +80,7 @@ Next we need to connect the MightOhm Geiger to the Huzzah. You can use a breadbo
 
 The first is the MightOhm geiger serial TX pin which is found on J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
 
-Secondly connect the Huzzah's 3.3v and GND pins to the MightOhm's battery connections which are the red and black wires below.....Refer to Adafruit's pinout images online.
+Secondly connect the Huzzah's 3.3v and GND pins to the MightOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this docuemnt, or Adafruit's pinout images online.
 
 ![underside](https://user-images.githubusercontent.com/109115488/183534736-6471d7e9-a969-49c6-ac1c-33ec735b5cfa.jpg)
 
@@ -156,6 +156,10 @@ MightOhm with connections to Raspberry Pi. Red is 5V supply, Orange is serial TX
 
 ![rpi-connections](https://user-images.githubusercontent.com/109115488/183542370-b1425d1e-df4b-43f3-ac72-6ed607074740.jpg)
 
+Default bootup/Button A & B display
+
+![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
+
 Button A display
 
 ![a](https://user-images.githubusercontent.com/109115488/183542943-c080e2a9-8f17-4930-82a1-04a2702ff9c8.jpg)
@@ -167,6 +171,13 @@ Button B display
 Button C display
 ![c](https://user-images.githubusercontent.com/109115488/183542965-d20e37c1-c1be-48f8-adb3-025e99516f57.jpg)
 
+Adafruit Feather Huzzah ESP8266 pinout 
+
+![FeatherHuzzahESP8266pinout](https://user-images.githubusercontent.com/109115488/183532848-67e19153-23b0-45d9-b821-0f4a29993b36.png)
+
+Adafruit Feather Huzzah ESP32 v2 pinout 
+
+![FeatherHuzzahESP32pinout](https://user-images.githubusercontent.com/109115488/183532850-095e769c-4976-42ac-ab86-83e7bfbfaed9.png)
 
 ## Latest Version
 
