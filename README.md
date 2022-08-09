@@ -43,6 +43,8 @@ NTP client for OLED and web server time display
 
 Unix syslog status messages to your syslog server
 
+Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when aborting an unsuccessful update.
+
 ## Parts list
 
 MightOhm Gieger
@@ -57,7 +59,7 @@ https://www.adafruit.com/product/3405
 with 
 https://www.adafruit.com/product/4650
 
-I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 due to the dual core functionality which is mentioned below.
+I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 due to the NeoPixel and dual core functionality which is mentioned below.
 
 Stacking Headers for Feather - 12-pin and 16-pin female headers
 https://www.adafruit.com/product/2830
@@ -132,8 +134,6 @@ You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
 ## ESP8266/ESP32/OLED specific settings
-
-The Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when aborting an unsuccessful update.
 
 Other than the expected differences in libraries for the ESP8266 & ESP32 ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
 
