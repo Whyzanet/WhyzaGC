@@ -76,11 +76,11 @@ Start by soldering the stacking headers to the Huzzah and the supplied headers o
 
 Then connecting to your PC via the USB cable, you should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify functionality. 
 
-Next we need to connect the MightOhm Geiger to the HUzzah. You can use a breadboard to test your setup if desired or you can simply dive in and connect the required 3 wires between the Huzzah and the Mighyohm. 
+Next we need to connect the MightOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the Mighyohm. 
 
-The first is the MightOhm geiger serial TX pin which is J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
+The first is the MightOhm geiger serial TX pin which is found on J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
 
-Secondly connect the Huzzah's 3.3 and GND pins to the MightOhm's battery connections which are the red and black wires below.....Refer to Adafruit's pinout images online.
+Secondly connect the Huzzah's 3.3v and GND pins to the MightOhm's battery connections which are the red and black wires below.....Refer to Adafruit's pinout images online.
 
 ![underside](https://user-images.githubusercontent.com/109115488/183534736-6471d7e9-a969-49c6-ac1c-33ec735b5cfa.jpg)
 
