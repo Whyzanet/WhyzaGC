@@ -108,7 +108,7 @@ Upload the sketch and see if there are any missing libraries you need to fix.
 
 Once running, USB Serial is set to 9600 baud.
 
-Once the ketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
+Once the sketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb (A&B and B&C for a total of 5)
 
 HTTP diagnostic data is available on port 80 via URL
 
