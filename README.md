@@ -12,11 +12,11 @@ Arduino code for the wireless Adafruit Arduino Feather HUZZAH ESP8266 & ESP32 v2
 
 ## Description:
 
-This project is about adding a wireless Adafruit Arduino Feather Huzzah ESP8266 or ESP32 and OLED screen to the self assembled MightOhm Gieger Kit linked below. 
+This project is about adding a wireless Adafruit Arduino Feather Huzzah ESP8266 or ESP32 and OLED screen to the self-assembled MightOhm Geiger Kit linked below. 
 
 I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to the added NeoPixel RGB LED and dual core functionality, which is discussed below.
 
-It is recommend to read all of this document before commencing the project.
+It is recommended to read all of this document before commencing the project.
 
 ## Features:
 
@@ -78,11 +78,11 @@ While assembling your MightOhm if you are yet to do so, do not install the AAA b
 
 Start by soldering the stacking headers to the Huzzah and the supplied headers on the Featherwing OLED as documented at the Adafruit's online guide. 
 
-Then connecting to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200.  You should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
+Then connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200.  You should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
 
 Next we need to connect the MightOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the Mighyohm. 
 
-With the rear of the MightOhm accessable, the first is the MightOhm geiger serial TX pin which is found on J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
+With the rear of the MightOhm accessible, the first is the MightOhm geiger serial TX pin which is found on J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
 
 Secondly connect the Huzzah's 3.3v and GND pins to the MightOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this document, or Adafruit's pinout images online.
 
@@ -106,7 +106,7 @@ Register with radmon,org first so you have all your required credentials.
 
 Upload the sketch and see if there are any missing libraries you need to fix.
 
-Once the ketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
+Once the ketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
 HTTP diagnostic data is available on port 80 via URL
 
@@ -122,15 +122,15 @@ To monitor the MightyOhm serial data remotely use
 
 http://whyzagc-esp.local:81
 
-and in your favourite telnet program
+and in your favorite telnet program
 
 telnet whyzagc-esp.local
 
-Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, heartbeat will stop.
+Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, the heartbeat will stop.
 
 Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when aborting an unsuccessful update.
 
-OTA upgrading of complied sketch .bin via WiFi using the following URL.
+OTA upgrading of compiled sketch .bin via WiFi using the following URL.
 
 http://whyzagc-esp.local/upload
 
@@ -138,7 +138,7 @@ To locate the correct binary for upload, within the Arduino IDE interface select
 
 WiFi software updates and HTTP server diagnostics solve the issue of the USB serial port being inaccessible when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades and monitoring.
 
-You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to renable radmon.org uploads if startup behaviour is enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
+You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to nable radmon.org uploads if startup behavior is enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
 Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope if gives others guidance in achieving whatever you are looking for.
 
@@ -164,7 +164,7 @@ On one port I have configured a bash script to perform radmon.org updates for us
 See this link for the perl script. Read the whole page before starting.
 https://mightyohm.com/forum/viewtopic.php?t=3504
 
-Finally I also have the MightyOhm pulse pin ( J6 pin 2 ) connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log occurences of high CPS's for when I need to reconfirm the randomness of the universe. 
+Finally I also have the MightyOhm pulse pin ( J6 pin 2 ) connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log occurrences of high CPS's for when I need to reconfirm the randomness of the universe. 
 
 MightOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
 
