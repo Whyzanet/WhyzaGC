@@ -78,7 +78,7 @@ While assembling your MightOhm if you are yet to do so, do not install the AAA b
 
 Start by soldering the stacking headers to the Huzzah and the supplied headers on the Featherwing OLED as documented at the Adafruit's online guide. 
 
-Then connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200.  You should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
+Then connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200 baud.  You should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
 
 Next we need to connect the MightOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the Mighyohm. 
 
@@ -105,6 +105,8 @@ At the top of the sketch are the variables that will need changing for your spec
 Register with radmon,org first so you have all your required credentials. 
 
 Upload the sketch and see if there are any missing libraries you need to fix.
+
+Once running, USB Serial is set to 9600 baud.
 
 Once the ketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
