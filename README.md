@@ -35,6 +35,8 @@ Blue LED/Neopixel heartbeat, Red LED CPS
 
 Monitoring of MightOhm's serial data for disconnections.
 
+MightyOhm serial data over HTTP and Telnet
+
 mDNS multicast name registration
 
 Neopixel radmon status indications. 
@@ -105,25 +107,31 @@ Register with radmon,org first so you have all your required credentials.
 
 Input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and renable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb ( A&B and B&C for a total of 5 )
 
-HTTP diagnostic data is available on port 80 via URL's
+HTTP diagnostic data is available on port 80 via URL
 
-http://whyzagc-esp8266.local or http://whyzagc-esp32.local
+http://whyzagc-esp.local
 
 Monitor easily via the following linux terminal command.
 
-watch -n 10 curl -s whyzagc-esp8266.local  ( or  whyzagc-esp32.local depending on the version )
+watch -n 10 curl -s whyzagc-esp.local
 
 USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output ( when accessible )
+
+To monitor the MightyOhm serial data remotely use
+
+http://whyzagc-esp.local:81
+
+and in your favourite telnet program
+
+telnet whyzagc-esp.local
 
 Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, heartbeat will stop.
 
 Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when aborting an unsuccessful update.
 
-OTA upgrading of complied sketch .bin via WiFi using one of the following URL's.
+OTA upgrading of complied sketch .bin via WiFi using the following URL.
 
-http://whyzagc-esp8266.local/upload
-
-http://whyzagc-esp32.local/upload
+http://whyzagc-esp.local/upload
 
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as the ino sketch file.
 
