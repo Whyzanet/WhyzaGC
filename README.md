@@ -104,9 +104,7 @@ If I recall correctly all libraries are available via the Arduino Library Manage
 At the top of the sketch are the variables that will need changing for your specific environment.
 Register with radmon,org first so you have all your required credentials. 
 
-Upload the sketch and see if there are any missing libraries you need to fix.
-
-USB Serial is set to 9600 baud.
+Upload the sketch and see if there are any missing libraries you need to fix..
 
 Once the sketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb (A&B and B&C for a total of 5)
 
