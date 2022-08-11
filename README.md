@@ -107,8 +107,11 @@ Tested on Arduino IDE 1.8.19/2.0.0-rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Ar
 Download the correct ino sketch file for your hardware and check the list of libraries included in the sketch and ensure they are all installed.
 If I recall correctly all libraries are available via the Arduino Library Manager.
 
+Software available at:
+https://github.com/Whyzanet/WhyzaGC
+
 At the top of the sketch are the variables that will need changing for your specific environment.
-Register with radmon,org first so you have all your required credentials. 
+Register with radmon.org first so you have all your required credentials. 
 
 Upload the sketch and see if there are any missing libraries you need to fix..
 
