@@ -12,9 +12,9 @@ This project is about adding a wireless Adafruit Arduino Feather HUZZAH ESP8266 
 ## Introduction:
 
 I am always on the lookout for unique and interesting kits to build which led to me discovering the MightOhm Geiger kit. 
-While there are a couple of other geiger kits around, the fact that the MightOhm was in stock ( rare in these post covid times! ), it included a commonly available detector tube ( for relative data comparisions ), its serial output, along with its steam punk looks, it had me sold. 
+While there are a couple of other geiger kits around, the fact that the MightOhm was in stock ( rare in these post covid times! ), it included a commonly available detector tube ( for relative data comparisons ), its serial output, along with its steampunk looks, it had me sold. 
 
-While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino. I found a dated project using the Huzzah and MightyOhm and after reseaching parts availability, I decided to do my own Arduino project from scratch. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
+While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino. I found a dated project using the Huzzah and MightyOhm and after researching parts availability, I decided to do my own Arduino project from scratch. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
 
 I initially started with the ESP8266 and then 'upgraded' to the ESP32 to take advantage of the dual core as I ran into limitations multitasking on the ESP8266 as discussed below. 
 
