@@ -22,7 +22,7 @@ As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 
 
 I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power !
 
-I bought from ebay a piece of vaseline glass to test out the meter's functionality.
+I bought from ebay a piece of Vaseline glass to test out the meter's functionality.
 
 It is recommended to read all of this document before commencing the project.
 
