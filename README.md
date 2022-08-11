@@ -80,7 +80,7 @@ Double sided tape.
 
 Female breadboard jumper wires to connect to Raspberry Pi if desired.
 
-Vaseline glass as a source of radiation.
+Vaseline or uranium glass as a source of radiation.
 
 ## Assembly
 
