@@ -104,6 +104,9 @@ After verifying the software below and the hardware is functional by connecting 
 
 Tested on Arduino IDE 1.8.19/2.0.0-rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
+The code is a result of learning many new skills along the way from various examples and online searches. 
+It reads the serial data from the MightyOhm using softSerial on a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently upload the result to radmon.org. The histogram graph utilises the circularBuffer library which made this graphing relatively easy. The code is broken up into individual functions and hopefully is readable if you are wanting to modify.
+
 Download the correct ino sketch file for your hardware and check the list of libraries included in the sketch and ensure they are all installed.
 If I recall correctly all libraries are available via the Arduino Library Manager.
 
@@ -148,9 +151,6 @@ To locate the correct binary for upload, within the Arduino IDE interface select
 WiFi software updates and HTTP server diagnostics solve the issue of the USB serial port being inaccessible when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades and monitoring.
 
 You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to nable radmon.org uploads if startup behavior is enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
-
-The code is a result of learning many new skills along the way from various examples and online searches. 
-The code simply reads the serial data from the MightyOhm using softSerial on a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently uploads the result to radmon.org. The histogram graph utilises the circularBuffer library which made this graphing relatively easy. The code is broken up into individual functions and hopefully is quiet readable if you are wanting to modify.
 
 ## ESP8266/ESP32/OLED specific settings
 
