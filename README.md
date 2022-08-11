@@ -133,6 +133,8 @@ Upload the sketch and see if there are any missing libraries you need to fix..
 
 Once the sketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb (A&B and B&C for a total of 5)
 
+USB serial port is set to 115200 baud and will display the MightyOhm Gieger serial output ( when accessible )
+
 HTTP diagnostic data is available on port 80 via URL
 
 http://whyzagc-esp.local
@@ -140,8 +142,6 @@ http://whyzagc-esp.local
 Monitor easily via the following linux terminal command.
 
 watch -n 10 curl -s whyzagc-esp.local
-
-USB serial port is set to 9600 baud and will display the MightyOhm Gieger serial output ( when accessible )
 
 To monitor the MightyOhm serial data remotely use
 
