@@ -127,7 +127,7 @@ Software is available at:
 https://github.com/Whyzanet/WhyzaGC
 
 At the top of the sketch are the variables that will need changing for your specific environment.
-Register with radmon.org first so you have all your required credentials. 
+Register with radmon.org first so you have your required credentials. 
 
 Upload the sketch and see if there are any missing libraries you need to fix..
 
