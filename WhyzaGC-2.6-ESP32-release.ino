@@ -264,13 +264,13 @@ void radmon (void * ptParameters ) {  // perfrom the HTTP Get for radmon.org eve
         }
         else {
           pixels.clear();
-          pixels.setPixelColor(0, pixels.Color(100, 0, 100));
+          pixels.setPixelColor(0, pixels.Color(255, 0, 255));
           pixels.show();
           delay(80);
           pixels.clear();
           pixels.show();
           delay(80);
-          pixels.setPixelColor(0, pixels.Color(100, 0, 100));
+          pixels.setPixelColor(0, pixels.Color(255, 0, 255));
           pixels.show();
           delay(80);
           pixels.clear();
