@@ -159,7 +159,7 @@ Vaseline glass is a useful item for background level radiation testing. The piec
 
  The SBM20 detects limited range beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ). 
  
-The Vaseline glass’s radiation is stopped by aluminum which fits the definition of beta radiation.  
+The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the definition of beta radiation.  
 
 ## ESP8266/ESP32/OLED specific settings
 
