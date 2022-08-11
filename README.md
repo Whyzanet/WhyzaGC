@@ -22,6 +22,8 @@ As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 
 
 I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power !
 
+I bought of ebay a piece of vaseline glass to test out the meter's functionality.
+
 It is recommended to read all of this document before commencing the project.
 
 ## Features:
@@ -77,6 +79,8 @@ Li-Po battery to replace the original AAA battery
 Double sided tape.
 
 Female breadboard jumper wires to connect to Raspberry Pi if desired.
+
+Vaseline glass as a source of radiation.
 
 ## Assembly
 
