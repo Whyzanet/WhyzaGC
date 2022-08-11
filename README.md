@@ -19,7 +19,7 @@ While waiting for delivery I checked a number of forums looking for ideas on how
 
 I initially started with the ESP8266 and then 'upgraded' to the ESP32 to take advantage of the dual core as I ran into limitations multitasking on the ESP8266 as discussed below. 
 
-As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual core functionality.
+As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual core functionality. That said, if you have a Feather Huzzah ESP8266 already, it will work just fine.
 
 I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power !
 
@@ -107,14 +107,23 @@ After verifying the software below and the hardware is functional by connecting 
 
 ## Software:
 
-Tested on Arduino IDE 1.8.19/2.0.0-rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
+Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
-The code is a result of learning from various examples and online searches. It in essence reads the serial data from the MightyOhm using softSerial via a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently upload the result to radmon.org via a HTTP client GET. The histogram graph utilises the circularBuffer library which made the  graphing relatively easy. There are a number of networking functions which should be self explanatory. The code is broken up into individual functions so if you want to see how one of the graphs work it should be straightforward.
+The code is a result of learning from various examples and online searches.
+
+It in essence reads the serial data from the MightyOhm using softSerial via a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently upload the result to radmon.org via a HTTP client GET. 
+
+The histogram graph utilises the circularBuffer library which made the  graphing relatively easy. 
+
+There are a number of networking functions which should be self explanatory ( mDNS, Web server, NTP client, serial to telnet/HTTP, unix syslog, OTA upgrades ). 
+
+The code is broken up into individual functions so if you want to see how one of the functions work it should be straightforward.
 
 Download the correct ino sketch file for your hardware and check the list of libraries included in the sketch and ensure they are all installed.
+
 If I recall correctly all libraries are available via the Arduino Library Manager.
 
-Software available at:
+Software is available at:
 https://github.com/Whyzanet/WhyzaGC
 
 At the top of the sketch are the variables that will need changing for your specific environment.
