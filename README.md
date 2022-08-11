@@ -167,7 +167,7 @@ The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the d
 
 In addition to giving off radiation, Vaseline Glass/Uranium is also fluorescent bright green under UV light.
 
-An airplane flight would also be an interesting test environment due to increased radiation levels at altitude.
+An airplane flight would also be an interesting test environment due to increased cosmic radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles.
 
 ## ESP8266/ESP32/OLED specific settings
 
