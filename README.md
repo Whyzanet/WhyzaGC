@@ -107,7 +107,7 @@ After verifying the software below and the hardware is functional by connecting 
 
 ## Software:
 
-Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
+Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both the Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
 The code is a result of learning from various examples and online searches.
 
