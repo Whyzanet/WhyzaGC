@@ -101,7 +101,7 @@ Secondly connect the Huzzah's 3.3v and GND pins to the MightOhm's battery connec
 
 You will notice in the above photo I have removed the stacking header pins on the bottom of the Huzzah but have not cut off the 1 pin for the VBUS/USB connection. I have bent it at a right angle so I can connect a 5v supply to power the Feather Huzzah (and charge the Li-Po battery).
 
-Note that when the Huzzah is mounted in the MightOhm, access is lost to the onboard USB serial connection so you will need to upload the software mentioned below before final assembly. Once the software is loaded, you can use the OTA WiFi update feature if required when the Huzzah is mounted in it's final position in the MightyOhm Geiger for upgrades. 
+Note that when the Huzzah is mounted in the MightOhm, access is lost to the onboard USB serial connection so you will need to upload the software mentioned below before final assembly. Once the software is loaded, you can use the OTA WiFi update feature if required when the Huzzah is mounted in its final position in the MightyOhm Geiger for upgrades. 
 
 After verifying the software below and the hardware is functional by connecting the Li-Po battery and checking operation, only then apply the double sided tape and secure the Feather Huzzah to the MightyOhm AAA battery space, and the Li-Po battery to the rear side of the MightyOhm.
 
