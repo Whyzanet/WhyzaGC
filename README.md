@@ -21,7 +21,7 @@ I initially started with the ESP8266 and then 'upgraded' to the ESP32 to take ad
 
 As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual core functionality.
 
-I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power ! There doesn't seem many places online where you can observe background radiation levels worldwide.
+I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power !
 
 I bought from ebay a piece of Vaseline glass to test out the meter's functionality.
 
