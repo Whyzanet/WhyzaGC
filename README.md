@@ -149,7 +149,8 @@ WiFi software updates and HTTP server diagnostics solve the issue of the USB ser
 
 You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to nable radmon.org uploads if startup behavior is enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
-Note: I am no coder expert and have basically fumbled my way through getting something functional on what is one of my first Arduino projects. I am sure the code could be a lot more efficient and improved upon which would be good to see if someone has the inclination. Meanwhile it is what it is.....and I hope it gives others guidance in achieving whatever you are looking for.
+The code is a result of learning many new skills along the way from various examples and online searches. 
+The code simply reads the serial data from the MightyOhm using softSerial on a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently uploads the result to radmon.org. The histogram graph utilises the circularBuffer library which made this graphing relatively easy. The code is broken up into individual functions and hopefully is quiet readable if you are wanting to modify.
 
 ## ESP8266/ESP32/OLED specific settings
 
