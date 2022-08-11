@@ -157,7 +157,8 @@ You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi
 
 ## Testing
 
-Vaseline glass contains uranium which makes it a useful item for background level radiation testing ( as do granite kitchen benchtops ). The piece of Vaseline glass I have will cause a count of around 135 CPM when up close to the detector tube.
+Vaseline glass contains uranium which makes it a useful item for background level radiation testing ( as do granite kitchen benchtops I have read ). 
+The piece of Vaseline glass I have will cause a count of around 135 CPM when up close to the detector tube.
 
  Around 18 CPM is normal for background radiation with the SBM20 detector tube.
 
