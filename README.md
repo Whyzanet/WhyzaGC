@@ -155,6 +155,8 @@ WiFi software updates and HTTP server diagnostics solve the issue of the USB ser
 
 You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to nable radmon.org uploads if startup behavior is enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
+Testing with the Vaseline glass I have causes the counter to max out at around 135 CPM ( Counts per minute ).
+
 ## ESP8266/ESP32/OLED specific settings
 
 Other than the expected differences in libraries for the ESP8266 & ESP32 ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
