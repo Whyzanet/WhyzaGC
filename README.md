@@ -155,6 +155,8 @@ WiFi software updates and HTTP server diagnostics solve the issue of the USB ser
 
 You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to nable radmon.org uploads if startup behavior is enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
+## Testing
+
 Vaseline glass is a useful item for background level radiation testing. The piece of Vaseline glass I have will cause a count of around 135 CPM when up close to the detector tube. Around 18 CPM is normal for background radiation with the SBM20 detector tube.
 
  The SBM20 detects limited range beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
