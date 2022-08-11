@@ -159,8 +159,6 @@ Vaseline glass is a useful item for background level radiation testing. The piec
 
  The SBM20 detects limited range beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ). 
 
-This makes me assume the Vaseline glass must be a beta particle source due to its limited range.
-
 ## ESP8266/ESP32/OLED specific settings
 
 Other than the expected differences in libraries for the ESP8266 & ESP32 ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
