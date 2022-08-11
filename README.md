@@ -5,16 +5,22 @@ permlink: /README.md/
 title: README
 ---
 
-Arduino code for the wireless Adafruit Arduino Feather HUZZAH ESP8266 & ESP32 v2 with Adafruit Featherwing 128x64 OLED to interface with the MightyOhm Gieger Counter
+This project is about adding a wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 with Adafruit Featherwing 128x64 OLED to interface with the self-assembled MightOhm Geiger Kit.
 
 ![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
 
+## Introduction:
 
-## Description:
+I am always on the lookout for unique and interesting kits to build which led to me discovering the MightOhm Geiger kit. 
+While there are a couple of other geiger kits around, the fact that the MightOhm was in stock ( rare in these post covid times! ), it included a commonly available detector tube ( for relative data comparisions ), its serial output, along with its steam punk looks, it had me sold. 
 
-This project is about adding a wireless Adafruit Arduino Feather Huzzah ESP8266 or ESP32 and OLED screen to the self-assembled MightOhm Geiger Kit linked below. 
+While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino. I found a dated project using the Huzzah and MightyOhm and after reseaching parts availability, I decided to do my own Arduino project from scratch. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
 
-I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to the added NeoPixel RGB LED and dual core functionality, which is discussed below.
+I initially started with the ESP8266 and then 'upgraded' to the ESP32 to take advantage of the dual core as I ran into limitations multitasking on the ESP8266 as discussed below. 
+
+As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual core functionality.
+
+I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power !
 
 It is recommended to read all of this document before commencing the project.
 
@@ -22,10 +28,10 @@ It is recommended to read all of this document before commencing the project.
 
 Adafruit Feather Huzzah ESP8266 and ESP32 v2 support, OLED display, Li-Po battery
 
-Button inputs for 4 display modes showing different data formats.
+Button inputs for 4 OLED display modes showing different data formats.
 Includes bar meter strength graphs, auto scaling histogram and detailed data. Photos below.
 
-radmon.org data upload every 60 secs
+Radmon.org data upload every 60 secs
 
 https://radmon.org/index.php
 
