@@ -161,7 +161,7 @@ Vaseline glass is a useful item for background level radiation testing. The piec
  
 The Vaseline glass’s uranium radiation is mostly stopped by aluminum, which fits the definition of being mostly beta radiation. 
 
-As well as giving off radiation, Vaseline Glass/Uranium is also fluorescent bright green under UV light.
+In addition to giving off radiation, Vaseline Glass/Uranium is also fluorescent bright green under UV light.
 
 ## ESP8266/ESP32/OLED specific settings
 
