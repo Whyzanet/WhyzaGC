@@ -161,6 +161,8 @@ Vaseline glass is a useful item for background level radiation testing. The piec
  
 The Vaseline glass’s uranium radiation is mostly stopped by aluminum, which fits the definition of being mostly beta radiation. 
 
+As well as giving off radiation, Vaseline Glass/uranium is fluorescent bright green under UV light
+
 ## ESP8266/ESP32/OLED specific settings
 
 Other than the expected differences in libraries for the ESP8266 & ESP32 ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
