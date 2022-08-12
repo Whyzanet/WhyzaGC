@@ -175,7 +175,7 @@ The SBM20 detects limited range beta particle radiation and penetrating long ran
  
 The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the definition of being mostly beta radiation. 
 
-In addition to giving off radiation, Vaseline Glass/Uranium is also fluorescent bright green under UV light.
+In addition to ( and independently of ) giving off radiation, Vaseline glass/uranium is also a fluorescent bright green under UV light.
 
 An airplane flight would also be an interesting test environment due to increased cosmic radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles.
 
