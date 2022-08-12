@@ -75,7 +75,7 @@ https://www.adafruit.com/product/2830
 
 Micro USB (Huzzah ESP8266) or USB C (Huzzah ESP32 v2) cable to connect your PC to the Feather
 
-Li-Po battery to replace the original AAA battery
+Li-Po battery to replace the original AAA batteries
 
 Double sided tape.
 
