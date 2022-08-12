@@ -5,15 +5,15 @@ permlink: /README.md/
 title: README
 ---
 
-This project is about adding a wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 with Adafruit Featherwing 128x64 OLED to interface with the self-assembled MightOhm Geiger Kit.
+This project is about adding a wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 with Adafruit Featherwing 128x64 OLED to interface with the self-assembled MightyOhm Geiger Kit.
 
 ![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
 
 ## Introduction:
 
-I am always on the lookout for unique and interesting kits to build which led to me discovering the MightOhm Geiger kit.
+I am always on the lookout for unique and interesting kits to build which led to me discovering the MightyOhm Geiger kit.
 
-While there are a couple of other geiger kits around, the fact that the MightOhm was in stock ( rare in these post covid times! ), it included a commonly used detector tube ( for relative data comparisons ), its serial output, along with its steampunk looks, it had me sold. It was also a good opportunity to learn a lot more about radiation and our environment. 
+While there are a couple of other geiger kits around, the fact that the MightyOhm was in stock ( rare in these post covid times! ), it included a commonly used detector tube ( for relative data comparisons ), its serial output, along with its steampunk looks, it had me sold. It was also a good opportunity to learn a lot more about radiation and our environment. 
 
 While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino. I found a dated project using the Huzzah and MightyOhm and after researching parts availability, I decided to do my own Arduino project from scratch as I wanted to increase my Arduino coding skills. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
 
@@ -42,7 +42,7 @@ Web server diagnostics available via HTTP over port 80 ( data, radmon.org upload
 
 Blue LED/Neopixel heartbeat, Red LED CPS ( Counts per Second )
 
-Monitoring of MightOhm's serial data for disconnections.
+Monitoring of MightyOhm's serial data for disconnections.
 
 MightyOhm serial data over HTTP and Telnet
 
@@ -58,7 +58,7 @@ Unix syslog status messages to your syslog server
 
 ## Parts list
 
-MightOhm Gieger
+MightyOhm Gieger
 https://mightyohm.com/blog/products/geiger-counter/
 
 plus either Feather Huzzah ESP8266
@@ -85,23 +85,23 @@ Vaseline or uranium glass as a source of radiation.
 
 ## Assembly
 
-While assembling your MightOhm if you are yet to do so, do not install the AAA battery holder as this is where the Feather Huzzah is to be placed. If you have assembled your kit, you will need to remove the battery holder.
+While assembling your MightyOhm if you are yet to do so, do not install the AAA battery holder as this is where the Feather Huzzah is to be placed. If you have assembled your kit, you will need to remove the battery holder.
 
 Start by soldering the stacking headers to the Huzzah and the supplied headers on the Featherwing OLED as documented at the Adafruit's online guide. 
 
 Then connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200 baud.  You should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
 
-Next we need to connect the MightOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the Mighyohm. 
+Next we need to connect the MightyOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the MightyOhm. 
 
-With the rear of the MightOhm accessible, the first is the MightOhm geiger serial TX pin which is found on J7 pin 4 on the mightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
+With the rear of the MightyOhm accessible, the first is the MightyOhm geiger serial TX pin which is found on J7 pin 4 on the MightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
 
-Secondly connect the Huzzah's 3.3v and GND pins to the MightOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this document, or Adafruit's pinout images online.
+Secondly connect the Huzzah's 3.3v and GND pins to the MightyOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this document, or Adafruit's pinout images online.
 
 ![underside](https://user-images.githubusercontent.com/109115488/183534736-6471d7e9-a969-49c6-ac1c-33ec735b5cfa.jpg)
 
 You will notice in the above photo I have removed the stacking header pins on the bottom of the Huzzah but have not cut off the 1 pin for the VBUS/USB connection. I have bent it at a right angle so I can connect a 5v supply to power the Feather Huzzah (and charge the Li-Po battery).
 
-Note that when the Huzzah is mounted in the MightOhm, access is lost to the onboard USB serial connection so you will need to upload the software mentioned below before final assembly. Once the software is loaded, you can use the OTA WiFi update feature if required when the Huzzah is mounted in its final position in the MightyOhm Geiger for upgrades. 
+Note that when the Huzzah is mounted in the MightyOhm, access is lost to the onboard USB serial connection so you will need to upload the software mentioned below before final assembly. Once the software is loaded, you can use the OTA WiFi update feature if required when the Huzzah is mounted in its final position in the MightyOhm Geiger for upgrades. 
 
 After verifying the software below and the hardware is functional by connecting the Li-Po battery and checking operation, only then apply the double sided tape and secure the Feather Huzzah to the MightyOhm AAA battery space, and the Li-Po battery to the rear side of the MightyOhm.
 
@@ -161,7 +161,7 @@ http://whyzagc-esp.local/upload
 
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary in to the same location as the ino sketch file.
 
-WiFi software updates and HTTP server diagnostics solve the issue of the USB serial port being inaccessible when the Huzzah is mounted in the MightOhm's original battery location, preventing USB serial port upgrades and monitoring.
+WiFi software updates and HTTP server diagnostics solve the issue of the USB serial port being inaccessible when the Huzzah is mounted in the MightyOhm's original battery location, preventing USB serial port upgrades and monitoring.
 
 You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to nable radmon.org uploads if startup behavior is enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset.
 
@@ -203,7 +203,7 @@ https://mightyohm.com/forum/viewtopic.php?t=3504
 
 Finally I also have the MightyOhm pulse pin ( J6 pin 2 ) connected to pin 35 on the Pi 4 so that a bash script can look for a rising edge on GPIO 19. I use this to log occurrences of high CPS's for when I need to reconfirm the randomness of the universe. 
 
-MightOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
+MightyOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
 
 ![rpi-connections](https://user-images.githubusercontent.com/109115488/183542370-b1425d1e-df4b-43f3-ac72-6ed607074740.jpg)
 
