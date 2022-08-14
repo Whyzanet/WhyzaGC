@@ -91,7 +91,7 @@ Vaseline or uranium glass as a source of radiation.
 
 While assembling your MightyOhm if you are yet to do so, do not install the AAA battery holder as this is where the Feather Huzzah is to be placed. If you have assembled your kit, you will need to remove the battery holder.
 
-Start by soldering the stacking headers to the Huzzah and the supplied headers on the Featherwing OLED as documented at the Adafruit's online guide. 
+Start by soldering the stacking headers to the Huzzah and the supplied headers on the Featherwing OLED as documented at the Adafruit's online guide for your hardware. Familiarise yourself with all the documentation.
 
 Then connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200 baud. After selecting the correct board, you should be able to then load and run sample code from the Arduino IDE under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
 
