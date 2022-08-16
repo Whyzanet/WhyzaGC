@@ -207,11 +207,11 @@ To locate the correct binary for upload, within the Arduino IDE interface select
 
 WiFi software updates, HTTP server diagnostics and MightyOhm serial port redirection over telnet/HTTP solve the issue of the USB serial port being inaccessible when the Huzzah is mounted in the MightyOhm's original battery location, preventing USB serial port upgrades, diagnostic monitoring and raw MightyOhm serial port data access.
 
-You can Enable/Disable WiFi through buttons B&C for portable/low power use. WiFi disable will also disable radmon.org updates and will require a reset to enable radmon.org uploads if startup behavior is enabled. As such if you toggle WiFi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset....useful for testing as per below.
+You can Enable/Disable WiFi through buttons B&C for portable/low power use. WiFi disable will also disable radmon.org updates and will require a reset to enable radmon.org uploads if startup behavior is enabled. As such if you toggle WiFi off and back on, you will have WiFi connectivity but radmon updates are disabled until the next reset....useful for testing as per below.
 
 ## Testing
 
-Vaseline glass contains uranium which makes it a useful item for background level radiation testing. Other options are granite benchtops, some types of FiestaWare, or chunks of uranium... http://unitednuclear.com/
+Vaseline glass contains uranium which makes it a useful item for background level radiation testing. Other options are volcanic rock, granite benchtops, some types of FiestaWare, or chunks of uranium... http://unitednuclear.com/
 
 The piece of Vaseline glass I have will cause a count of around 135 CPM when up close to the detector tube which is a bit more than the average background levels of around 18 CPM with the SBM20 detector tube.
 
