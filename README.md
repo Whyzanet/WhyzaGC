@@ -125,7 +125,7 @@ The following libraries are available via the Arduino Library Manager and will n
 
 ESPSoftwareSerial, Tlog, NTPClient, Adafruit_GFX, Adafruit_SH110X, Adafruit Feather OLED, Adafrui NeoPixel ( ESP32 ), Uptime Library, CircularBuffer.
 
-The following libraries will need to be downloaded:
+The following libraries will need to be downloaded to your library directory:
 
 movingAvg:
 
