@@ -211,18 +211,19 @@ You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi
 
 ## Testing
 
-Vaseline glass contains uranium which makes it a useful item for background level radiation testing ( as do granite kitchen benchtops I have read ).
+Vaseline glass contains uranium which makes it a useful item for background level radiation testing.
 
 The piece of Vaseline glass I have will cause a count of around 135 CPM when up close to the detector tube which is a bit more than the average background levels of around 18 CPM with the SBM20 detector tube.
 
-The SBM20 detects limited range high energy beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ). 
+The SBM20 detects limited range high energy beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
  
 The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the definition of being mostly beta radiation. 
 
 In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
-An airplane flight would also be an interesting test environment due to increased cosmic ( though less terrestrial ) radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles.
+I also have a ‘ionizing anti EMF’ volcanic pendant necklace which gives a count of over 70 CPM, about 3.5 mSieverts/year. Despite the glossy product documentation listing a long list of varied health benefits if worn on the skin due to its ‘scalar energy’, it does not mention anywhere that it is ( minimally ) radioactive. 
 
+An airplane flight would also be an interesting test environment due to increased cosmic ( though less terrestrial ) radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Calculator available at https://jag.cami.jccbi.gov/
 
 ## ESP8266/ESP32/OLED specific settings
 
