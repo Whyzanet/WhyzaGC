@@ -211,7 +211,7 @@ You can Enable/Disable WiFi through buttons B&C for portable/low power use. WiFi
 
 ## Testing
 
-Vaseline glass contains uranium which makes it a useful item for background level radiation testing.
+Vaseline glass contains uranium which makes it a useful item for background level radiation testing. Other options are granite benchtops, some types of FiestaWare, or chunks of uranium... http://unitednuclear.com/
 
 The piece of Vaseline glass I have will cause a count of around 135 CPM when up close to the detector tube which is a bit more than the average background levels of around 18 CPM with the SBM20 detector tube.
 
@@ -267,6 +267,28 @@ Button B display
 
 Button C display
 ![c](https://user-images.githubusercontent.com/109115488/183542965-d20e37c1-c1be-48f8-adb3-025e99516f57.jpg)
+
+Radmon Site
+![Radmon-site](https://user-images.githubusercontent.com/109115488/184986769-9446e31d-5155-4078-8dea-657e5d715cdd.png)
+ 
+Radmon data
+![radmon-12hr](https://user-images.githubusercontent.com/109115488/184986777-30e85e87-a652-45a8-9987-b25e3880f064.png)
+![radmon-1month](https://user-images.githubusercontent.com/109115488/184986785-746c713a-a424-409b-9e0b-4c1065f6a507.png)
+
+HTTP Diagnostics:
+![gc-diags](https://user-images.githubusercontent.com/109115488/184987250-8a6153ce-7e5f-45d1-94b2-17fc3f9517e0.png)
+
+Telnet output of MightyOhm serial data
+![gc-telnet](https://user-images.githubusercontent.com/109115488/184987262-78afafae-8e1f-4c8e-927b-bef9ad719035.png)
+
+Raspberry Pi Graphs using rrdtool
+![rpi-graph](https://user-images.githubusercontent.com/109115488/184986901-79bdcfbd-5aa8-444f-a940-c020fcd8be97.png)
+
+Vaseline Glass sourced from Ebay
+![vaseline glass](https://user-images.githubusercontent.com/109115488/184986268-821d0b7b-8cff-45dc-9551-0ad31935eb98.jpg)
+
+In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
+![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
 
 Adafruit Feather Huzzah ESP8266 pinout 
 
