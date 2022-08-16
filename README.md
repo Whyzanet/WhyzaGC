@@ -227,7 +227,7 @@ An airplane flight would also be an interesting test environment due to increase
 
 ## ESP8266/ESP32/OLED specific settings
 
-Other than the expected differences in libraries for the ESP8266 & ESP32 ( ESP8266WiFi.h/WiFi.h and ESP8266WebServer.h/WebServer.h ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
+Other than the expected differences in libraries for the ESP8266 & ESP32 retrospectively ( ESP8266WiFi.h/WiFi.h, ESP8266WebServer.h/WebServer.h and ESP8266mDNS/ESPmDNS ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
 
 As such in the ESP32 code I have set the radmon.org update function to utilse CPU0 rather than CPU1 which all other code runs on by default. 
 
