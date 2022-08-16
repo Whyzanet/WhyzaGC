@@ -113,9 +113,7 @@ After verifying the software below and the hardware is functional by connecting 
 
 Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both the Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2
 
-The code is a result of learning from various examples and online searches.
-
-It in essence reads the serial data from the MightyOhm using softSerial via a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently upload the result to radmon.org via a HTTP client GET. 
+The code in essence reads the serial data from the MightyOhm using softSerial via a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently upload the result to radmon.org via a HTTP client GET. 
 
 The histogram graph utilises the circularBuffer library which made the  graphing relatively easy. 
 
