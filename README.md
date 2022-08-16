@@ -161,11 +161,17 @@ The following libraries are available via the Arduino Library Manager and will n
 ESPSoftwareSerial, Tlog, NTPClient, Adafruit_GFX, Adafruit_SH110X, Adafruit Feather OLED, Adafrui NeoPixel ( ESP32 ), Uptime Library, CircularBuffer.
 
 The following libraries will need to be downloaded:
+
 movingAvg:
+
 https://github.com/JChristensen/movingAvg
+
 Syslog:
+
 https://github.com/arcao/Syslog
+
 ESP8266mDNS ( for ESP8266 ):
+
 https://github.com/LaborEtArs/ESP8266mDNS
 
 Upload the sketch and see if there are any missing libraries you need to fix..
