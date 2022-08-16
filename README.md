@@ -121,6 +121,19 @@ There are a number of networking functions which should be self explanatory ( mD
 
 The code is broken up into individual functions so if you want to see how one of the functions work it should be straightforward.
 
+Below is a list of the main functions:
+Wifion - Activate WiFi, setup Web server, OTA upgrades and NTP client
+serialmon - Monitor the MightyOhm serial connection for disconnects longer than 15 seconds
+grab - Read the MightyOhm serial data from softSerial GPIO RX pin
+process - Check for valid MightyOhm EOL serial data, flash the heartbeat LED, extract the required data for variables, averages and histogram display.
+grabgraphdata - Grab current data for histogram circularBuffer
+averagedata - average CPM data for radmon update
+radmon - Once per minute flash the NeoPixel purple ( ESP32), perform the HTTP Get with radmon.org, flash the NeoPixel ( ESP32 ) red or green on the result.
+handleRootPath - configure the web diagnostics on the HTTP server
+logstats - send Unix syslog messages each hour
+Buttons and buttonN - Check for button input and call the correct buttonN function to display outputs and WiFi toggle.
+runntp - Update NTP time at update interval
+
 Download the correct ino sketch file for your hardware and check the list of libraries included in the sketch and ensure they are all installed.
 
 If I recall correctly all libraries are available via the Arduino Library Manager.
