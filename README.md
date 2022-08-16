@@ -113,18 +113,37 @@ After verifying the software below and the hardware is functional by connecting 
 
 Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both the Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2.
 
-Arduino software is available at:
+Arduino software for ESP8266 and ESP32 versions are available at:
 
 https://github.com/Whyzanet/WhyzaGC
 
-At the top of the sketch are the variables that will need changing for your specific environment.
-Register with radmon.org first so you have your required credentials. 
+At the top of the sketch are the variables that will need changing for your specific environment. Register with radmon.org first so you have your required credentials.
 
-The code in essence reads the serial data from the MightyOhm using SoftwareSerial via a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently upload the result to radmon.org via a HTTP client GET. 
+Download the correct ino sketch file for your hardware and check the list of libraries included in the sketch and ensure they are all installed.
 
-The histogram graph utilises the circularBuffer library which made the  graphing relatively easy. 
+The following libraries are available via the Arduino Library Manager and will need to be installed:
 
-There are a number of networking functions which should be self explanatory ( mDNS, Web server, NTP client, serial to telnet/HTTP, unix syslog, OTA upgrades ). 
+ESPSoftwareSerial, Tlog, NTPClient, Adafruit_GFX, Adafruit_SH110X, Adafruit Feather OLED, Adafrui NeoPixel ( ESP32 ), Uptime Library, CircularBuffer.
+
+The following libraries will need to be downloaded:
+
+movingAvg:
+
+https://github.com/JChristensen/movingAvg
+
+Syslog:
+
+https://github.com/arcao/Syslog
+
+ESP8266mDNS ( for ESP8266 ):
+
+https://github.com/LaborEtArs/ESP8266mDNS
+
+The code in essence reads the serial data from the MightyOhm using SoftwareSerial via a GPIO pin, displays this data in various ways on the OLED, and uses movingAvg to average the CPM ( Count per Minute ) over 1 minute and subsequently upload the result to radmon.org via a HTTP client GET.
+
+The histogram graph utilises the circularBuffer library which made the graphing relatively easy.
+
+There are a number of networking functions which should be self explanatory ( mDNS, Web server, NTP client, serial to telnet/HTTP, unix syslog, OTA upgrades ).
 
 The code is broken up into individual functions so if you want to see how one of the functions work it should be straightforward.
 
@@ -143,7 +162,7 @@ process - Check for valid MightyOhm EOL serial data, flash the heartbeat LED, ex
 grabgraphdata - Grab current data for histogram circularBuffer
 
 averagedata - average CPM data for radmon update
- 
+
 radmon - Once per minute flash the NeoPixel purple ( ESP32), perform the HTTP Get with radmon.org, flash the NeoPixel ( ESP32 ) red or green on the result.
 
 handleRootPath - configure the web diagnostics on the HTTP server
@@ -153,26 +172,6 @@ logstats - send Unix syslog messages each hour
 Buttons and buttonN - Check for button input and call the correct buttonN function to display outputs and WiFi toggle.
 
 runntp - Update NTP time at update interval
-
-Download the correct ino sketch file for your hardware and check the list of libraries included in the sketch and ensure they are all installed. 
-
-The following libraries are available via the Arduino Library Manager and will need to be installed
-
-ESPSoftwareSerial, Tlog, NTPClient, Adafruit_GFX, Adafruit_SH110X, Adafruit Feather OLED, Adafrui NeoPixel ( ESP32 ), Uptime Library, CircularBuffer.
-
-The following libraries will need to be downloaded:
-
-movingAvg:
-
-https://github.com/JChristensen/movingAvg
-
-Syslog:
-
-https://github.com/arcao/Syslog
-
-ESP8266mDNS ( for ESP8266 ):
-
-https://github.com/LaborEtArs/ESP8266mDNS
 
 Upload the sketch and see if there are any missing libraries you need to fix..
 
