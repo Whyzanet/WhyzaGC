@@ -155,7 +155,7 @@ wifioff - deactivate wifi and radmon updates
 
 serialmon - Monitor the MightyOhm serial connection for disconnects longer than 15 seconds
 
-grab - Read the MightyOhm serial data from softSerial GPIO RX pin
+grab - Read the MightyOhm serial data from SoftwareSerial GPIO RX pin
 
 process - Check for valid MightyOhm EOL serial data, flash the heartbeat LED, extract the required data for variables, averages and histogram display.
 
