@@ -169,7 +169,7 @@ handleRootPath - configure the web diagnostics on the HTTP server
 
 logstats - send Unix syslog messages each hour
 
-Buttons and buttonN - Check for button input and call the correct buttonN function to display outputs and WiFi toggle.
+buttons and buttonX - Check for button input and call the correct buttonX function to display outputs and WiFi toggle.
 
 runntp - Update NTP time at update interval
 
