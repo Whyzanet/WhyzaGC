@@ -151,7 +151,7 @@ Below is a list of the main functions:
 
 wifion - Activate WiFi, setup Web server, OTA upgrades and NTP client
 
-wifioff - deactivate wifi and radmon updates
+wifioff - deactivate WiFi and radmon updates
 
 serialmon - Monitor the MightyOhm serial connection for disconnects longer than 15 seconds
 
@@ -175,7 +175,7 @@ runntp - Update NTP time at update interval
 
 Upload the sketch and see if there are any missing libraries you need to fix..
 
-Once the sketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable Wifi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb (A&B and B&C for a total of 5)
+Once the sketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable WiFi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb (A&B and B&C for a total of 5)
 
 USB serial port is set to 115200 baud and will display the MightyOhm Gieger serial output ( when accessible )
 
@@ -207,7 +207,7 @@ To locate the correct binary for upload, within the Arduino IDE interface select
 
 WiFi software updates, HTTP server diagnostics and MightyOhm serial port redirection over telnet/HTTP solve the issue of the USB serial port being inaccessible when the Huzzah is mounted in the MightyOhm's original battery location, preventing USB serial port upgrades, diagnostic monitoring and raw MightyOhm serial port data access.
 
-You can Enable/Disable Wifi through buttons B&C for portable/low power use. Wifi disable will also disable radmon.org updates and will require a reset to enable radmon.org uploads if startup behavior is enabled. As such if you toggle wifi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset....useful for testing as per below.
+You can Enable/Disable WiFi through buttons B&C for portable/low power use. WiFi disable will also disable radmon.org updates and will require a reset to enable radmon.org uploads if startup behavior is enabled. As such if you toggle WiFi off and back on, you will have WiFi connectivity but radmon updates are disabled until next reset....useful for testing as per below.
 
 ## Testing
 
