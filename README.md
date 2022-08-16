@@ -27,7 +27,7 @@ The MightyOhm measures background radiation levels, which Wikipedia defines as â
 
 While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino. I found a dated project using the Huzzah and MightyOhm and after researching parts availability, I decided to do my own Arduino project from scratch as I wanted to increase my Arduino coding skills. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
 
-I bought from ebay a piece of Vaseline glass to test out the meter's functionality.
+I bought from ebay a piece of Vaseline glass to test out the meter's functionality. Other test options are discussed below.
 
 It is recommended to read all of this document before commencing the project.
 
