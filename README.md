@@ -118,6 +118,8 @@ Arduino software for ESP8266 and ESP32 versions are available at:
 
 https://github.com/Whyzanet/WhyzaGC
 
+Note: The Feather HUzzah ESP8266 will require the CPU Frequency set to 160MHz to accomodate high values of CPS/CPM.
+
 At the top of the sketch are the variables that will need changing for your specific environment. Register with radmon.org first so you have your required credentials.
 
 Download the correct ino sketch file for your hardware and check the list of libraries included in the sketch and ensure they are all installed.
@@ -227,6 +229,8 @@ I also have a ‘nano technology, ionizing anti EMF’ volcanic pendant necklace
 An airplane flight would also be an interesting test environment due to increased cosmic ( though less terrestrial ) radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Calculator available at https://jag.cami.jccbi.gov/
 
 ## ESP8266/ESP32/OLED specific settings
+
+As noted above, the Feather HUzzah ESP8266 will require the CPU Frequency set to 160MHz to accomodate high values of CPS/CPM.
 
 Other than the expected differences in libraries for the ESP8266 & ESP32 retrospectively ( ESP8266WiFi.h/WiFi.h, ESP8266WebServer.h/WebServer.h and ESP8266mDNS/ESPmDNS ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
 
