@@ -314,9 +314,9 @@ Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitti
 
 ![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
 
-Fiesta tableware, United Nuclear testcard and uranium ore chunks.
+Fiesta tableware, volcanic pendant, United Nuclear testcard and uranium ore chunks.
 
-![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189281482-ce8b55ee-1464-4c2a-a793-822d1091e9c0.jpg)
+![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189282549-54f30927-5ccf-40b2-9b11-2017fbfefbd7.jpg)
 
 Adafruit Feather Huzzah ESP8266 pinout 
 
