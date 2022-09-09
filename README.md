@@ -288,16 +288,6 @@ Button C display
 
 ![c](https://user-images.githubusercontent.com/109115488/183542965-d20e37c1-c1be-48f8-adb3-025e99516f57.jpg)
 
-Radmon Site
-
-![Radmon-site](https://user-images.githubusercontent.com/109115488/184986769-9446e31d-5155-4078-8dea-657e5d715cdd.png)
- 
-Radmon data
-
-![radmon-12hr](https://user-images.githubusercontent.com/109115488/184986777-30e85e87-a652-45a8-9987-b25e3880f064.png)
-
-![radmon-1month](https://user-images.githubusercontent.com/109115488/184986785-746c713a-a424-409b-9e0b-4c1065f6a507.png)
-
 HTTP Diagnostics:
 
 ![gc-diags](https://user-images.githubusercontent.com/109115488/184987250-8a6153ce-7e5f-45d1-94b2-17fc3f9517e0.png)
@@ -317,6 +307,16 @@ Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitti
 Fiesta tableware, volcanic pendant, United Nuclear testcard and uranium ore chunks.
 
 ![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189282549-54f30927-5ccf-40b2-9b11-2017fbfefbd7.jpg)
+
+Radmon Site
+
+![Radmon-site](https://user-images.githubusercontent.com/109115488/184986769-9446e31d-5155-4078-8dea-657e5d715cdd.png)
+ 
+Radmon data
+
+![radmon-12hr](https://user-images.githubusercontent.com/109115488/184986777-30e85e87-a652-45a8-9987-b25e3880f064.png)
+
+![radmon-1month](https://user-images.githubusercontent.com/109115488/184986785-746c713a-a424-409b-9e0b-4c1065f6a507.png)
 
 Adafruit Feather Huzzah ESP8266 pinout 
 
