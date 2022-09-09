@@ -44,7 +44,7 @@ https://radmon.org/index.php
 
 Web server diagnostics available via HTTP over port 80 ( data, radmon.org upload status, debug, uptime )
 
-Blue LED/Neopixel heartbeat, Red LED CPS ( Counts per Second )
+Blue LED/Neopixel heartbeat, Red LED CPS ( for Counts per Second <= 5 )
 
 Monitoring of MightyOhm's serial data for disconnections.
 
