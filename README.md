@@ -244,7 +244,7 @@ Fiesta tableware red/orange plate: 6500 CPM
 
 ## ESP8266/ESP32/OLED specific settings
 
-As noted above, the Feather HUzzah ESP8266 will require the CPU Frequency set to 160MHz to accomodate high values of CPS/CPM.
+As noted above, the Feather Huzzah ESP8266 will require the CPU Frequency set to 160MHz to accomodate high values of CPS/CPM.
 
 Other than the expected differences in libraries for the ESP8266 & ESP32 retrospectively ( ESP8266WiFi.h/WiFi.h, ESP8266WebServer.h/WebServer.h and ESP8266mDNS/ESPmDNS ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
 
