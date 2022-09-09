@@ -229,11 +229,17 @@ I also have a ‘nano technology, ionizing anti EMF’ volcanic pendant necklace
 An airplane flight would also be an interesting test environment due to increased cosmic ( though less terrestrial ) radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Calculator available at https://jag.cami.jccbi.gov/
 
 Measured Test Results:
+
 Background radiation: 18 CPM
+
 Volcanic pendant: 90 CPM
+
 Vaseline glass: 173 CPM
+
 United Nuclear uranium ore chunks: 1700 CPM
+
 United Nuclear geiger counter test card: 2700 CPM
+
 Fiestaware Red/Orange plate: 6500 CPM
 
 ## ESP8266/ESP32/OLED specific settings
