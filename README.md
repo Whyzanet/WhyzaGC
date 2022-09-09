@@ -214,9 +214,9 @@ You can Enable/Disable WiFi through buttons B&C for portable/low power use. WiFi
 
 ## Testing
 
-Vaseline glass contains uranium which makes it a useful item for background level radiation testing. Other options are volcanic rock, granite benchtops, some types of FiestaWare, or chunks of uranium... http://unitednuclear.com/
+There are a number of items you can collect to test radiation. 
 
-The piece of Vaseline glass I have will cause a count of around 135 CPM when up close to the detector tube which is a bit more than the average background levels of around 18 CPM with the SBM20 detector tube.
+Vaseline glass contains uranium which makes it a useful item for background level radiation testing. It is easily available on Ebay. Other options are volcanic rock, granite benchtops, some types of FiestaWare, or chunks of uranium... http://unitednuclear.com/
 
 The SBM20 detects limited range high energy beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
  
@@ -224,9 +224,17 @@ The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the d
 
 In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
-I also have a ‘nano technology, ionizing anti EMF’ volcanic pendant necklace which gives a count of over 70 CPM, about 3.5 mSieverts/year. Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells ) if worn on the skin due to its ‘scalar energy’.
+I also have a ‘nano technology, ionizing anti EMF’ volcanic pendant necklace which gives a count of over 90 CPM, about 4.5 mSieverts/year. Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells ) if worn on the skin due to its ‘scalar energy’.
 
 An airplane flight would also be an interesting test environment due to increased cosmic ( though less terrestrial ) radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Calculator available at https://jag.cami.jccbi.gov/
+
+Measured Test Results:
+Background radiation: 18 CPM
+Volcanic pendant: 90 CPM
+Vaseline glass: 173 CPM
+United Nuclear uranium ore chunks: 1700 CPM
+United Nuclear geiger counter test card: 2700 CPM
+Fiestaware Red/Orange plate: 6500 CPM
 
 ## ESP8266/ESP32/OLED specific settings
 
