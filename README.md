@@ -316,8 +316,6 @@ Radmon data
 
 ![radmon-12hr](https://user-images.githubusercontent.com/109115488/184986777-30e85e87-a652-45a8-9987-b25e3880f064.png)
 
-![radmon-1month](https://user-images.githubusercontent.com/109115488/184986785-746c713a-a424-409b-9e0b-4c1065f6a507.png)
-
 Adafruit Feather Huzzah ESP8266 pinout 
 
 ![FeatherHuzzahESP8266pinout](https://user-images.githubusercontent.com/109115488/183532848-67e19153-23b0-45d9-b821-0f4a29993b36.png)
