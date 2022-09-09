@@ -216,7 +216,7 @@ You can Enable/Disable WiFi through buttons B&C for portable/low power use. WiFi
 
 There are a number of items you can collect to test radiation. 
 
-Vaseline glass contains uranium which makes it a useful item for background level radiation testing. It is easily available on Ebay. Other options are volcanic rock, granite benchtops, some types of FiestaWare, or chunks of uranium... http://unitednuclear.com/
+Vaseline glass contains uranium which makes it a useful item for background level radiation testing. It is easily available on Ebay. Other options are volcanic rock, granite benchtops, some types of Fiesta tableware, or chunks of uranium... http://unitednuclear.com/
 
 The SBM20 detects limited range high energy beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
  
@@ -240,7 +240,7 @@ United Nuclear uranium ore chunks: 1700 CPM
 
 United Nuclear geiger counter test card: 2700 CPM
 
-Fiestaware Red/Orange plate: 6500 CPM
+Fiesta tableware red/orange plate: 6500 CPM
 
 ## ESP8266/ESP32/OLED specific settings
 
