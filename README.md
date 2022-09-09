@@ -304,7 +304,7 @@ Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitti
 
 ![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
 
-Fiesta tableware plate, volcanic pendant, United Nuclear testcard and uranium ore chunks.
+Fiesta tableware plate, volcanic pendant, United Nuclear uranium ore chunks and testcard.
 
 ![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189282549-54f30927-5ccf-40b2-9b11-2017fbfefbd7.jpg)
 
