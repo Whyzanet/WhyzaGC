@@ -296,10 +296,6 @@ Telnet output of MightyOhm serial data
 
 ![gc-telnet](https://user-images.githubusercontent.com/109115488/184987262-78afafae-8e1f-4c8e-927b-bef9ad719035.png)
 
-Raspberry Pi Graphs using rrdtool
-
-![rpi-graph](https://user-images.githubusercontent.com/109115488/184986901-79bdcfbd-5aa8-444f-a940-c020fcd8be97.png)
-
 Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
 ![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
@@ -307,6 +303,10 @@ Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitti
 Fiesta tableware plate, volcanic pendant, United Nuclear uranium ore chunks and testcard.
 
 ![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189282549-54f30927-5ccf-40b2-9b11-2017fbfefbd7.jpg)
+
+Raspberry Pi Graphs using rrdtool
+
+![rpi-graph](https://user-images.githubusercontent.com/109115488/184986901-79bdcfbd-5aa8-444f-a940-c020fcd8be97.png)
 
 Radmon Site
 
