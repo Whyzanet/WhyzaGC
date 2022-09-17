@@ -419,7 +419,7 @@ void buttons () {  // check for button presses
     }
     else if (!digitalRead(buttonA)) {
       mode = (mode + 1);
-      if (mode == 5)
+    if (mode == 4 | mode == 5)
         mode = 1;
       gotButton = true;
     }
@@ -430,7 +430,7 @@ void buttons () {  // check for button presses
     else if (!digitalRead(buttonC)) {
       mode = (mode - 1);
       if (mode == 0 ) {
-        mode = 4;
+        mode = 3;
       }
       gotButton = true;
     }
