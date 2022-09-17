@@ -21,7 +21,7 @@ As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 
 
 I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power !
 
-While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino. I found a dated project using the Huzzah and MightyOhm and after researching parts availability, I decided to do my own Arduino project from scratch as I wanted to increase my Arduino coding skills. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
+While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino platforms. I found a dated project using the Feather Huzzah ESP8266 and the MightyOhm for inspiration but it was not going to compile on the current librarie , so I decided to do my own Arduino project from scratch as I also wanted to increase my Arduino coding skills. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
 
 It was also a good opportunity to learn a lot more about radiation and our environment. 
 
