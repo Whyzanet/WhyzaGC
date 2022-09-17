@@ -270,7 +270,7 @@ The other consideration is that I can confirm that OLED screen burn in does occu
 
 ## Additional Connections:
 
-I am connecting the VBUS/USB pin on the Huzzah to a Raspberry Pi 5V pin via the Pi GPIO header ( probably any 5v supply will suffice ), as well as a ground connection between the two boards. Current is usually around 110 mA, though will peak around 300 mA when charging the Li-Po battery.
+I am connecting the VBUS/USB pin on the Huzzah to a Raspberry Pi 5V pin via the Pi GPIO header as well as a ground connection between the two boards. Current is usually around 110 mA, though will peak at around 300 mA when charging the Li-Po battery which probabaly means any 5v supply will suffice. 
 
 I am also connecting the Gieger serial TX pin (J7 pin 4) to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
 On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool.
