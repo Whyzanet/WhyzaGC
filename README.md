@@ -62,7 +62,7 @@ Unix syslog status messages to your syslog server
 
 ## Parts list
 
-MightyOhm Gieger
+MightyOhm Gieger Counter DIY kit with clear case
 https://www.adafruit.com/products/483 and https://mightyohm.com/blog/products/geiger-counter/
 
 
