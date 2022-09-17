@@ -234,7 +234,7 @@ In addition to ( and independently of ) emitting radiation, Vaseline glass/urani
 
 I also have a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace which gives a relatively weak count of over 90 CPM, about 4.5 mSieverts/year. Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells and protection from harmful 5G technology ) if worn on the skin due to its ‘scalar energy’.
 
-I also picked up from United Nuclear a small speciman bottle of uranium ore chunks, a geiger counter test card and a Fiestaware plate, the latter having the greatest radiation emissions detected from all the samples I have.
+I also picked up from United Nuclear a small speciman bottle of uranium ore chunks, a geiger counter test card and a Fiestaware glazed plate, the latter having the greatest radiation emissions detected among all the samples I have.
 
 An airplane flight would also be an interesting test environment due to increased cosmic ( though less terrestrial ) radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Calculator available at https://jag.cami.jccbi.gov/
 
@@ -250,7 +250,7 @@ United Nuclear small speciman bottle of uranium ore chunks: 1700 CPM
 
 United Nuclear geiger counter test card: 2700 CPM
 
-Fiesta tableware red/orange plate: 6500 CPM
+Fiesta tableware red/orange glazed plate: 6500 CPM
 
 Maximum tested using a combination of the last 3 samples listed above: 208 CPS or 12500 CPM
 
@@ -312,7 +312,7 @@ Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitti
 
 ![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
 
-Fiesta tableware plate, therapeutic volcanic pendant, United Nuclear uranium ore chunks and geiger test card.
+Fiesta tableware plate, therapeutic volcanic pendant, United Nuclear uranium ore chunks and geiger counter test card.
 
 ![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189282549-54f30927-5ccf-40b2-9b11-2017fbfefbd7.jpg)
 
