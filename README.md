@@ -184,11 +184,11 @@ histogramData - Display histogram graph
 
 runntp - Update NTP time at update interval
 
-Upload the sketch and see if there are any missing libraries you need to fix..
+Upload the sketch and check for any missing libraries you may need.
 
 Once running, input is via the 3 OLED Featherwing buttons. Button A and Button C will cycle up and down respectively through the 3 available data display modes. Button B selects histogram display mode. See photos below of different display outputs.
 
-Buttons B&C together will toggle WiFi disable and enable, which I found easy to select as the buttons are small enough and so close together. WiFi disable will also disable radmon.org updates and will require a reset to enable radmon.org uploads if radmon startup behavior is enabled. As such if you toggle WiFi off and back on, you will have WiFi connectivity but radmon updates are disabled until the next reset....useful for testing, as per below.
+Buttons B & C together will toggle WiFi disable and enable, which I found easy to select as the buttons are small enough and so close together. WiFi disable will also disable radmon.org updates and will require a reset to enable radmon.org uploads if radmon startup behavior is enabled. As such if you toggle WiFi off and back on, you will have WiFi connectivity but radmon updates are disabled until the next reset....useful for testing, as per below.
 
 USB serial port is set to 115200 baud and will display the MightyOhm Gieger serial output ( when not mounted in kit and accessible ).
 
