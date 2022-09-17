@@ -5,7 +5,7 @@ permlink: /README.md/
 title: README
 ---
 
-This project is about adding a wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 with Adafruit Featherwing 128x64 OLED to interface with the self-assembled MightyOhm Geiger Kit.
+This project is about building your own wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 with Adafruit Featherwing 128x64 OLED addon to interface with the self-assembled MightyOhm Geiger Kit.
 
 ![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
 
