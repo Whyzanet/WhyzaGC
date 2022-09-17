@@ -5,7 +5,7 @@ permlink: /README.md/
 title: README
 ---
 
-This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 with Adafruit Featherwing 128x64 OLED addon to interface with the self-assembled DIY MightyOhm Geiger Kit.
+This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit.
 
 ![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
 
@@ -13,7 +13,7 @@ This project is about building your own DIY wireless Adafruit Arduino Feather HU
 
 I am always on the lookout for unique and interesting kits to build which led to me discovering the MightyOhm Geiger kit.
 
-While there are a couple of other geiger kits around, the fact that the MightyOhm was in stock ( rare in these post covid times! ), it included a commonly used detector tube ( for relative data comparisons ), its serial output, along with its steampunk looks, it had me sold. 
+While there are a couple of other geiger kits around, the fact that the MightyOhm was in stock ( rare in these post covid times! ), it included a commonly used detector tube ( for relative data comparisons ), its serial data output, along with its steampunk looks, it had me sold. 
 
 I initially started with the ESP8266 and then 'upgraded' to the ESP32 to take advantage of the dual core as I ran into limitations multitasking on the ESP8266 as discussed below. 
 
