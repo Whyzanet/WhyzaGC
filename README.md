@@ -172,7 +172,15 @@ handleRootPath - configure the web diagnostics on the HTTP server
 
 logstats - send Unix syslog messages each hour
 
-buttons and buttonX - Check for button input and call the correct buttonX function to display outputs and WiFi toggle.
+buttons - Check for button input 
+
+smallData - Display all data available with small small font
+
+mediumData - Display all Geiger Counter Data with medium size font
+
+largeData - Display mimimal CPS/CPM data with large font size
+
+histogramData - Display histogram data
 
 runntp - Update NTP time at update interval
 
