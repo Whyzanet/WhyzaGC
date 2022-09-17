@@ -186,7 +186,7 @@ runntp - Update NTP time at update interval
 
 Upload the sketch and see if there are any missing libraries you need to fix..
 
-Once the sketch is compiled and uploaded, input is via 5 featherwing button combinations. Button A, Button B, Button C, Button A&B ( default startup mode ) and finally Button B&C to disable and enable WiFi. See photos below of different display outputs. I found the Featherwing OLED buttons small enough and close enough to be able to use multiple button presses easily with my thumb (A&B and B&C for a total of 5)
+Once the sketch is compiled and uploaded, input is via the 3 featherwing buttons. Button A and Button C will cycle up and down through the available display modes. Button B will select histogram display. Button B&C together will toggle WiFi disable and enable, which I found easy to select as the buttons are small enough and so close together. See photos below of different display outputs.
 
 USB serial port is set to 115200 baud and will display the MightyOhm Gieger serial output ( when accessible )
 
