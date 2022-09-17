@@ -284,7 +284,7 @@ MightyOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Ora
 
 ![rpi-connections](https://user-images.githubusercontent.com/109115488/183542370-b1425d1e-df4b-43f3-ac72-6ed607074740.jpg)
 
-Default bootup/histogram display
+Default bootup/histogram display mode
 
 ![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
 
