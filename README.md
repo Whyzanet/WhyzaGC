@@ -186,7 +186,7 @@ runntp - Update NTP time at update interval
 
 Upload the sketch and see if there are any missing libraries you need to fix..
 
-Once the sketch is compiled and uploaded, input is via the 3 featherwing buttons. Button A and Button C will cycle up and down through the available display modes. Button B will select histogram display. Buttons B&C together will toggle WiFi disable and enable, which I found easy to select as the buttons are small enough and so close together. See photos below of different display outputs.
+Once running, input is via the 3 featherwing buttons. Button A and Button C will cycle up and down respectively through the available display modes. Button B will select the histogram display. Buttons B&C together will toggle WiFi disable and enable, which I found easy to select as the buttons are small enough and so close together. See photos below of different display outputs.
 
 USB serial port is set to 115200 baud and will display the MightyOhm Gieger serial output ( when accessible )
 
