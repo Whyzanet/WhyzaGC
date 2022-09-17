@@ -250,7 +250,7 @@ United Nuclear geiger counter test card: 2700 CPM
 
 Fiesta tableware red/orange plate: 6500 CPM
 
-Maximum tested using a combination of the above: 208 CPS or 12500 CPM
+Maximum tested using a combination of the last 3 samples listed above: 208 CPS or 12500 CPM
 
 ## ESP8266/ESP32/OLED specific settings
 
