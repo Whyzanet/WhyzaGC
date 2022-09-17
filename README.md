@@ -232,15 +232,17 @@ The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the d
 
 In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
-I also have a ‘nano technology, ionizing anti EMF’ volcanic pendant necklace which gives a count of over 90 CPM, about 4.5 mSieverts/year. Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells ) if worn on the skin due to its ‘scalar energy’.
+I also have a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace which gives a weak count of over 90 CPM, about 4.5 mSieverts/year. Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells ) if worn on the skin due to its ‘scalar energy’.
+
+I also picked up from United Nuclear uranium ore chunks, a geiger counter test card and a Fiestaware plate, which has the greatest radiation of all the samples I have.
 
 An airplane flight would also be an interesting test environment due to increased cosmic ( though less terrestrial ) radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Calculator available at https://jag.cami.jccbi.gov/
 
-Measured Test Results:
+Measured Test Results in order of strength:
 
 Background radiation: 18 CPM
 
-Volcanic pendant: 90 CPM
+Therapeutic volcanic pendant: 90 CPM
 
 Vaseline glass: 173 CPM
 
