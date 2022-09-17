@@ -52,7 +52,7 @@ MightyOhm serial data over HTTP and Telnet
 
 mDNS multicast name registration
 
-Neopixel radmon status indications. 
+Neopixel radmon status feedback. 
 
 OTA Software upgrades via WiFi
 
