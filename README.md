@@ -63,7 +63,7 @@ Unix syslog status messages to your syslog server
 ## Parts list
 
 MightyOhm Gieger
-https://mightyohm.com/blog/products/geiger-counter/
+https://mightyohm.com/blog/products/geiger-counter/ and 
 https://www.adafruit.com/products/483
 
 plus either Feather Huzzah ESP8266
