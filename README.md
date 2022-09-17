@@ -222,7 +222,7 @@ WiFi (OTA) software updates, HTTP server diagnostics and MightyOhm serial port r
 
 ## Testing
 
-There are a number of items you can collect to test radiation. 
+There are a number of items you can collect to test radiation detection. 
 
 The SBM20 tube detects limited range high energy beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
 
