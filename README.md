@@ -232,7 +232,7 @@ The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the d
 
 In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
-I also bought a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace which gives a relatively weak count of over 90 CPM, about 4.5 mSieverts/year ( the average annual background exposure is 1 mSieverts/year here in Australia ). Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells and protection from harmful 5G technology ) if worn on the skin due to its ‘scalar energy’.
+I also bought a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace and while it gives a relatively weak count among my samples of only 90+ CPM, that works out to about 4.5 mSieverts/year, which is 4.5 times the annual normal background exposure of 1 mSieverts/year here in Australia ( which is still very small ). Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells and protection from harmful 5G technology ) if worn on the skin due to its ‘scalar energy’.
 
 I also picked up from United Nuclear a small speciman bottle of uranium ore chunks, a geiger counter test card and a Fiestaware glazed plate, the latter having the greatest radiation emissions detected among all the samples I have.
 
