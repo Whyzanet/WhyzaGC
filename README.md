@@ -284,23 +284,23 @@ MightyOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Ora
 
 ![rpi-connections](https://user-images.githubusercontent.com/109115488/183542370-b1425d1e-df4b-43f3-ac72-6ed607074740.jpg)
 
-Default bootup/Button A & B display
+Default bootup/histogram display
 
 ![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
 
-Button A display
+Small size font all data display mode
 
 ![a](https://user-images.githubusercontent.com/109115488/183542943-c080e2a9-8f17-4930-82a1-04a2702ff9c8.jpg)
 
-Button B display
+Medium size font geiger data display mode
 
 ![b](https://user-images.githubusercontent.com/109115488/183542952-a5c750ff-7dba-4f3e-952d-4732805959bd.jpg)
 
-Button C display
+Large size font CPS & CPM display mode
 
 ![c](https://user-images.githubusercontent.com/109115488/183542965-d20e37c1-c1be-48f8-adb3-025e99516f57.jpg)
 
-HTTP Diagnostics:
+HTTP diagnostics:
 
 ![gc-diags](https://user-images.githubusercontent.com/109115488/184987250-8a6153ce-7e5f-45d1-94b2-17fc3f9517e0.png)
 
@@ -312,7 +312,7 @@ Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitti
 
 ![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
 
-Fiesta tableware plate, therapeutic volcanic pendant, United Nuclear uranium ore chunks and testcard.
+Fiesta tableware plate, therapeutic volcanic pendant, United Nuclear uranium ore chunks and geiger test card.
 
 ![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189282549-54f30927-5ccf-40b2-9b11-2017fbfefbd7.jpg)
 
