@@ -288,15 +288,15 @@ Default bootup/histogram display mode
 
 ![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
 
-Small size font all data display mode
+All data display mode
 
 ![a](https://user-images.githubusercontent.com/109115488/183542943-c080e2a9-8f17-4930-82a1-04a2702ff9c8.jpg)
 
-Medium size font geiger data display mode
+Geiger data display mode
 
 ![b](https://user-images.githubusercontent.com/109115488/183542952-a5c750ff-7dba-4f3e-952d-4732805959bd.jpg)
 
-Large size font CPS & CPM display mode
+CPS & CPM large display mode
 
 ![c](https://user-images.githubusercontent.com/109115488/183542965-d20e37c1-c1be-48f8-adb3-025e99516f57.jpg)
 
