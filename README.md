@@ -118,11 +118,11 @@ Arduino software for ESP8266 and ESP32 versions are available at:
 
 https://github.com/Whyzanet/WhyzaGC
 
+Download the correct ino sketch file for your hardware, either ESP8266 or ESP32. 
+
 Note: The Feather HUzzah ESP8266 will require the CPU Frequency set to 160MHz to accomodate high values of CPS/CPM.
 
 At the top of the sketch are the variables that will need changing for your specific environment. Register with radmon.org first so you have your required credentials.
-
-Download the correct ino sketch file for your hardware and check the list of libraries included in the sketch and ensure they are all installed.
 
 The following libraries are available via the Arduino Library Manager and will need to be installed:
 
