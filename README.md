@@ -218,7 +218,7 @@ http://whyzagc-esp.local/upload
 
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary into the same location as the ino sketch file.
 
-WiFi software updates, HTTP server diagnostics and MightyOhm serial port redirection over telnet/HTTP solve issues with the USB serial port being inaccessible when the Huzzah is mounted in the MightyOhm's original battery location, preventing USB serial port upgrades, diagnostic monitoring and raw MightyOhm serial port data access.
+WiFi (OTA) software updates, HTTP server for diagnostics and MightyOhm serial port redirection over telnet/HTTP workaround limitations with the USB serial port being inaccessible when the Huzzah is mounted in the MightyOhm's original battery location, preventing USB serial port upgrades, serial diagnostic monitoring and raw MightyOhm serial port data access.
 
 ## Testing
 
