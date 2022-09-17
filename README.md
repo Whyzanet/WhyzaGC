@@ -35,8 +35,8 @@ It is recommended to read all of this document before commencing the project.
 
 Adafruit Feather Huzzah ESP8266 and ESP32 v2 support, OLED display, Li-Po battery
 
-Button inputs for 4 OLED display modes showing different data formats.
-Includes bar meter strength graphs, auto scaling histogram and detailed data. Photos below.
+Button inputs select between 3 OLED data display modes showing different formats.
+Including bar meter strength graphs, detailed data, plus a auto scaling histogram. Photos below.
 
 Radmon.org data upload every 60 secs
 
@@ -186,7 +186,7 @@ runntp - Update NTP time at update interval
 
 Upload the sketch and see if there are any missing libraries you need to fix..
 
-Once running, input is via the 3 OLED Featherwing buttons. Button A and Button C will cycle up and down respectively through the 4 available display modes. Button B is a shortcut straight to the histogram display mode. See photos below of different display outputs.
+Once running, input is via the 3 OLED Featherwing buttons. Button A and Button C will cycle up and down respectively through the 3 available data display modes. Button B selects histogram display mode. See photos below of different display outputs.
 
 Buttons B&C together will toggle WiFi disable and enable, which I found easy to select as the buttons are small enough and so close together. WiFi disable will also disable radmon.org updates and will require a reset to enable radmon.org uploads if radmon startup behavior is enabled. As such if you toggle WiFi off and back on, you will have WiFi connectivity but radmon updates are disabled until the next reset....useful for testing, as per below.
 
@@ -249,6 +249,8 @@ United Nuclear uranium ore chunks: 1700 CPM
 United Nuclear geiger counter test card: 2700 CPM
 
 Fiesta tableware red/orange plate: 6500 CPM
+
+Maximum tested using a combination of the above: 208 CPS or 12500 CPM
 
 ## ESP8266/ESP32/OLED specific settings
 
