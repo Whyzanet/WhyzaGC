@@ -86,7 +86,7 @@ Double sided tape.
 
 Female breadboard jumper wires to connect to Raspberry Pi if desired.
 
-Vaseline/uranium glass or other sources of radiation noted in Testing below.
+A test source of radiation, discussed in Testing below.
 
 ## Assembly
 
