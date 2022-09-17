@@ -224,15 +224,15 @@ WiFi (OTA) software updates, HTTP server for diagnostics and MightyOhm serial po
 
 There are a number of items you can collect to test radiation. 
 
-Vaseline glass contains uranium which makes it a useful item for background level radiation testing. It is easily available on Ebay. Other options are volcanic rock, granite benchtops, some types of Fiesta tableware, or chunks of uranium... http://unitednuclear.com/
-
 The SBM20 tube detects limited range high energy beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
+
+Vaseline glass contains uranium which makes it a useful item for background level radiation testing and is easily available on Ebay. Other options are volcanic rock, granite benchtops, some types of Fiesta tableware, or chunks of uranium... http://unitednuclear.com/
  
 The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the definition of being mostly beta radiation. 
 
 In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
-I also have a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace which gives a relatively weak count of over 90 CPM, about 4.5 mSieverts/year ( the average annual background exposure is 1 mSieverts/year here in Australia ). Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells and protection from harmful 5G technology ) if worn on the skin due to its ‘scalar energy’.
+I also bought a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace which gives a relatively weak count of over 90 CPM, about 4.5 mSieverts/year ( the average annual background exposure is 1 mSieverts/year here in Australia ). Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells and protection from harmful 5G technology ) if worn on the skin due to its ‘scalar energy’.
 
 I also picked up from United Nuclear a small speciman bottle of uranium ore chunks, a geiger counter test card and a Fiestaware glazed plate, the latter having the greatest radiation emissions detected among all the samples I have.
 
