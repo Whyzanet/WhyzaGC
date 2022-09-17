@@ -174,13 +174,13 @@ logstats - send Unix syslog messages each hour
 
 buttons - Check for button input 
 
-smallData - Display all data available with small small font
+smallData - Display all data available in a small size font
 
-mediumData - Display all Geiger Counter Data with medium size font
+mediumData - Display all Geiger Counter Data in a medium size font
 
-largeData - Display mimimal CPS/CPM data with large font size
+largeData - Display mimimal CPS/CPM data in a large font size
 
-histogramData - Display histogram data
+histogramData - Display histogram graph
 
 runntp - Update NTP time at update interval
 
