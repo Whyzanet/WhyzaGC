@@ -226,11 +226,11 @@ There are a number of items you can collect to test radiation.
 
 The SBM20 tube detects limited range high energy beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
 
-Vaseline glass contains uranium which makes it a useful item for background level radiation testing and is easily available on Ebay. Other options are volcanic rock, granite benchtops, some types of glazing used in Fiesta tableware, or chunks of uranium... http://unitednuclear.com/
- 
+Vaseline glass contains uranium which makes it a useful item for background level radiation testing and is easily available on Ebay. 
 The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the definition of being mostly beta radiation. 
-
 In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
+
+Other testing options are volcanic rock, granite benchtops, some types of Fiesta tableware ( due to the colored glazing used ), or chunks of uranium.... http://unitednuclear.com/
 
 I also bought a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace and while it gives a relatively weak count among my samples of only 90+ CPM, that works out to about 4.5 mSieverts/year, which is 4.5 times the annual normal background exposure of 1 mSieverts/year here in Australia ( which is still very small ). Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells and protection from harmful 5G technology ) if worn on the skin due to its ‘scalar energy’.
 
