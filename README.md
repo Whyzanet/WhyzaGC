@@ -211,7 +211,7 @@ telnet whyzagc-esp.local
 
 Blue Heartbeat LED/Neopixel is triggered by an EOL from the Gieger serial output. Should flash 1 per second as a result. If Geiger serial EOL data is not detected, the heartbeat will stop.
 
-Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when aborting an unsuccessful update.
+Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when detecting an unsuccessful update.
 
 OTA upgrading of compiled sketch .bin via WiFi using the following URL.
 
