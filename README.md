@@ -78,10 +78,10 @@ https://www.adafruit.com/product/4650
 Stacking Headers for Feather - 12-pin and 16-pin female headers
 https://www.adafruit.com/product/2830
 
-Micro USB (Huzzah ESP8266) or USB C (Huzzah ESP32 v2) cable to connect your PC to the Feather
-
 Li-Po battery to replace the original AAA batteries
 https://www.adafruit.com/product/2011
+
+Micro USB (Huzzah ESP8266) or USB C (Huzzah ESP32 v2) cable to connect your PC to the Feather
 
 Double sided tape.
 
