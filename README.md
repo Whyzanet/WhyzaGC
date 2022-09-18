@@ -109,7 +109,7 @@ You will notice in the above photo I have removed the stacking header pins on th
 
 Note that when the Huzzah is mounted in the MightyOhm, access is lost to the onboard USB serial connection so you will need to upload the software mentioned below before final assembly. Once the software is loaded, you can use the OTA WiFi update feature if required when the Huzzah is mounted in its final position in the MightyOhm Geiger for upgrades. 
 
-After verifying the software below and the hardware is functional by connecting the Li-Po battery and checking operation, only then apply the double sided tape and secure the Feather Huzzah to the MightyOhm AAA battery space, and the Li-Po battery to the rear piece of plastic case on the MightyOhm.
+After verifying the software below and the hardware is functional by connecting the Li-Po battery and checking operation, only then apply the double sided tape and secure the Feather Huzzah to the MightyOhm AAA battery space, and the Li-Po battery to the rear piece of the plastic case on the MightyOhm.
 
 ## Software:
 
