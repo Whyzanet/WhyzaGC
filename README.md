@@ -289,7 +289,7 @@ Default bootup/histogram display mode
 
 ![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192123691-52e77460-48d9-4fd2-a95f-41f3cf3bae22.jpg)
 
-All data display mode while capturing a NightyOhm LED trigger
+All data display mode while capturing a MightyOhm LED trigger
 
 ![WhyzaGC-alldata1](https://user-images.githubusercontent.com/109115488/192136285-4fa3d755-e4f2-479a-9ceb-c7b95cd33153.jpg)
 
