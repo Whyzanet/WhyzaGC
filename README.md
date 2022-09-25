@@ -225,7 +225,7 @@ WiFi (OTA) software updates, HTTP server diagnostics and MightyOhm serial port r
 
 There are a number of items you can collect to test radiation detection. 
 
-The SBM20 tube detects limited range high energy beta particle radiation and penetrating long range gamma electromagnetic radiation, but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
+The SBM20 tube detects limited range high energy beta particle radiation ( also known as electrons ) and penetrating long range gamma electromagnetic radiation ( also known as protons ), but not short range alpha particle radiation which is stopped by the tube's metallic outer composition, which is fine as you don’t want to be playing with hazardous alpha radiation sources anyway ( e.g. a smoke alarm’s Americium-241 ).  
 
 Vaseline glass contains uranium which makes it a useful item for background level radiation testing and is easily available on Ebay. 
 The Vaseline glass’s radiation is mostly stopped by aluminum, which fits the definition of being mostly beta radiation. 
