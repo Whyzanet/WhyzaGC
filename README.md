@@ -295,7 +295,7 @@ All data display mode
 
 Geiger data display mode while capturing a LED flash
 
-![WhyzaGC-data](https://user-images.githubusercontent.com/109115488/192123396-a9e2b8c8-9a2a-4d27-9408-0cee730c01c3.jpg)
+![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192136210-afc1242c-24dd-4b21-b15a-db46118a23aa.jpg)
 
 CPS & CPM large display mode
 
