@@ -7,7 +7,7 @@ title: README
 
 This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit.
 
-![WhyzaGC-histogram](https://user-images.githubusercontent.com/109115488/192123356-b8635165-9b58-4a33-8240-b8c3816791fd.jpg)
+![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192123691-52e77460-48d9-4fd2-a95f-41f3cf3bae22.jpg)
 
 ## Introduction:
 
@@ -287,7 +287,7 @@ MightyOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Ora
 
 Default bootup/histogram display mode
 
-![WhyzaGC-histogram](https://user-images.githubusercontent.com/109115488/192123356-b8635165-9b58-4a33-8240-b8c3816791fd.jpg)
+![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192123691-52e77460-48d9-4fd2-a95f-41f3cf3bae22.jpg)
 
 All data display mode
 
