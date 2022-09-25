@@ -7,7 +7,7 @@ title: README
 
 This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit.
 
-![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
+![WhyzaGC-histogram](https://user-images.githubusercontent.com/109115488/192123356-b8635165-9b58-4a33-8240-b8c3816791fd.jpg)
 
 ## Introduction:
 
@@ -283,23 +283,23 @@ Finally I also have the MightyOhm pulse pin ( J6 pin 2 ) connected to pin 35 on 
 
 MightyOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
 
-![rpi-connections](https://user-images.githubusercontent.com/109115488/183542370-b1425d1e-df4b-43f3-ac72-6ed607074740.jpg)
+![WhyzaGC-rpi_wiring](https://user-images.githubusercontent.com/109115488/192123370-be4c7772-94e3-4354-a41b-df52f2c8204f.jpg)
 
 Default bootup/histogram display mode
 
-![gc](https://user-images.githubusercontent.com/109115488/183527736-65f04142-ec97-42df-9d83-001d34401015.jpg)
+![WhyzaGC-histogram](https://user-images.githubusercontent.com/109115488/192123356-b8635165-9b58-4a33-8240-b8c3816791fd.jpg)
 
 All data display mode
 
-![a](https://user-images.githubusercontent.com/109115488/183542943-c080e2a9-8f17-4930-82a1-04a2702ff9c8.jpg)
+![WhyzaGC-alldata](https://user-images.githubusercontent.com/109115488/192123385-fabe1dac-e7ef-474f-8cd2-60324cbf4730.jpg)
 
 Geiger data display mode
 
-![b](https://user-images.githubusercontent.com/109115488/183542952-a5c750ff-7dba-4f3e-952d-4732805959bd.jpg)
+![WhyzaGC-data](https://user-images.githubusercontent.com/109115488/192123396-a9e2b8c8-9a2a-4d27-9408-0cee730c01c3.jpg)
 
 CPS & CPM large display mode
 
-![c](https://user-images.githubusercontent.com/109115488/183542965-d20e37c1-c1be-48f8-adb3-025e99516f57.jpg)
+![WhyzaGC-largedata](https://user-images.githubusercontent.com/109115488/192123402-beeb0aa4-70b2-43d2-a367-72b785da4eda.jpg)
 
 HTTP diagnostics:
 
