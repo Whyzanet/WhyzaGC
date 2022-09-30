@@ -152,7 +152,7 @@ The histogram graph utilises the circularBuffer library which made the graphing 
 
 There are a number of networking functions which should be self explanatory ( mDNS, Web server, NTP client, serial to telnet/HTTP, unix syslog, OTA upgrades ).
 
-The random number generator uses the pulse signal from the MightyOhm to generate an  interrupt which will read the current value from a looping counter that counts from 0 to 15, which is then output as a hex value to serial/telnet/HTTP (Tlog). Collating and analying this random output is discussed below.
+The random number generator uses the pulse signal from the MightyOhm to generate an  interrupt which will read the current value from a looping counter ( basically a roulette wheel ) that loops and counts from 0 to 15, which is then output as a hex value to serial/telnet/HTTP (Tlog). Collating and analying this random output is discussed below.
 
 The code is broken up into individual functions so if you want to see how one of the functions work it should be straightforward.
 
@@ -194,7 +194,7 @@ Upload the sketch and check for any missing libraries you may need.
 
 randomise - looping counter from 0 to 15 roulette wheel used for random number generation. Pinned to CPU0 on ESP32.
 
-grabrandomnum - the function called by the interrupt to grab a number from the loop. Triggered by the pulse pin on the MightyOhm
+grabrandomnum - the function called by the interrupt to grab a number from the roulette wheel loop. Triggered by the pulse pin on the MightyOhm
 
 echorandom - Dislay the random number on a new line via Tlog to serial/telnet/HTTP.
 
