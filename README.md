@@ -191,7 +191,7 @@ runntp - Update NTP time at update interval
 
 Upload the sketch and check for any missing libraries you may need.
 
-randomise - looping counter from 0 to 15 used for random number generation. Pinned to CPU0 on ESP32.
+randomise - looping counter from 0 to 15 roulette wheel used for random number generation. Pinned to CPU0 on ESP32.
 
 grabrandomnum - the function called by the interrupt to grab a number from the loop. Triggered by the pulse pin on the MightyOhm
 
