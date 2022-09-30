@@ -64,7 +64,7 @@ NTP client for OLED and web server time display
 
 Unix syslog status messages to your syslog server
 
-Random number generator, generating 1 character for every two pulses detected.
+Random number generator at rate of 1 character per two pulses detected.
 
 ## Parts list
 
@@ -332,7 +332,7 @@ I collected random data from the Huzzah via the following command on my linux de
 
 nc whyzagc-esp.local 23 | tee -a rnd_nums.txt
 
-and waited about 5 days until I had about 15M rawa data.
+and waited about 5 days until I had about 15M raw data which gave me around 50K of binary random data once filtered. 
 
 I had to change line 6 in test_random_numbers.sh from
 
