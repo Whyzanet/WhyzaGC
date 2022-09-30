@@ -5,7 +5,7 @@ permlink: /README.md/
 title: README
 ---
 
-This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit.
+This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. I also added a random number generator based of the radiation count for fun.
 
 ![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192123691-52e77460-48d9-4fd2-a95f-41f3cf3bae22.jpg)
 
@@ -97,17 +97,19 @@ Start by soldering the stacking headers to the Huzzah and the supplied headers o
 
 Then connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200 baud in the Arduino IDE. After selecting the correct baud, you should be able to then load and run sample code under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
 
-Next we need to connect the MightyOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the MightyOhm. 
+Next we need to connect the MightyOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the MightyOhm.  Optionally you can include a 4th wire if you would like to enable and play with the random number generator. I used a small gauge wire so I was able to feed the 4 wires through the circuit board hole under the battery cover.
 
-With the rear of the MightyOhm accessible, the first is the MightyOhm geiger serial TX pin which is found on J7 pin 4 on the MightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the white wire shown below.
+With the rear of the MightyOhm accessible, the first wire to connect is the MightyOhm geiger serial TX pin which is found on J7 pin 4 on the MightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the blue wire shown below.
 
-Secondly connect the Huzzah's 3.3v and GND pins to the MightyOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this document, or Adafruit's pinout images online.
+If you want include the random number functionality, wire from the MightyOhm centre pulse pin on J6 to GPIO 12. GPIO 12 is pin 5 next to pin 6 noted above on both Huzzah versions, and is the yellow wire in the image below.
 
-![underside](https://user-images.githubusercontent.com/109115488/183534736-6471d7e9-a969-49c6-ac1c-33ec735b5cfa.jpg)
+Finally, connect the Huzzah's 3.3v and GND pins to the MightyOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this document, or Adafruit's pinout images online.
 
-You will notice in the above photo I have removed the stacking header pins on the bottom of the Huzzah but have not cut off the 1 pin for the VBUS/USB connection. I have bent it at a right angle so I can connect a 5v supply to power the Feather Huzzah (and charge the Li-Po battery).
+![WhyzaGC-underside wiring](https://user-images.githubusercontent.com/109115488/193185576-39bdc3c0-ae11-4c34-9da6-50260546a1f1.jpg)
 
-Note that when the Huzzah is mounted in the MightyOhm, access is lost to the onboard USB serial connection so you will need to upload the software mentioned below before final assembly. Once the software is loaded, you can use the OTA WiFi update feature if required when the Huzzah is mounted in its final position in the MightyOhm Geiger for upgrades. 
+You will notice in the above photo I have soldered a single stacking header pin on the bottom of the Huzzah on the VBUS/USB pin. I have soldered it at a right angle so I can connect Raspberry Pi 5v supply to power the Feather Huzzah (and charge the Li-Po battery) via a jumper cable from the Pi's header.
+
+Note that when the Huzzah is mounted in the MightyOhm, access is lost to the onboard USB serial connection so you will need to upload the software mentioned below before final assembly. Once the software is loaded, you can use the OTA WiFi update feature if required when the Huzzah is mounted in its final position in the MightyOhm Geiger for upgrades.
 
 After verifying the software below and the hardware is functional by connecting the Li-Po battery and checking operation, only then apply the double sided tape and secure the Feather Huzzah to the MightyOhm AAA battery space, and the Li-Po battery to the rear piece of the plastic case on the MightyOhm.
 
@@ -149,6 +151,8 @@ The histogram graph utilises the circularBuffer library which made the graphing 
 
 There are a number of networking functions which should be self explanatory ( mDNS, Web server, NTP client, serial to telnet/HTTP, unix syslog, OTA upgrades ).
 
+The random number generator uses the pulse signal from the MightyOhm to generate an  interrupt which will read the current value from a looping counter that counts from 0 to 15, which is then output as a hex value to serial/telnet/HTTP (Tlog). Collating and analying this random output is discussed below.
+
 The code is broken up into individual functions so if you want to see how one of the functions work it should be straightforward.
 
 Below is a list of the main functions:
@@ -186,6 +190,12 @@ histogramData - Display histogram graph
 runntp - Update NTP time at update interval
 
 Upload the sketch and check for any missing libraries you may need.
+
+randomise - looping counter from 0 to 15 used for random number generation. Pinned to CPU0 on ESP32.
+
+grabrandomnum - the function called by the interrupt to grab a number from the loop. Triggered by the pulse pin on the MightyOhm
+
+echorandom - Dislay the random number on a new line via Tlog to serial/telnet/HTTP.
 
 Once running, input is via the 3 OLED Featherwing buttons. Button A and Button C will cycle up and down respectively through the 3 available data display modes. Button B selects histogram display mode. See photos below of different display outputs.
 
@@ -235,9 +245,7 @@ Other testing options are volcanic rock, granite benchtops, some types of Fiesta
 
 I bought a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace and while it gives a relatively weak count among my samples of only 90+ CPM, that works out to about 4.5 mSieverts/year, which is 4.5 times the annual normal background exposure of 1 mSieverts/year here in Australia ( which is still very small ). Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells and protection from harmful 5G technology ) if worn on the skin due to its ‘scalar energy’.
 
-I also picked up from United Nuclear a small speciman bottle of uranium ore chunks, a geiger counter test card and a Fiestaware glazed plate, the latter having the greatest radiation emissions detected among all the samples I have.
-
-An airplane flight would also be an interesting test environment due to increased cosmic radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Interesting calculator available at https://jag.cami.jccbi.gov/
+I also picked up from United Nuclear a small speciman bottle of uranium ore chunks, a Cloud Chamber Source ( a bigger chunk of uranium ore ), a geiger counter test card and a Fiestaware glazed plate. The respective CPM readings are below.
 
 Measured Test Results in order of strength:
 
@@ -253,7 +261,11 @@ United Nuclear geiger counter test card: 2700 CPM
 
 Fiesta tableware red/orange glazed plate: 6500 CPM
 
-Maximum tested using a combination of the last 3 samples listed above: 208 CPS or 12500 CPM
+United Nuclear Cloud Chamber Source: 27300
+
+Maximum tested using a combination of the last 3 samples listed above: 532 CPS or 31900 CPM
+
+An airplane flight would also be an interesting test environment due to increased cosmic radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Interesting calculator available at https://jag.cami.jccbi.gov/
 
 ## ESP8266/ESP32/OLED specific settings
 
@@ -263,11 +275,71 @@ Other than the expected differences in libraries for the ESP8266 & ESP32 retrosp
 
 As such in the ESP32 code I have set the radmon.org update function to utilse CPU0 rather than CPU1 which all other code runs on by default. 
 
-This solves an issue on the ESP8266 platform due to it's single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5+ seconds in my environment ( and up to N  secs ! ), reulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not really a big issue as the code is reading the MightyOhm CPM ( Counts per Minute ) value which is itself averaged and uploading the resulting arduino calculated 1 minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266.....
+This solves an issue on the ESP8266 platform due to it's single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5+ seconds in my environment ( and up to N  secs ! ), reulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not really a big issue as the code is reading the MightyOhm CPM ( Counts per Minute ) value which is itself averaged and uploading the resulting arduino calculated 1 minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266....
 
 This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) is pinned to CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
 
 The other consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with contrast deviation from burn in will always be not as bright ( or white as in this case ) as a new screen, with the same settings. The color temperature is different. You can increase the contrast of a burnt screen to somewhat compensate, but this may make the problem worse depending on your setting and will not change the color temperature.
+
+## Random number generator.
+
+Inspired by this project,
+
+https://github.com/gbonacini/nuclear_random_number_generator
+
+I added a simple random number generator.
+
+You enable it via true or false at the top section of the ino file
+
+bool randomon = true; // enable random number generator
+
+It obviously takes  a bit of time to generate data if you use only background radiation levels as you only generate one random character per pulse. I did testing with high counts utilising some of the radiation samples I have, and found the output data was far from random. I believe this is due to the SMB20 saturating and the associated dead zone when the tube is rendered insentive.
+
+I installed ent via
+
+apt-get install ent
+
+I downloaded the test directory from the nuclear_random_number_generator project above, cd to this test directory whereyou can run
+
+./test_random_numbers.sh
+
+to format and test the included rnd_nums.txt data.
+
+running
+
+ent -c rnd_nums.bin
+
+will analyse the data per character while
+
+ent -b -c rnd_nums.bin
+
+will analyse the data per bit.
+
+man ent
+
+is your friend.
+
+I collected random data from the Arduino via the following command on my linux desktop.
+
+nc whyzagc-esp.local 23 | tee -a rnd_nums.txt
+
+and waited until I had some data.
+
+I had to change line 6 in test_random_numbers.sh from
+
+cat rnd_nums.txt | grep -v '^CPM' | tr -d '\r\n' | head -204800 > rnd_nums.clean.txt
+
+to the rather convoluted
+
+cat rnd_nums.txt | cut  -c -2 | grep --binary-files=text -v 'CP\|Te\|19\|C\|BP\|PS\|GP' | cut -c -1 | grep --binary-files=text '0\|1\|2\|3\|4\|5\|6\|7\|8\|9\|a\|b\|c\|d\|e\|f' | grep --binary-files=text -v -e '^$' | tr -d '\r\n' > rnd_nums.clean.txt
+
+to work with the data collected via the nc command and is associated messages. You may need to modify this if your enviroment is different to mine ( eg the 19 in the search field is from 192.168.0.100, the address nc is connecting to ). Is is obviously not meant to be in the the final random data.
+
+Once you have run test_random_numbers.sh over your new data in rnd_nums.txt, you can analyze your data as per above with the ent command or visually with
+
+./scatter.py rnd_nums.bin
+
+I have initially found that the ESP8266 platform does not pass the Chi square distribution test under ent. This is no doubt due to the limitations of only one CPU where you can not dedicate the time critical randomise counter to a spare CPU. On the ESP32 hardware, I have pinned the randomise function to the previously underutilised CPU0. CPU0 was only performing the once per minute Radmon upload, so other than this upload which will pause the randomise function, it is available for dedicated use. 
 
 ## Additional Connections:
 
