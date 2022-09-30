@@ -60,11 +60,12 @@ NTP client for OLED and web server time display
 
 Unix syslog status messages to your syslog server
 
+Random number generator, generating 1 character for every two pulses detected.
+
 ## Parts list
 
 MightyOhm Gieger Counter DIY kit with GM tube and clear case
 https://www.adafruit.com/products/483 and https://mightyohm.com/blog/products/geiger-counter/
-
 
 plus either Feather Huzzah ESP8266
 https://www.adafruit.com/product/2821
@@ -273,13 +274,15 @@ As noted above, the Feather Huzzah ESP8266 will require the CPU Frequency set to
 
 Other than the expected differences in libraries for the ESP8266 & ESP32 retrospectively ( ESP8266WiFi.h/WiFi.h, ESP8266WebServer.h/WebServer.h and ESP8266mDNS/ESPmDNS ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
 
-As such in the ESP32 code I have set the radmon.org update function to utilse CPU0 rather than CPU1 which all other code runs on by default. 
+As such in the ESP32 code I have set both the radmon.org update and randomise functions to utilse CPU0 rather than CPU1, which all other code runs on by default. 
 
-This solves an issue on the ESP8266 platform due to it's single CPU. While performing the TCP connection setup and get request for the radmon.org update, the CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5+ seconds in my environment ( and up to N  secs ! ), reulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not really a big issue as the code is reading the MightyOhm CPM ( Counts per Minute ) value which is itself averaged and uploading the resulting arduino calculated 1 minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266....
+This solves 2 issue's on the ESP8266 platform due to it's single CPU. Firstly, while performing the TCP connection setup and get request for the radmon.org update, the (single) CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5+ seconds in my environment ( and up to N  secs ! ), reulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not really a big issue as the code is reading the MightyOhm CPM ( Counts per Minute ) value which is itself averaged and uploading the resulting arduino calculated 1 minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266....
 
-This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) is pinned to CPU0 while the default CPU1 is free to carry out other tasks such as not missing the grabbing of the next line of serial data from the MightyOhm ;)
+Secondly, because the roulette wheel function generating the random data is time critial, any sharing of CPU will corrupt the random data. My inital tests confirm this.
 
-The other consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it. A screen with contrast deviation from burn in will always be not as bright ( or white as in this case ) as a new screen, with the same settings. The color temperature is different. You can increase the contrast of a burnt screen to somewhat compensate, but this may make the problem worse depending on your setting and will not change the color temperature.
+This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) and the radomise function are both pinned to CPU0 while the default CPU1 is free to carry out other tasks. When not uploading to radmon, CPU0 is available to the randomise function 
+
+The other hardware consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it.
 
 ## Random number generator.
 
@@ -287,19 +290,21 @@ Inspired by this project,
 
 https://github.com/gbonacini/nuclear_random_number_generator
 
-I added a simple random number generator.
+I added a simple random number generator, which seesm to work well on the ESP32 platform.
 
 You enable it via true or false at the top section of the ino file
 
 bool randomon = true; // enable random number generator
 
-It obviously takes  a bit of time to generate data if you use only background radiation levels as you only generate one random character per pulse. I did testing with high counts utilising some of the radiation samples I have, and found the output data was far from random. I believe this is due to the SMB20 saturating and the associated dead zone when the tube is rendered insentive.
+It obviously takes  a bit of time to generate data if you use only background radiation levels as you only generate one random character per 2 pulses. I did testing with high counts utilising some of the radiation samples I have, and found the output data was far from random. I believe this is due to the SMB20 saturating and the associated dead zone when the tube is rendered insentive.
 
-I installed ent via
+The random numbers are available via the HTTP or telnet connection. A character is output on a new line for each pulse when enabled.
+
+To analyse the data I installed ent via
 
 apt-get install ent
 
-I downloaded the test directory from the nuclear_random_number_generator project above, cd to this test directory whereyou can run
+I then downloaded the test directory from the nuclear_random_number_generator project above, cd to this test directory where you can run
 
 ./test_random_numbers.sh
 
@@ -319,11 +324,11 @@ man ent
 
 is your friend.
 
-I collected random data from the Arduino via the following command on my linux desktop.
+I collected random data from the Huzzah via the following command on my linux desktop.
 
 nc whyzagc-esp.local 23 | tee -a rnd_nums.txt
 
-and waited until I had some data.
+and waited about 5 days until I had about 15M rawa data.
 
 I had to change line 6 in test_random_numbers.sh from
 
@@ -333,7 +338,7 @@ to the rather convoluted
 
 cat rnd_nums.txt | cut  -c -2 | grep --binary-files=text -v 'CP\|Te\|19\|C\|BP\|PS\|GP' | cut -c -1 | grep --binary-files=text '0\|1\|2\|3\|4\|5\|6\|7\|8\|9\|a\|b\|c\|d\|e\|f' | grep --binary-files=text -v -e '^$' | tr -d '\r\n' > rnd_nums.clean.txt
 
-to work with the data collected via the nc command and is associated messages. You may need to modify this if your enviroment is different to mine ( eg the 19 in the search field is from 192.168.0.100, the address nc is connecting to ). Is is obviously not meant to be in the the final random data.
+to ensure the filtered data collected via the nc command was free of the MightyOhm serial output and nc's output messages. You may need to modify this if your enviroment is different to mine ( eg the 19 in the search field is a match from the first two characters of 192.168.0.100, the address nc is connecting to ). This address is obviously not meant to be in the the final random data.
 
 Once you have run test_random_numbers.sh over your new data in rnd_nums.txt, you can analyze your data as per above with the ent command or visually with
 
