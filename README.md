@@ -386,9 +386,9 @@ HTTP diagnostics:
 
 ![gc-diags](https://user-images.githubusercontent.com/109115488/184987250-8a6153ce-7e5f-45d1-94b2-17fc3f9517e0.png)
 
-Telnet output of MightyOhm serial data
+Telnet output of MightyOhm serial data with random number output enabled
 
-![gc-telnet](https://user-images.githubusercontent.com/109115488/184987262-78afafae-8e1f-4c8e-927b-bef9ad719035.png)
+![WhyzaGC-Telnet_random](https://user-images.githubusercontent.com/109115488/193193697-3d6ac85a-084c-4e04-a5d1-7e107b81b320.png)
 
 Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
