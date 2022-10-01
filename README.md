@@ -5,7 +5,7 @@ permlink: /README.md/
 title: README
 ---
 
-This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. I also added a random number generator based off the radiation counts for fun.
+This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. I also added a random number generator based on the radiation counts for fun.
 
 ![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192123691-52e77460-48d9-4fd2-a95f-41f3cf3bae22.jpg)
 
@@ -40,7 +40,7 @@ It is recommended to read all of this document before commencing the project.
 Adafruit Feather Huzzah ESP8266 and ESP32 v2 support, OLED display, Li-Po battery
 
 Button inputs select between 3 OLED data display modes showing different formats.
-Including bar meter strength graphs, detailed data, plus a auto scaling histogram. Photos below.
+Including bar meter strength graphs, detailed data, plus an auto scaling histogram. Photos below.
 
 Radmon.org data upload every 60 secs
 
@@ -68,7 +68,7 @@ Random number generator at rate of 1 character per two pulses detected.
 
 ## Parts list
 
-MightyOhm Gieger Counter DIY kit with GM tube and clear case
+MightyOhm Geiger Counter DIY kit with GM tube and clear case
 https://www.adafruit.com/products/483 and https://mightyohm.com/blog/products/geiger-counter/
 
 plus either Feather Huzzah ESP8266
@@ -106,7 +106,7 @@ Next we need to connect the MightyOhm Geiger to the Huzzah. You can use a breadb
 
 With the rear of the MightyOhm accessible, the first wire to connect is the MightyOhm geiger serial TX pin which is found on J7 pin 4 on the MightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the blue wire shown below.
 
-If you want include the random number functionality, wire from the MightyOhm centre pulse pin on J6 to GPIO 12. GPIO 12 is pin 5 next to pin 6 noted above on both Huzzah versions, and is the yellow wire in the image below.
+If you want to include the random number functionality, wire from the MightyOhm center pulse pin on J6 to GPIO 12. GPIO 12 is pin 5 next to pin 6 noted above on both Huzzah versions, and is the yellow wire in the image below.
 
 Finally, connect the Huzzah's 3.3v and GND pins to the MightyOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this document, or Adafruit's pinout images online.
 
@@ -128,7 +128,7 @@ https://github.com/Whyzanet/WhyzaGC
 
 Download the correct ino sketch file for your hardware, either ESP8266 or ESP32. 
 
-Note: The Feather HUzzah ESP8266 will require the CPU Frequency set to 160MHz to accomodate high values of CPS/CPM.
+Note: The Feather HUzzah ESP8266 will require the CPU Frequency set to 160MHz to accommodate high values of CPS/CPM.
 
 At the top of the sketch are the variables that will need changing for your specific environment. Register with radmon.org first so you have your required credentials.
 
@@ -188,7 +188,7 @@ smallData - Display all data available in a small size font
 
 mediumData - Display all Geiger Counter Data in a medium size font
 
-largeData - Display mimimal CPS/CPM data in a large font size
+largeData - Display minimal CPS/CPM data in a large font size
 
 histogramData - Display histogram graph
 
@@ -250,7 +250,7 @@ Other testing options are volcanic rock, granite benchtops, some types of Fiesta
 
 I bought a ‘nano technology, ionizing anti EMF’ therapeutic volcanic pendant necklace and while it gives a relatively weak count among my samples of only 90+ CPM, that works out to about 4.5 mSieverts/year, which is 4.5 times the annual normal background exposure of 1 mSieverts/year here in Australia ( which is still very small ). Its glossy product documentation has a long list of varied health benefits ( including fighting cancer cells and protection from harmful 5G technology ) if worn on the skin due to its ‘scalar energy’.
 
-I also picked up from United Nuclear a small speciman bottle of uranium ore chunks, a Cloud Chamber Source ( a bigger chunk of uranium ore ), a geiger counter test card and a Fiestaware glazed plate. The respective CPM readings are below.
+I also picked up from United Nuclear a small specimen bottle of uranium ore chunks, a Cloud Chamber Source ( a bigger chunk of uranium ore ), a geiger counter test card and a Fiestaware glazed plate. The respective CPM readings are below.
 
 Measured Test Results in order of strength:
 
@@ -260,7 +260,7 @@ Therapeutic volcanic pendant: 90 CPM
 
 Vaseline glass: 173 CPM
 
-United Nuclear small speciman bottle of uranium ore chunks: 1700 CPM
+United Nuclear small specimen bottle of uranium ore chunks: 1700 CPM
 
 United Nuclear geiger counter test card: 2700 CPM
 
@@ -276,19 +276,19 @@ An airplane flight would also be an interesting test environment due to increase
 
 ## ESP8266/ESP32/OLED specific settings
 
-As noted above, the Feather Huzzah ESP8266 will require the CPU Frequency set to 160MHz to accomodate high values of CPS/CPM.
+As noted above, the Feather Huzzah ESP8266 will require the CPU Frequency set to 160MHz to accommodate high values of CPS/CPM.
 
 Other than the expected differences in libraries for the ESP8266 & ESP32 retrospectively ( ESP8266WiFi.h/WiFi.h, ESP8266WebServer.h/WebServer.h and ESP8266mDNS/ESPmDNS ), the 2nd LED differences ( Blue LED vs Neopixel RGB LED ) and pinout changes, the Feather Huzzah ESP32 CPU is also dual core.
 
 As such in the ESP32 code I have set both the radmon.org update and randomise functions to utilse CPU0 rather than CPU1, which all other code runs on by default. 
 
-This solves 2 issue's on the ESP8266 platform due to it's single CPU. Firstly, while performing the TCP connection setup and get request for the radmon.org update, the (single) CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5+ seconds in my environment ( and up to N  secs ! ), reulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not really a big issue as the code is reading the MightyOhm CPM ( Counts per Minute ) value which is itself averaged and uploading the resulting arduino calculated 1 minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266....
+This solves 2 issue's on the ESP8266 platform due to it's single CPU. Firstly, while performing the TCP connection setup and get request for the radmon.org update, the (single) CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5+ seconds in my environment ( and up to N  secs ! ), resulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not really a big issue as the code is reading the MightyOhm CPM ( Counts per Minute ) value which is itself averaged and uploading the resulting arduino calculated 1 minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266....
 
-Secondly, because the roulette wheel function generating the random data is time critical, any sharing of CPU will corrupt the random data. My inital tests confirm this.
+Secondly, because the roulette wheel function generating the random data is time critical, any sharing of CPU will corrupt the random data. My initial tests confirm this.
 
-This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) and the radomise function are both pinned to CPU0 while the default CPU1 is free to carry out other tasks. When not uploading to radmon, CPU0 is available to the randomise function 
+This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) and the randomise function are both pinned to CPU0 while the default CPU1 is free to carry out other tasks. When not uploading to radmon, CPU0 is available to the randomise function 
 
-The other hardware consideration is that I can confirm that OLED screen burn in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it.
+The other hardware consideration is that I can confirm that OLED screen burn-in does occur with the default contrast and use over 1000 hours as noted on the Adafruit site, resulting in a contrast deviation as the datasheet explains it. As such I have now set the contrast to a minimum to preserve the screen. This setting is near the top of the ino file if you desire to change it.
 
 ## Random number generator.
 
@@ -296,13 +296,13 @@ Inspired by this project,
 
 https://github.com/gbonacini/nuclear_random_number_generator
 
-I added a simple random number generator, which seesm to work well on the ESP32 platform.
+I added a simple random number generator, which seems to work well on the ESP32 platform.
 
 You enable it via true or false at the top section of the ino file
 
 bool randomon = true; // enable random number generator
 
-It obviously takes  a bit of time to generate data if you use only background radiation levels as you only generate one random character per 2 pulses. I did testing with high counts utilising some of the radiation samples I have, and found the output data was far from random. I believe this is due to the SMB20 saturating and the associated dead zone when the tube is rendered insentive.
+It obviously takes  a bit of time to generate data if you use only background radiation levels as you only generate one random character per 2 pulses. I did testing with high counts utilising some of the radiation samples I have, and found the output data was far from random. I believe this is due to the SMB20 saturating and the associated dead zone when the tube is rendered insensitive.
 
 The random numbers are available via the HTTP or telnet connection. A character is output on a new line for each pulse when enabled.
 
@@ -344,7 +344,7 @@ to the rather convoluted
 
 cat rnd_nums.txt | cut  -c -2 | grep --binary-files=text -v 'CP\|Te\|19\|C\|BP\|PS\|GP' | cut -c -1 | grep --binary-files=text '0\|1\|2\|3\|4\|5\|6\|7\|8\|9\|a\|b\|c\|d\|e\|f' | grep --binary-files=text -v -e '^$' | tr -d '\r\n' > rnd_nums.clean.txt
 
-to ensure the filtered data collected via the nc command was free of the MightyOhm serial output and nc's output messages. You may need to modify this if your enviroment is different to mine ( eg the 19 in the search field is a match from the first two characters of 192.168.0.100, the address nc is connecting to ). This address is obviously not meant to be in the the final random data.
+to ensure the filtered data collected via the nc command was free of the MightyOhm serial output and nc's output messages. You may need to modify this if your environment is different to mine ( eg the 19 in the search field is a match from the first two characters of 192.168.0.100, the address nc is connecting to ). This address is obviously not meant to be in the final random data.
 
 Once you have run test_random_numbers.sh over your new data in rnd_nums.txt, you can analyze your data as per above with the ent command or visually with
 
@@ -354,7 +354,7 @@ I have initially found that the ESP8266 platform does not pass the Chi square di
 
 ## Additional Connections:
 
-I am connecting the VBUS/USB pin on the Huzzah to a Raspberry Pi 5V pin via the Pi GPIO header as well as a ground connection between the two boards. Current is usually around 110 mA, though will peak at around 300 mA when charging the Li-Po battery which probabaly means any 5v supply will suffice. 
+I am connecting the VBUS/USB pin on the Huzzah to a Raspberry Pi 5V pin via the Pi GPIO header as well as a ground connection between the two boards. Current is usually around 110 mA, though will peak at around 300 mA when charging the Li-Po battery which probably means any 5v supply will suffice. 
 
 I am also connecting the Gieger serial TX pin (J7 pin 4) to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
 On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool.
