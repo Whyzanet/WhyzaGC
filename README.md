@@ -386,7 +386,7 @@ CPS & CPM large display mode
 
 HTTP diagnostics:
 
-![gc-diags](https://user-images.githubusercontent.com/109115488/184987250-8a6153ce-7e5f-45d1-94b2-17fc3f9517e0.png)
+![WhyzaGC-http-diags](https://user-images.githubusercontent.com/109115488/193431130-163e6753-30ea-4f36-9bd0-03043cd92357.png)
 
 Telnet output of MightyOhm serial data with random number output enabled
 
