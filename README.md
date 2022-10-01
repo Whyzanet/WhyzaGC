@@ -264,11 +264,13 @@ United Nuclear small speciman bottle of uranium ore chunks: 1700 CPM
 
 United Nuclear geiger counter test card: 2700 CPM
 
-Fiesta tableware red/orange glazed plate: 6500 CPM
+No name tableware red/orange glazed plate: 6500 CPM
 
-United Nuclear Cloud Chamber Source: 27300
+Fiesta tableware red/orange glazed plate: 9200 CPM
 
-Maximum tested using a combination of the last 3 samples listed above: 532 CPS or 31900 CPM
+United Nuclear Cloud Chamber Source ( chunk of uranium ): 27300
+
+Maximum tested using a combination of samples listed above: 865 CPS or 51900 CPM
 
 An airplane flight would also be an interesting test environment due to increased cosmic radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Interesting calculator available at https://jag.cami.jccbi.gov/
 
