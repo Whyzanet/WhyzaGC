@@ -200,7 +200,7 @@ randomise - looping counter from 0 to 15 roulette wheel used for random number g
 
 grabrandomnum - the function called by the interrupt to grab a number from the roulette wheel loop. Triggered by the pulse pin on the MightyOhm
 
-echorandom - Dislay the random number on a new line via Tlog to serial/telnet/HTTP.
+echorandom - Display the random number on a new line via Tlog to serial/telnet/HTTP.
 
 Once running, input is via the 3 OLED Featherwing buttons. Button A and Button C will cycle up and down respectively through the 3 available data display modes. Button B selects histogram display mode. See photos below of different display outputs.
 
@@ -284,7 +284,7 @@ As such in the ESP32 code I have set both the radmon.org update and randomise fu
 
 This solves 2 issue's on the ESP8266 platform due to it's single CPU. Firstly, while performing the TCP connection setup and get request for the radmon.org update, the (single) CPU is unavailable for other tasks. Since the typical TCP setup, data exchange and teardown takes at least 1.5+ seconds in my environment ( and up to N  secs ! ), reulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not really a big issue as the code is reading the MightyOhm CPM ( Counts per Minute ) value which is itself averaged and uploading the resulting arduino calculated 1 minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266....
 
-Secondly, because the roulette wheel function generating the random data is time critial, any sharing of CPU will corrupt the random data. My inital tests confirm this.
+Secondly, because the roulette wheel function generating the random data is time critical, any sharing of CPU will corrupt the random data. My inital tests confirm this.
 
 This is not a problem on the ESP32 where the radmon.org function ( and the functions it calls ) and the radomise function are both pinned to CPU0 while the default CPU1 is free to carry out other tasks. When not uploading to radmon, CPU0 is available to the randomise function 
 
