@@ -1,5 +1,5 @@
 # WhyzaGC
-Feather Huzzah ESP8266/ESP32 v2 + Featherwing 128x64 OLED Arduino addon to MightyOhm Gieger Counter
+Feather Huzzah ESP8266/ESP32 v2 + Featherwing 128x64 OLED Arduino addon to MightyOhm Gieger Counter C++
 ---
 permlink: /README.md/
 title: README
@@ -122,11 +122,11 @@ After verifying the software below and the hardware is functional by connecting 
 
 Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.4 Arduino with Ubuntu Linux desktop 20.04 with both the Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2.
 
-Arduino software for ESP8266 and ESP32 versions are available at:
+Arduino C++ software for ESP8266 and ESP32 versions are available at:
 
 https://github.com/Whyzanet/WhyzaGC
 
-Download the correct ino sketch file for your hardware, either ESP8266 or ESP32. 
+Download the correct C++ ino sketch file for your hardware, either ESP8266 or ESP32. 
 
 Note: The Feather HUzzah ESP8266 will require the CPU Frequency set to 160MHz to accommodate high values of CPS/CPM.
 
