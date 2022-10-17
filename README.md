@@ -194,13 +194,13 @@ histogramData - Display histogram graph
 
 runntp - Update NTP time at update interval
 
-Upload the sketch and check for any missing libraries you may need.
-
 randomise - looping counter from 0 to 15 roulette wheel used for random number generation. Pinned to CPU0 on ESP32.
 
 grabrandomnum - the function called by the interrupt to grab a number from the roulette wheel loop. Triggered by the pulse pin on the MightyOhm
 
 echorandom - Display the random number on a new line via Tlog to serial/telnet/HTTP.
+
+Upload the sketch and check for any missing libraries you may need.
 
 Once running, input is via the 3 OLED Featherwing buttons. Button A and Button C will cycle up and down respectively through the 3 available data display modes. Button B selects histogram display mode. See photos below of different display outputs.
 
