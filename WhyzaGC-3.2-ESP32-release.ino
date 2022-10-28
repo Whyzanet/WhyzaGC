@@ -8,7 +8,7 @@ bool radmonen = true; // Set startup radmon.org behaviour. Will enable WIFI if r
 const char* radmonuser = "CHANGEME";  // Set radmon.org username
 const char* radmonpass = "CHANGEME"; // Set radmon.org password
 const char* ntpServer = "pool.ntp.org"; // Set ntp server
-String hostname = "WhyzaGC-ESP"; // Set wifi hostname
+const char* hostname = "WhyzaGC-ESP";
 uint8_t mode = 5;  // Startup default OLED display mode - Graph Display ( Buttons A&B )
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(27, 33); // Gieger serial port directly connected on RX, TX ( no TX connection needed as only receiving data )
