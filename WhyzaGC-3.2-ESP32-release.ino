@@ -1,5 +1,5 @@
-const char* release = "WhyzaGC v3.2";
-const char* releasedate = "Released 30/9/2022";
+const char* release = "WhyzaGC v3.21";
+const char* releasedate = "Released 29/10/2022";
 bool WIFIEnable = true; // set startup wifi client behaviour
 const char* ssid = "CHANGEME"; // Set wifi SSID
 const char* password = "CHANGEME"; // Set wifi password
