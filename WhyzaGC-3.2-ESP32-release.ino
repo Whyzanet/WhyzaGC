@@ -1,5 +1,5 @@
-const char* release = "WhyzaGC v3.21";
-const char* releasedate = "Released 29/10/2022";
+const char* release = "WhyzaGC v3.2";
+const char* releasedate = "Released 29/10/2022"; //updated to correct hostname string/char issue
 bool WIFIEnable = true; // set startup wifi client behaviour
 const char* ssid = "CHANGEME"; // Set wifi SSID
 const char* password = "CHANGEME"; // Set wifi password
@@ -8,7 +8,7 @@ bool radmonen = true; // Set startup radmon.org behaviour. Will enable WIFI if r
 const char* radmonuser = "CHANGEME";  // Set radmon.org username
 const char* radmonpass = "CHANGEME"; // Set radmon.org password
 const char* ntpServer = "pool.ntp.org"; // Set ntp server
-const char* hostname = "WhyzaGC-ESP";
+const char* hostname = "WhyzaGC-ESP"; //updated
 uint8_t mode = 5;  // Startup default OLED display mode - Graph Display ( Buttons A&B )
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(27, 33); // Gieger serial port directly connected on RX, TX ( no TX connection needed as only receiving data )
