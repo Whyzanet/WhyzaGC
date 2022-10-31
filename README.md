@@ -421,7 +421,7 @@ Adafruit Feather Huzzah ESP32 v2 pinout
 
 ![FeatherHuzzahESP32pinout](https://user-images.githubusercontent.com/109115488/183532850-095e769c-4976-42ac-ab86-83e7bfbfaed9.png)
 
-MightyOhm Geiger Schematic showing connector pinouts
+MightyOhm Geiger Schematic showing header pinout configuration.
 
 ![geiger_sch_fixedR5R6](https://user-images.githubusercontent.com/109115488/198948137-f1748bfc-4e6d-4b7e-b820-efd574d00066.png)
 
