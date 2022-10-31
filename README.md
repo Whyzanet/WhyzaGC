@@ -132,21 +132,22 @@ Note: The Feather HUzzah ESP8266 will require the CPU Frequency set to 160MHz to
 
 At the top of the sketch are the variables that will need changing for your specific environment. Register with radmon.org first so you have your required credentials.
 
-The following libraries are available via the Arduino Library Manager and will need to be installed:
+The following libraries are available via the Arduino Library Manager and will need to be installed.
+I have listed the version that I tested under.
 
-ESPSoftwareSerial, Tlog, NTPClient, Adafruit_GFX, Adafruit_SH110X, Adafruit Feather OLED, Adafrui NeoPixel ( ESP32 ), Uptime Library, CircularBuffer.
+ESPSoftwareSerial(6.16.1), Tlog(1.03), NTPClient(3.2.1), Adafruit_GFX(1.11.1), Adafruit_SH110X(2.1.6), Adafruit Feather OLED(2.0.2), Adafrui NeoPixel ( ESP32 )(1.10.6), Uptime Library(1.0.0), CircularBuffer(1.3.3).
 
 The following libraries will need to be downloaded to your library directory:
 
-movingAvg:
+movingAvg(3.2.1):
 
 https://github.com/JChristensen/movingAvg
 
-Syslog:
+Syslog(2.0.0):
 
 https://github.com/arcao/Syslog
 
-ESP8266mDNS ( for ESP8266 ):
+ESP8266mDNS(1.2) ( for ESP8266 ):
 
 https://github.com/LaborEtArs/ESP8266mDNS
 
