@@ -108,7 +108,7 @@ With the rear of the MightyOhm accessible, the first wire to connect is the Migh
 
 If you want to include the random number functionality, wire from the MightyOhm center pulse pin on J6 to GPIO 12. GPIO 12 is pin 5 next to pin 6 noted above on both Huzzah versions, and is the yellow wire in the image below.
 
-Finally, connect the Huzzah's 3.3v and GND pins to the MightyOhm's battery connections which are the red and black wires below.....Refer to pinout images at the end of this document, or Adafruit's pinout images online.
+Finally, connect the Huzzah's 3.3v and GND pins to the MightyOhm's battery connections which are the red and black wires below.....Refer to the images at the end of this document for both the Feather Huzzah's and the MightyOhm Gieger's header pinouts.
 
 ![WhyzaGC-underside wiring](https://user-images.githubusercontent.com/109115488/193185576-39bdc3c0-ae11-4c34-9da6-50260546a1f1.jpg)
 
