@@ -1011,14 +1011,14 @@ void setup() {
   oled.init();
   oled.setContrast (contrast); // reduce contrast to preserve OLED display
 
-  oled.clearDisplay();
-  // Display bitmap
-  oled.drawBitmap(0, 2,  radiationicon, 128, 60, WHITE);
-  oled.display();
-  delay(2000);
-  // Invert Display
-  //display.invertDisplay(1);
-
+ // Animate bitmap
+  for (int i = -1; i <= 10; i++) {
+    oled.clearDisplay();
+    oled.drawBitmap(0, (64 - (6 * i)),  radiationicon, 128, 60, WHITE);
+    oled.display();
+  }
+  delay (1500);
+ 
   Log.addPrintStream(std::make_shared<TelnetSerialStream>(telnetSerialStream));
   Log.addPrintStream(std::make_shared<WebSerialStream>(webSerialStream));
   wifion(); // Start wifi if enabled
