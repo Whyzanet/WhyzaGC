@@ -19,6 +19,8 @@ I initially started with the ESP8266 and then 'upgraded' to the ESP32 to take ad
 
 As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual core functionality. That said, if you have a Feather Huzzah ESP8266 already, it will work just fine.
 
+I have packed as many software features in as I can think of in an attempt to learn as much as possible about the ESP software development.
+
 I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power !
 
 While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino platforms. I found a dated project using the Feather Huzzah ESP8266 and the MightyOhm for inspiration but it was not going to compile on the current libraries, so I decided to do my own Arduino project from scratch as I also wanted to increase my Arduino coding skills. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
@@ -65,6 +67,8 @@ NTP client for OLED and web server time display
 Unix syslog status messages to your syslog server
 
 Random number generator at rate of 1 character per two pulses detected.
+
+Bootup animation logo
 
 ## Parts list
 
@@ -124,7 +128,7 @@ Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.5 Ard
 
 Arduino C++ software for ESP8266 and ESP32 versions are available at:
 
-https://github.com/Whyzanet/WhyzaGC
+Latest version available at https://github.com/Whyzanet/WhyzaGC
 
 Download the correct C++ ino sketch file for your hardware, either ESP8266 or ESP32. 
 
@@ -200,6 +204,8 @@ randomise - looping counter from 0 to 15 roulette wheel used for random number g
 grabrandomnum - the function called by the interrupt to grab a number from the roulette wheel loop. Triggered by the pulse pin on the MightyOhm
 
 echorandom - Display the random number on a new line via Tlog to serial/telnet/HTTP.
+
+setup - Initialisation, Animate bitmap logo, start WiFi if enabled.
 
 Upload the sketch and check for any missing libraries you may need.
 
