@@ -1,5 +1,7 @@
+// Latest version available https://github.com/Whyzanet/WhyzaGC
 const char* release = "WhyzaGC v3.4";
 const char* releasedate = "Released 1/11/2022";
+
 bool WIFIEnable = true; // set startup wifi client behaviour
 const char* ssid = "CHANGEME"; // Set wifi SSID
 const char* password = "CHANGEME"; // Set wifi password
