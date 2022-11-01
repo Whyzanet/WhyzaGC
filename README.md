@@ -305,7 +305,7 @@ https://github.com/gbonacini/nuclear_random_number_generator
 
 I added a simple random number generator, which seems to work well on the ESP32 platform.
 
-You enable it via true or false at the top section of the ino file
+It is disabled by default. You enable it via true or false at the top section of the ino file
 
 bool randomon = true; // enable random number generator
 
