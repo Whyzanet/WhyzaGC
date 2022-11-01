@@ -1014,7 +1014,7 @@ void setup() {
  // Animate bitmap
   for (int i = -1; i <= 10; i++) {
     oled.clearDisplay();
-    oled.drawBitmap(0, (64 - (6 * i)),  radiationicon, 128, 60, WHITE);
+    oled.drawBitmap(0, (62 - (6 * i)),  radiationicon, 128, 60, WHITE);
     oled.display();
   }
   delay (1500);
