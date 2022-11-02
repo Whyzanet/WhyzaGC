@@ -281,6 +281,10 @@ Maximum tested using a combination of samples listed above: 865 CPS or 51900 CPM
 
 An airplane flight would also be an interesting test environment due to increased cosmic radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Interesting calculator available at https://jag.cami.jccbi.gov/
 
+Fiesta tableware plate, therapeutic volcanic pendant, United Nuclear uranium ore chunks and geiger counter test card.
+
+![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189282549-54f30927-5ccf-40b2-9b11-2017fbfefbd7.jpg)
+
 ## ESP8266/ESP32/OLED specific settings
 
 As noted above, the Feather Huzzah ESP8266 will require the CPU Frequency set to 160MHz to accommodate high values of CPS/CPM.
@@ -402,10 +406,6 @@ Telnet output of MightyOhm serial data with random number output enabled
 Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
 ![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
-
-Fiesta tableware plate, therapeutic volcanic pendant, United Nuclear uranium ore chunks and geiger counter test card.
-
-![Fiestaware-Testcard-Uorejpg](https://user-images.githubusercontent.com/109115488/189282549-54f30927-5ccf-40b2-9b11-2017fbfefbd7.jpg)
 
 Raspberry Pi Graphs using rrdtool
 
