@@ -277,7 +277,7 @@ Fiesta tableware red/orange glazed plate: 9200 CPM
 
 United Nuclear Cloud Chamber Source ( chunk of uranium ): 27300
 
-Maximum tested using a combination of samples listed above: 865 CPS or 51900 CPM
+Maximum tested using a combination of samples listed above and both the SBM-20 tube and a SBT-11 pancake detector : 1366 CPS or 82000 CPM
 
 An airplane flight would also be an interesting test environment due to increased cosmic radiation levels at altitude. Latitude also affects background cosmic radiation with higher levels the closer you are to the poles. Interesting calculator available at https://jag.cami.jccbi.gov/
 
