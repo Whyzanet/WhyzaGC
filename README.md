@@ -126,6 +126,18 @@ After verifying the software below and the hardware is functional by connecting 
 
 Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.5 Arduino with Ubuntu Linux desktop 20.04 with both the Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2.
 
+To support the Feather Huzzah, you will need to add the following to File -> Preferences -> Additional Board Manager URL if you have not done so already. This example has 2 entries, for both the ESP8266 and ESP32 boards
+
+http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+
+Then in Board Manager install esp8266 or esp32 to relect the hardware that you have.
+
+Finally select the appropiate board via 
+
+Tools -> Board -> ESP32 Arduino -> Adafruit Feather ESP32 V2
+or
+Tools -> Board -> ESP8266 Boards -> Adafruit Feather Huzzah ESP8266
+
 Arduino C++ software for ESP8266 and ESP32 versions are available at:
 
 Latest version available at https://github.com/Whyzanet/WhyzaGC
