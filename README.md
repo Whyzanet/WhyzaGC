@@ -104,9 +104,7 @@ While assembling your MightyOhm if you are yet to do so, do not install the AAA 
 
 Start by soldering the stacking headers to the Huzzah and the supplied headers on the Featherwing OLED as documented at the Adafruit's online guide for your hardware. Familiarise yourself with all the documentation.
 
-Then connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200 baud in the Arduino IDE. After selecting the correct baud, you should be able to then load and run sample code under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
-
-Next we need to connect the MightyOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the MightyOhm.  Optionally you can include a 4th wire if you would like to enable and play with the random number generator. I used a small gauge wire so I was able to feed the 4 wires through the circuit board hole under the battery cover.
+We first need to connect the MightyOhm Geiger to the Huzzah. You can use a breadboard to test your setup if desired or you can simply dive in and solder the required 3 wires between the Huzzah and the MightyOhm.  Optionally you can include a 4th wire if you would like to enable and play with the random number generator. I used a small gauge wire so I was able to feed the 4 wires through the circuit board hole under the battery cover.
 
 With the rear of the MightyOhm accessible, the first wire to connect is the MightyOhm geiger serial TX pin which is found on J7 pin 4 on the MightyOhm which is connected to GPIO 13 on the Huzzah ESP8266 and GPIO 27 on the Huzzah ESP32 via the bottom of the board. This is pin 6 on the top from left to right ( from the front! ) on both Huzzah versions and is the blue wire shown below.
 
@@ -138,7 +136,9 @@ Tools -> Board -> ESP32 Arduino -> Adafruit Feather ESP32 V2
 or
 Tools -> Board -> ESP8266 Boards -> Adafruit Feather Huzzah ESP8266
 
-Arduino C++ software for ESP8266 and ESP32 versions are available at:
+Connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200 baud in the Arduino IDE. After selecting the correct baud, you should be able to then load and run sample code under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
+
+WhyzaGC Arduino C++ software for ESP8266 and ESP32 versions are available at:
 
 Latest version available at https://github.com/Whyzanet/WhyzaGC
 
