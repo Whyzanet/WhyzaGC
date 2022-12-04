@@ -133,7 +133,9 @@ Then in Board Manager install esp8266 or esp32 to relect the hardware that you h
 Finally select the appropiate board via 
 
 Tools -> Board -> ESP32 Arduino -> Adafruit Feather ESP32 V2
+
 or
+
 Tools -> Board -> ESP8266 Boards -> Adafruit Feather Huzzah ESP8266
 
 Connect to your PC via the USB cable and you should see the Huzzah fire up and show serial output @ 115200 baud in the Arduino IDE. After selecting the correct baud, you should be able to then load and run sample code under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
