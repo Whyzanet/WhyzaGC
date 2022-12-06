@@ -79,7 +79,7 @@ plus either Feather Huzzah ESP8266
 https://www.adafruit.com/product/2821
 
 or Feather Huzzah ESP32 v2
-https://www.adafruit.com/product/3405
+https://www.adafruit.com/product/5400
 
 with Featherwing 128x64 OLED
 https://www.adafruit.com/product/4650
