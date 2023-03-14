@@ -5,7 +5,7 @@ permlink: /README.md/
 title: README
 ---
 
-This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. I also added a random number generator based on the radiation counts for fun.
+This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. I also added an optional random number generator based on the timing of the radiation counts for education and fun.
 
 ![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192123691-52e77460-48d9-4fd2-a95f-41f3cf3bae22.jpg)
 
@@ -25,11 +25,11 @@ I also discovered Radmon.org which seemed a worthwhile project to contribute dat
 
 While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino platforms. I found a dated project using the Feather Huzzah ESP8266 and the MightyOhm for inspiration but it was not going to compile on the current libraries, so I decided to do my own Arduino project from scratch as I also wanted to increase my Arduino coding skills. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
 
-It was also a good opportunity to learn a lot more about radiation and our environment. 
+It was also a good opportunity to learn a lot more about radiation, quantum pysics, and our environment. 
 
 The MightyOhm measures background radiation levels, which Wikipedia defines as “Background radiation originates from a variety of sources, both natural and artificial. These include both cosmic radiation and environmental radioactivity from naturally occurring radioactive materials (such as radon and radium), as well as man-made medical X-rays, fallout from nuclear weapons testing and nuclear accidents.”
 
-The most interesting explanation of the whole radioactive process and how you can use it, I found is dicussed in this next link, from a facinating long standing project now well and truely obsolete in this era of micro controllers and improved cpu design.
+The most interesting explanation of the whole radioactive process and how you can use it in a pratical ways, I found is dicussed in this next link, from a facinating long standing project now well and truely obsolete in this era of micro controllers and improved cpu design.
 
 https://www.fourmilab.ch/hotbits/how3.html
 
