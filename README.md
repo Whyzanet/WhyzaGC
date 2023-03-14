@@ -25,7 +25,7 @@ I also discovered Radmon.org which seemed a worthwhile project to contribute dat
 
 While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino platforms. I found a dated project using the Feather Huzzah ESP8266 and the MightyOhm for inspiration but it was not going to compile on the current libraries, so I decided to do my own Arduino project from scratch as I also wanted to increase my Arduino coding skills. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
 
-It was also a good opportunity to learn a lot more about radiation, quantum pysics, and our environment. 
+It was also a good opportunity to learn a lot more about radiation, quantum physics, and our environment. 
 
 The MightyOhm measures background radiation levels, which Wikipedia defines as “Background radiation originates from a variety of sources, both natural and artificial. These include both cosmic radiation and environmental radioactivity from naturally occurring radioactive materials (such as radon and radium), as well as man-made medical X-rays, fallout from nuclear weapons testing and nuclear accidents.”
 
