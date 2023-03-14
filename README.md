@@ -325,7 +325,7 @@ Also inspired by this project which has some good ideas and tools for use in gen
 
 https://github.com/gbonacini/nuclear_random_number_generator
 
-As mentioned, I added a simple random number generator, which seems to work well on the ESP32 platform.
+As mentioned, I added a simple random number generator, which seems to work well on the ESP32 platform. The random number generator uses the pulse signal from the MightyOhm to generate a hardware interrupt which will read the current value from a looping counter ( basically a roulette wheel ) that loops and counts from 0 to 15, which is then output as a hex value to serial/telnet/HTTP (Tlog).
 
 It is disabled by default. You enable it via true or false at the top section of the ino file
 
