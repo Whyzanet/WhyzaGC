@@ -29,7 +29,7 @@ It was also a good opportunity to learn a lot more about radiation and our envir
 
 The MightyOhm measures background radiation levels, which Wikipedia defines as “Background radiation originates from a variety of sources, both natural and artificial. These include both cosmic radiation and environmental radioactivity from naturally occurring radioactive materials (such as radon and radium), as well as man-made medical X-rays, fallout from nuclear weapons testing and nuclear accidents.”
 
-The most interesting explanation of the whole process I found at this link.
+The most interesting explanation of the whole radioactive process and how you can use it, I found is dicussed in this next link, from a facinating long standing project now well and truely obsolete in this era of micro controllers and improved cpu design.
 
 https://www.fourmilab.ch/hotbits/how3.html
 
