@@ -237,11 +237,11 @@ Monitor easily via the following linux terminal command.
 
 watch -n 10 curl -s whyzagc-esp.local
 
-To monitor the MightyOhm serial data remotely use
+To monitor the MightyOhm serial data remotely over HTTP use
 
 http://whyzagc-esp.local:81
 
-and in your favorite telnet program
+and serial data is also available in your favorite telnet program
 
 telnet whyzagc-esp.local
 
