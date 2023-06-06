@@ -17,7 +17,7 @@ While there are a couple of other geiger kits around, the fact that the MightyOh
 
 I initially started with the ESP8266 and then 'upgraded' to the ESP32 to take advantage of the dual core as I ran into limitations multitasking on the ESP8266 as discussed below. 
 
-As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual core functionality. That said, if you have a Feather Huzzah ESP8266 already, it will work just fine.
+As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual core functionality. That said, if you have a Feather Huzzah ESP8266 already, it will work just fine. That said, I have released version 4 software only for the ESP32. Version 4 brings MQTT support.
 
 I have packed as many software features in as I can think of in an attempt to learn as much as possible about the ESP software development.
 
@@ -69,6 +69,8 @@ Unix syslog status messages to your syslog server
 Random number generator at rate of 1 character per two pulses detected.
 
 Bootup animation logo
+
+MQTT support on version 4 for ESP32 platform.
 
 ## Parts list
 
@@ -195,6 +197,8 @@ grabgraphdata - Grab current data for histogram circularBuffer
 
 averagedata - average CPM data for radmon update
 
+mqttpub - publish mqtt data and other syslog/Tlog events
+
 radmon - Once per minute flash the NeoPixel purple ( ESP32), perform the HTTP Get with radmon.org, flash the NeoPixel ( ESP32 ) red or green on the result.
 
 handleRootPath - configure the web diagnostics on the HTTP server
@@ -256,6 +260,12 @@ http://whyzagc-esp.local/upload
 To locate the correct binary for upload, within the Arduino IDE interface select Sketch -> Export Compiled Binary, which will drop the compiled binary into the same location as the ino sketch file.
 
 WiFi (OTA) software updates, HTTP server diagnostics and MightyOhm serial port redirection over telnet/HTTP all workaround limitations with the USB serial port being inaccessible when the Huzzah is mounted in the MightyOhm's original AA battery location, preventing USB serial port access to upgrades, diagnostics and MightyOhm raw data.
+
+MQTT support on version 4 publishes the following subscriptions to the MQTT configured broker
+
+WhyzaGC/CPM -Average of count per minute published every 60 secs.
+WhyzaGC/status - Publishes a status of online when WiFi is bought up successfully.
+WhyzaGC/radmon_status - Publishes a status when radmon.org accessability goes down or up.
 
 ## Testing
 
