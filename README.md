@@ -264,6 +264,7 @@ WiFi (OTA) software updates, HTTP server diagnostics and MightyOhm serial port r
 MQTT support on version 4 publishes the following subscriptions to the MQTT configured broker
 
 WhyzaGC/CPM -Average of count per minute published every 60 secs.
+WhyzaGC/sieverts - measured sieverts/hr from the mighyohm output
 WhyzaGC/status - Publishes a status of online when WiFi is bought up successfully.
 WhyzaGC/radmon_status - Publishes a status when radmon.org accessability goes down or up.
 
