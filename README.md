@@ -197,7 +197,7 @@ grabgraphdata - Grab current data for histogram circularBuffer
 
 averagedata - average CPM data for radmon update
 
-mqttpub - publish mqtt data and other syslog/Tlog events
+mqttpub - publish mqtt sensor data together with WiFi online and last radmon upload status. Theree are seperate timers for each if you want to customise.
 
 radmon - Once per minute flash the NeoPixel purple ( ESP32), perform the HTTP Get with radmon.org, flash the NeoPixel ( ESP32 ) red or green on the result.
 
