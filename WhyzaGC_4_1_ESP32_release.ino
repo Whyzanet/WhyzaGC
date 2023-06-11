@@ -8,21 +8,21 @@ const char* password = "YYYY";  // Set wifi password
 const char* hostname = "WhyzaGC";           // Set own hostname
 int TZ = +10;                                     // Set local timezone offset from UTC
 
-bool radmonen = flase;                 // Set startup radmon.org behaviour. Will enable WIFI if reqd
+bool radmonen = false;                 // Set startup radmon.org behaviour. Will enable WIFI if reqd
 const char* radmonuser = "XXXX";     // Set radmon.org username
 const char* radmonpass = "YYYY";  // Set radmon.org password
 
 bool NTP_Use_Hostname = true;             // Set to true to use and attempt to resolve via DNS the NTP server hostname. Set to false to use IPAddress instead.
-const char* ntphostname = "ntp.lan";      // NTP server hostname. pool.ntp.org
-const char* ntpServer = "192.168.0.138";  // Set ntp server IP if not using hostname
+const char* ntphostname = "ntp.lan";      // NTP server hostname. You can use pool.ntp.org
+const char* ntpServer = "192.168.0.138";  // Optionally set ntp server IP if not using hostname
 
 bool MQTTEnable = true;                   // set startup mqtt client behaviour
 bool MQTT_Use_Hostname = true;            // Set to true to use and attempt to resolve via DNS the MQTT broker hostname. Set to false to use IPAddress instead.
 const char* mqtthostname = "mqtt.lan";    // mqtt broker hostname.
-IPAddress mqtt_server(192, 168, 0, 138);  // set mqtt broker IP if not using hostname.
+IPAddress mqtt_server(192, 168, 0, 138);  // Optionally set mqtt broker IP if not using hostname.
 const char* mqtt_user = "XXXX";          // Set mqtt username
 const char* mqtt_password = "YYYY";       // Set mqtt password
-const char* mqtt_path = "WhyzaGC/CPM";    // Set mqtt publish path for CPM
+const char* mqtt_path = "WhyzaGC/CPM";    // Set mqtt publish path for CPM sensor data
 const char* mqtt_id = "WhyzaGC";          // Set mqtt client id
 
 int contrast = 0;      // reduce OLED contrast to preserve OLED lifespan
