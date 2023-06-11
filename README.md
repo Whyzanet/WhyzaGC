@@ -225,6 +225,9 @@ echorandom - Display the random number on a new line via Tlog to serial/telnet/H
 
 setup - Initialisation, Animate bitmap logo, start WiFi if enabled.
 
+bootupbitmap - function holding bitmap data. Replace with your own logo via http://javl.github.io/image2cpp/ Ensure your log is 128 x 64 pixels.
+
+
 Upload the sketch and check for any missing libraries you may need.
 
 Once running, input is via the 3 OLED Featherwing buttons. Button A and Button C will cycle up and down respectively through the 3 available data display modes. Button B selects histogram display mode. See photos below of different display outputs.
