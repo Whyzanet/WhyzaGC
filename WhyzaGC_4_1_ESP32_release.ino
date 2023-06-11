@@ -8,7 +8,7 @@ const char* password = "YYYY";  // Set wifi password
 const char* hostname = "WhyzaGC";           // Set own hostname
 int TZ = +10;                                     // Set local timezone offset from UTC
 
-bool radmonen = true;                 // Set startup radmon.org behaviour. Will enable WIFI if reqd
+bool radmonen = flase;                 // Set startup radmon.org behaviour. Will enable WIFI if reqd
 const char* radmonuser = "XXXX";     // Set radmon.org username
 const char* radmonpass = "YYYY";  // Set radmon.org password
 
