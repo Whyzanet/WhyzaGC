@@ -2,13 +2,13 @@
 const char* release = "WhyzaGC v4.1";  // Version 4 adds MQTT support and a few tidy ups. Not released for ESP8266 at this stage. Use v 3.6 for ESP8266
 const char* releasedate = "Released 11/6/2023";
 
-bool WIFIEnable = true;                           // set startup wifi client behaviour
-const char* ssid = "XXXX";                   // Set wifi SSID
-const char* password = "YYYY";  // Set wifi password
+bool WIFIEnable = true;                           // ***set startup wifi client behaviour***
+const char* ssid = "XXXX";                   // ***Set wifi SSID***
+const char* password = "YYYY";  // ***Set wifi password***
 const char* hostname = "WhyzaGC";           // Set own hostname
 int TZ = +10;                                     // Set local timezone offset from UTC
 
-bool radmonen = false;                 // Set startup radmon.org behaviour. Will enable WIFI if reqd
+bool radmonen = false;                 // ***Set startup radmon.org behaviour. Will enable WIFI if reqd***
 const char* radmonuser = "XXXX";     // Set radmon.org username
 const char* radmonpass = "YYYY";  // Set radmon.org password
 
@@ -16,7 +16,7 @@ bool NTP_Use_Hostname = true;             // Set to true to use and attempt to r
 const char* ntphostname = "ntp.lan";      // NTP server hostname. You can use pool.ntp.org
 const char* ntpServer = "192.168.0.138";  // Optionally set ntp server IP if not using hostname
 
-bool MQTTEnable = true;                   // set startup mqtt client behaviour
+bool MQTTEnable = false;                   // ***set startup mqtt client behaviour***
 bool MQTT_Use_Hostname = true;            // Set to true to use and attempt to resolve via DNS the MQTT broker hostname. Set to false to use IPAddress instead.
 const char* mqtthostname = "mqtt.lan";    // mqtt broker hostname.
 IPAddress mqtt_server(192, 168, 0, 138);  // Optionally set mqtt broker IP if not using hostname.
@@ -26,8 +26,8 @@ const char* mqtt_path = "WhyzaGC/CPM";    // Set mqtt publish path for CPM senso
 const char* mqtt_id = "WhyzaGC";          // Set mqtt client id
 
 int contrast = 0;      // reduce OLED contrast to preserve OLED lifespan
-bool randomon = true;  // enable random number generator
-int pulsepin = 12;
+bool randomon = false;  // enable random number generator
+int pulsepin = 12;  // Set the pin used connected to the MightyOhm pule pin to use for random number generation.
 uint8_t mode = 4;  // Startup default OLED display mode - Histogram Display
 
 #include <Syslog.h>
@@ -371,12 +371,12 @@ void wifion() {  //enable WiFi
       NTPClient timeClient(ntpUDP, ip);
       timeClient.begin();  // Start NTP client
       timeClient.setTimeOffset(3600 * TZ);
-      timeClient.setUpdateInterval(43200000);
+      timeClient.setUpdateInterval(3600000);
     } else {
       NTPClient timeClient(ntpUDP, ntpServer);
       timeClient.begin();  // Start NTP client
       timeClient.setTimeOffset(3600 * TZ);
-      timeClient.setUpdateInterval(43200000);
+      timeClient.setUpdateInterval(3600000);
       syslog.log(LOG_INFO, "Using configured NTP server IP address: ");
       syslog.log(LOG_INFO, ntpServer);
     }
@@ -550,7 +550,7 @@ void radmon(void* ptParameters) {  // perfrom the HTTP Get for radmon.org every 
 }
 void runntp() {  // run  the NTP client
   timeClient.setTimeOffset(3600 * TZ);
-  timeClient.setUpdateInterval(43200000);
+  timeClient.setUpdateInterval(3600000);
   timeClient.update();
   //Serial.println(timeClient.getFormattedTime());
   //Serial.println(timeClient.getFormattedDate());
