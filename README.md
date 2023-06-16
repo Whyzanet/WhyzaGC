@@ -405,7 +405,7 @@ So with the ESP32 at least, it is reassuring to confirm that the universe really
 I am connecting the VBUS/USB pin on the Huzzah to a Raspberry Pi 5V pin via the Pi GPIO header as well as a ground connection between the two boards. Current is usually around 110 mA, though will peak at around 300 mA when charging the Li-Po battery which probably means any 5v supply will suffice. 
 
 I am also connecting the Gieger serial TX pin (J7 pin 4) to the Raspberry Pi 4's additional serial Rx pins on uart 4 and 5 ( the default serial port is already in use ) by setting dtoverlay=uart4 and dtoverlay=uart5 in the Pi's /boot/config.txt file and then connecting the Gieger serial Tx pin to both pins 33 and 21. These additional serial ports are found under /dev/ttyAMA1 and /dev/ttyAMA2 under Raspberry Pi OS Bullseye.
-On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool.
+On one port I have configured a bash script to perform radmon.org updates for use if I don't want to upload from the Feather Huzzah for whatever reason. The other port is used by a perl script that displays graphs using rrdtool. See the RPI 4 pinout below for the additional serial ports.
 
 See this link for the perl script. Read the whole page before starting.
 https://mightyohm.com/forum/viewtopic.php?t=3504
@@ -467,6 +467,10 @@ Adafruit Feather Huzzah ESP32 v2 pinout
 MightyOhm Geiger schematic showing header pinout configurations.
 
 ![geiger_sch_fixedR5R6](https://user-images.githubusercontent.com/109115488/198948137-f1748bfc-4e6d-4b7e-b820-efd574d00066.png)
+
+Raspberry Pi 4 pinout showing additional serial ports
+
+![Raspberry-Pi-pinout](https://github.com/Whyzanet/WhyzaGC/assets/109115488/3055c326-28ef-4a2f-9da5-8388532675fe)
 
 ## Latest Version
 
