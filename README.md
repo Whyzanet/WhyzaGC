@@ -29,7 +29,7 @@ It was also a good opportunity to learn a lot more about radiation, quantum phys
 
 The MightyOhm measures background radiation levels, which Wikipedia defines as “Background radiation originates from a variety of sources, both natural and artificial. These include both cosmic radiation and environmental radioactivity from naturally occurring radioactive materials (such as radon and radium), as well as man-made medical X-rays, fallout from nuclear weapons testing and nuclear accidents.”
 
-The most interesting explanation of the whole radioactive process and how you can use it in a pratical ways, I found is dicussed in this next link, from a facinating long standing project now well and truely obsolete in this era of micro controllers and modern cpu design.
+The most interesting explanation of the whole radioactive process and how you can use it in a pratical ways, I found is dicussed in this next link, from a facinating long standing project now well and truely obsolete in this era of micro controllers and modern cpu design. Created by Autodesk pioneer John Walker, it is a facinating site.
 
 https://www.fourmilab.ch/hotbits/how3.html
 
@@ -352,7 +352,7 @@ It obviously takes  a bit of time to generate data if you use only background ra
 
 The random numbers are available via the HTTP or telnet connection. A character is output on a new line for each pulse when enabled.
 
-To analyse the data I installed ent via
+To analyse the data I installed ent ( written by John Walker mentioned above from http://www.fourmilab.ch/ ) via
 
 apt-get install ent
 
@@ -372,9 +372,7 @@ ent -b -c rnd_nums.bin
 
 will analyse the data per bit.
 
-man ent
-
-is your friend.
+man ent describes the tests performed. 
 
 I collected random data from the Huzzah via the following command on my linux desktop.
 
