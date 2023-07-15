@@ -372,7 +372,7 @@ ent -b -c rnd_nums.bin
 
 will analyse the data per bit.
 
-man ent describes the tests performed. 
+manpage ent describes the tests performed. 
 
 I collected random data from the Huzzah via the following command on my linux desktop.
 
@@ -394,7 +394,19 @@ Once you have run test_random_numbers.sh over your new data in rnd_nums.txt, you
 
 ./scatter.py rnd_nums.bin
 
-I have initially found that the ESP8266 platform does not pass the Chi square distribution test under ent. This is no doubt due to the limitations of only one CPU where you can not dedicate the time critical randomise counter to a spare CPU. On the ESP32 hardware, I have pinned the randomise function to the previously underutilised CPU0. CPU0 was only performing the once per minute Radmon upload, so other than this upload which will pause the randomise function, it is available for dedicated use. 
+I have attached my ESP32 scatter graph below.
+
+I also tested with dieharder
+
+apt-get install dieharder
+
+Using this command
+
+dieharder -a -k2 -Y 1 -f rnd_nums.bin
+
+I was able to test against all of dieharder's inbuilt tests.
+
+I have initially found that the ESP8266 platform does not pass the Chi square distribution test under ent, and is visibly nont random when ispecting the scatter graph. This is no doubt due to the limitations of only one CPU where you can not dedicate the time critical randomise counter to a spare CPU. On the ESP32 hardware, I have pinned the randomise function to the previously underutilised CPU0. CPU0 was only performing the once per minute Radmon upload, so other than this upload which will pause the randomise function, it is available for dedicated use. 
 
 So with the ESP32 at least, it is reassuring to confirm that the universe really actually does compose of such truely random events or occurances of quantum tunneling, which can't be explained by our classical understanding of physics.
 
@@ -441,6 +453,10 @@ Telnet output of MightyOhm serial data with random number output enabled
 Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitting radiation, Vaseline glass/uranium also glows a fluorescent bright green under UV light.
 
 ![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
+
+Scatter Graph showing true randomness on the ESP32 platform.
+
+![ScatterGraph-ESP32-gieger-randomiser](https://github.com/Whyzanet/WhyzaGC/assets/109115488/eecac13f-458c-4d39-99c5-5dce6f03b634)
 
 Raspberry Pi Graphs using rrdtool
 
