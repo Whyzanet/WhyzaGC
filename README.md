@@ -348,7 +348,7 @@ It is disabled by default. You enable it via true or false at the top section of
 
 bool randomon = true; // enable random number generator
 
-It obviously takes  a bit of time to generate data if you use only background radiation levels as you only generate one random character per 2 pulses. I did testing with high counts utilising some of the radiation samples I have, and found the output data was far from random. I believe this is due to the SMB20 saturating and the associated dead zone when the tube is rendered insensitive.
+It obviously takes  a bit of time to generate data if you use only background radiation levels as you only generate one random character per pulse. I did testing with high counts utilising some of the radiation samples I have, and found the output data was far from random. I believe this is due to the SMB20 saturating and the associated dead zone when the tube is rendered insensitive.
 
 The random numbers are available via the HTTP or telnet connection. A character is output on a new line for each pulse when enabled.
 
