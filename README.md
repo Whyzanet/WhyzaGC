@@ -191,7 +191,7 @@ averagedata: Average CPM data for radmon update.
 
 mqttpub: Publish MQTT sensor data together with WiFi online and last radmon upload status. There are separate timers for each if you want to customize.
 
-radmon: Once per minute, flash the NeoPixel purple (ESP32), perform the HTTP Get with radmon.org, flash the NeoPixel (ESP32) red or green based on the result.
+radmon: Once per minute, flash the NeoPixel purple (ESP32), perform the HTTP Get with radmon.org, flash the NeoPixel (ESP32) red or green based on the result. Radmon will reject uploads if attempting to update before 30 seconds has expired since the last update. 
 
 handleRootPath: Configure the web diagnostics on the HTTP server.
 
@@ -209,7 +209,7 @@ histogramData: Display histogram graph.
 
 runntp: Update NTP time at the update interval.
 
-randomize: Looping counter from 0 to 15 roulette wheel used for random number generation. Pinned to CPU0 on ESP32.
+randomise: Looping counter from 0 to 15 roulette wheel used for random number generation. Pinned to CPU0 on ESP32.
 
 grabrandomnum: The function called by the interrupt to grab a number from the roulette wheel loop. Triggered by the pulse pin on the MightyOhm.
 
