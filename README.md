@@ -184,6 +184,7 @@ serialmon: Monitor the MightyOhm serial connection for disconnects longer than 1
 grab: Read the MightyOhm serial data via SoftwareSerial GPIO RX pin.
 
 process: Check for valid MightyOhm EOL serial data, flash the heartbeat LED, extract the required data for variables, averages, and histogram display.
+
 grabgraphdata: Grab current data for histogram circularBuffer.
 
 averagedata: Average CPM data for radmon update.
