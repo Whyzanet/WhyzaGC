@@ -420,7 +420,7 @@ Vaseline Glass sourced from Ebay. In addition to ( and independently of ) emitti
 
 ![vaseline glass uv2](https://user-images.githubusercontent.com/109115488/184986286-c954eba3-c4ca-428d-ace4-f207543e72a7.jpg)
 
-Scatter Graph visually showing the true randomness of the detected events on the ESP32 platform ( around 100K bytes of collected random data ). A non random result would show wave or clumps and empty spaces patterns.
+Scatter Graph visually showing the true randomness of the detected events on the ESP32 platform ( around 100K bytes of collected random data ). A non random result would show wave or clumps and empty space patterns.
 
 ![ScatterGraph-ESP32-gieger-randomiser](https://github.com/Whyzanet/WhyzaGC/assets/109115488/eecac13f-458c-4d39-99c5-5dce6f03b634)
 
