@@ -398,7 +398,7 @@ I have attached my ESP32 scatter graph below.
 
 I have initially found that the ESP8266 platform does not pass the Chi square distribution test under ent, and is visibly not random when inspecting the scatter graph. This is no doubt due to the limitations of only one CPU where you can not dedicate the time critical randomise counter to a spare CPU. On the ESP32 hardware, I have pinned the randomise function to the previously underutilised CPU0. CPU0 was only performing the once per minute Radmon upload, so other than this upload which will pause the randomise function, it is available for dedicated use. 
 
-So with the ESP32 at least, it is reassuring to confirm that the universe really actually does compose of such truely random events or occurances of quantum tunneling, which can't be explained by our classical understanding of physics, despite Einstein believing ‘I am at all events convinced that He does not play dice.’
+So with the ESP32 at least, it is reassuring to be able to confirm that the universe really actually does compose of such truely random events or occurances of quantum tunneling, which can't be explained by our classical understanding of physics, despite even Einstein believing ‘I am at all events convinced that He does not play dice.’
 
 ## Additional Connections:
 
