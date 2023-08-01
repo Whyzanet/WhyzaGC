@@ -267,7 +267,7 @@ Other testing options include volcanic rock, granite benchtops, some types of Fi
 
 I bought a ‘nano-technology, ionizing anti EMF’ therapeutic volcanic pendant necklace, and while it gives a relatively weak count among my samples, only 90+ CPM, that works out to about 4.5 mSieverts/year, which is 4.5 times the annual normal background exposure of 1 mSieverts/year here in Australia (which is still very small). Its glossy product documentation has a long list of varied health benefits, including fighting cancer cells and protection from harmful 5G technology, if worn on the skin due to its ‘scalar energy’.
 
-I also picked up from United Nuclear a small specimen bottle of uranium ore chunks, a Cloud Chamber Source (a bigger chunk of uranium ore), a geiger counter test card, and a Fiestaware glazed plate. The respective CPM readings are below:
+I also picked up from United Nuclear a small specimen bottle of uranium ore chunks, a Cloud Chamber Source (a bigger chunk of uranium ore), a geiger counter test card, and a Fiestaware glazed plate. The respective CPM readings in ascending order are below:
 
 Measured Test Results in order of strength:
 
