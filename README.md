@@ -126,6 +126,7 @@ Finally, select the appropriate board via Tools -> Board -> ESP32 Arduino -> Ada
 Connect to your PC via the USB cable, and you should see the Huzzah fire up and show serial output @ 115200 baud in the Arduino IDE. After selecting the correct baud, you should be able to load and run sample code under File -> Examples to verify hardware functionality, such as Basics -> Blink or WiFi -> WiFiScan.
 
 WhyzaGC Arduino C++ software for ESP8266 and ESP32 versions is available at:
+
 Latest version available at https://github.com/Whyzanet/WhyzaGC
 
 Download the correct C++ ino sketch file for your hardware, either ESP8266 or ESP32.
