@@ -127,6 +127,7 @@ Connect to your PC via the USB cable, and you should see the Huzzah fire up and 
 
 WhyzaGC Arduino C++ software for ESP8266 and ESP32 versions is available at:
 Latest version available at https://github.com/Whyzanet/WhyzaGC
+
 Download the correct C++ ino sketch file for your hardware, either ESP8266 or ESP32.
 
 Note: The Feather Huzzah ESP8266 will require the CPU Frequency set to 160MHz to accommodate high values of CPS/CPM.
