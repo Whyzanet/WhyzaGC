@@ -5,72 +5,89 @@ permlink: /README.md/
 title: README
 ---
 
-This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with Adafruit Featherwing 128x64 OLED display addon to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. I also added an optional random number generator based on the timing of the radiation counts for education and fun.
+This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with the Adafruit Featherwing 128x64 OLED display add-on to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. Additionally, I have included an optional random number generator based on the timing of the radiation counts for education and fun.
 
 ![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192123691-52e77460-48d9-4fd2-a95f-41f3cf3bae22.jpg)
 
 ## Introduction:
 
-I am always on the lookout for unique and interesting kits to build which led to me discovering the MightyOhm Geiger kit.
+I am always on the lookout for unique and interesting kits to build, which led me to discover the MightyOhm Geiger kit.
 
-While there are a couple of other geiger kits around, the fact that the MightyOhm was in stock ( rare in these post covid times! ), it included a commonly used detector tube ( for relative data comparisons ), its serial data output, along with its steampunk looks, it had me sold. 
+While there are a couple of other Geiger kits around, the fact that the MightyOhm was in stock (rare in these post-COVID times!), included a commonly used detector tube (for relative data comparisons), had serial data output, and sported steampunk looks, had me sold.
 
-I initially started with the ESP8266 and then 'upgraded' to the ESP32 to take advantage of the dual core as I ran into limitations multitasking on the ESP8266 as discussed below. 
+Initially, I started with the ESP8266 and then 'upgraded' to the ESP32 to take advantage of the dual-core as I ran into limitations multitasking on the ESP8266, as discussed below.
 
-As such I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual core functionality. That said, if you have a Feather Huzzah ESP8266 already, it will work just fine. That said, I have released version 4 software only for the ESP32. Version 4 brings MQTT support.
+As such, I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266 version due to both the NeoPixel RGB LED and dual-core functionality. That said, if you already have a Feather Huzzah ESP8266, it will work just fine. However, I have released version 4 software only for the ESP32, which brings MQTT support.
 
-I have packed as many software features in as I can think of in an attempt to learn as much as possible about the ESP software development.
+I have packed as many software features as I can think of in an attempt to learn as much as possible about ESP software development.
 
-I also discovered Radmon.org which seemed a worthwhile project to contribute data to. It has a very simple and easy registration process...and runs on solar power !
+I also discovered Radmon.org, which seemed like a worthwhile project to contribute data to. It has a very simple and easy registration process and runs on solar power!
 
-While waiting for delivery I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino platforms. I found a dated project using the Feather Huzzah ESP8266 and the MightyOhm for inspiration but it was not going to compile on the current libraries, so I decided to do my own Arduino project from scratch as I also wanted to increase my Arduino coding skills. I also found some good ideas for interfacing to the Raspberry Pi which I also cover.
+While waiting for delivery, I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino platforms. I found a dated project using the Feather Huzzah ESP8266 and the MightyOhm for inspiration, but it was not going to compile on the current libraries. So, I decided to do my own Arduino project from scratch as I also wanted to increase my Arduino coding skills. I also found some good ideas for interfacing with the Raspberry Pi, which I also cover.
 
-It was also a good opportunity to learn a lot more about radiation, quantum physics, and our environment. 
+It was also a good opportunity to learn a lot more about radiation, quantum physics, and our environment.
 
-The MightyOhm measures background radiation levels, which Wikipedia defines as “Background radiation originates from a variety of sources, both natural and artificial. These include both cosmic radiation and environmental radioactivity from naturally occurring radioactive materials (such as radon and radium), as well as man-made medical X-rays, fallout from nuclear weapons testing and nuclear accidents.”
+The MightyOhm measures background radiation levels, which Wikipedia defines as 'Background radiation originates from a variety of sources, both natural and artificial. These include both cosmic radiation and environmental radioactivity from naturally occurring radioactive materials (such as radon and radium), as well as man-made medical X-rays, fallout from nuclear weapons testing, and nuclear accidents.'
 
-The most interesting explanation of the whole radioactive process and how you can use it in a pratical ways, I found is dicussed in this next link, from a facinating long standing project now well and truely obsolete in this era of micro controllers and modern cpu design. Created by John Walker who started Autodesk/AutoCAD with others, it is a great read.
+The most interesting explanation of the whole radioactive process and how you can use it in practical ways, I found, is discussed in this next link from a fascinating long-standing project now well and truly obsolete in this era of microcontrollers and modern CPU design. Created by John Walker, who started Autodesk/AutoCAD with others, it is a great read.
 
 https://www.fourmilab.ch/hotbits/how3.html
 
-I bought a number of items to test out the meter's functionality which are discussed below. 
+I bought a number of items to test out the meter's functionality, which are discussed below.
 
 It is recommended to read all of this document before commencing the project.
 
 ## Features:
 
-Adafruit Feather Huzzah ESP8266 and ESP32 v2 support, OLED display, Li-Po battery
+Adafruit Feather Huzzah ESP8266 and ESP32 v2 support, OLED display, Li-Po battery.
 
-Button inputs select between 3 OLED data display modes showing different formats.
-Including bar meter strength graphs, detailed data, plus an auto scaling histogram. Photos below.
+Button inputs select between 3 OLED data display modes showing different formats, including bar meter strength graphs, detailed data, plus an auto-scaling histogram (photos below).
 
-Radmon.org data upload every 60 secs
+Radmon.org data upload every 60 seconds.
 
-https://radmon.org/index.php
+Web server diagnostics available via HTTP over port 80 (data, radmon.org upload status, debug, uptime).
 
-Web server diagnostics available via HTTP over port 80 ( data, radmon.org upload status, debug, uptime )
-
-Blue LED/Neopixel blue heartbeat, Red LED CPS ( for Counts per Second <= 5 )
+Blue LED/Neopixel blue heartbeat, Red LED CPS (for Counts per Second <= 5).
 
 Monitoring of MightyOhm's serial data for disconnections.
 
-MightyOhm serial data over HTTP and Telnet
+MightyOhm serial data over HTTP and Telnet.
 
-mDNS multicast name registration
+mDNS multicast name registration.
 
-Neopixel radmon status feedback. 
+Neopixel radmon status feedback.
 
-OTA Software upgrades via WiFi
+OTA Software upgrades via WiFi.
 
-NTP client for OLED and web server time display
+NTP client for OLED and web server time display.
 
-Unix syslog status messages to your syslog server
+Unix syslog status messages to your syslog server.
 
-Random number generator at rate of 1 character per two pulses detected.
+Random number generator at a rate of 1 character per two pulses detected.
 
-Bootup animation logo
+Bootup animation logo.
 
-MQTT support on version 4 for ESP32 platform.
+MQTT support on version 4 for the ESP32 platform.
+
+## Parts list:
+
+MightyOhm Geiger Counter DIY kit with GM tube and clear case (https://www.adafruit.com/products/483 and https://mightyohm.com/blog/products/geiger-counter/).
+
+Either Feather Huzzah ESP8266 (https://www.adafruit.com/product/2821) or Feather Huzzah ESP32 v2 (https://www.adafruit.com/product/5400).
+
+Featherwing 128x64 OLED (https://www.adafruit.com/product/4650).
+
+Stacking Headers for Feather - 12-pin and 16-pin female headers (https://www.adafruit.com/product/2830).
+
+Li-Po battery to replace the original AAA batteries (https://www.adafruit.com/product/258).
+
+Micro USB (Huzzah ESP8266) or USB C (Huzzah ESP32 v2) cable to connect your PC to the Feather.
+
+Double-sided tape.
+
+Female breadboard jumper wires to connect to Raspberry Pi if desired.
+
+A test source of radiation, discussed in Testing below.
 
 ## Parts list
 
