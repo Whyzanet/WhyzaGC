@@ -113,7 +113,7 @@ After verifying the software below and the hardware is functional by connecting 
 
 ## Software:
 
-Tested on Arduino IDE 1.8.19/2.0.0rc9.1 and ESP8266 Boards 3.0.2/ESP32 2.0.5 with Arduino on Ubuntu Linux desktop 20.04 using both the Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2.
+Tested on Arduino IDE 1.8.19/2.1.0 and ESP8266 Boards 3.0.2/ESP32 2.0.5 with Arduino on Ubuntu Linux desktop 20.04 using both the Feather Huzzah ESP8266 and Feather Huzzah ESP32 v2.
 
 To support the Feather Huzzah, add the following to File -> Preferences -> Additional Board Manager URL if not done already. This example has 2 entries for both the ESP8266 and ESP32 boards:
 
