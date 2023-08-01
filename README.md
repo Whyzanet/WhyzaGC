@@ -139,7 +139,7 @@ The following libraries are available via the Arduino Library Manager and will n
 
 ESPSoftwareSerial(6.16.1)
 
-Tlog(1.03)
+Tlog(1.03) , Logs output to serial, telnet and http simultaneously
 
 NTPClient(3.2.1)
 
