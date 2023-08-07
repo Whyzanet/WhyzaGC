@@ -424,7 +424,7 @@ Scatter Graph visually showing the true randomness of the detected events on the
 
 ![ScatterGraph-ESP32-gieger-randomiser](https://github.com/Whyzanet/WhyzaGC/assets/109115488/eecac13f-458c-4d39-99c5-5dce6f03b634)
 
-HomeAssistant intergration via MQTT and Mosquito broker.
+HomeAssistant intergration using MQTT via a Mosquito broker.
 
 ![Screenshot from 2023-08-07 20-22-36](https://github.com/Whyzanet/WhyzaGC/assets/109115488/f6982bd9-1e5f-4ed0-b0ef-1f354ab21123)
 
