@@ -189,7 +189,7 @@ grabgraphdata: Grab current data for histogram circularBuffer.
 
 averagedata: Average CPM data for radmon update.
 
-mqttpub: Publish MQTT sensor data together with WiFi online and last radmon upload status. There are separate timers for each if you want to customize.
+mqttpub: Publish MQTT sensor data together with WiFi online and last radmon upload status. There are separate timers for each if you want to customize. Image below of HomeAssistant intergration via mosquitto MQTT broker.
 
 radmon: Once per minute, flash the NeoPixel purple (ESP32), perform the HTTP Get with radmon.org, and flash the NeoPixel (ESP32) red or green based on the result. Radmon will reject uploads if attempting to update before 30 seconds has expired since the last update. "Too soon" will appear in the log output ( TLOG and syslog ) if this occurs. 
 
