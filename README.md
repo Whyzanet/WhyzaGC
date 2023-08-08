@@ -73,7 +73,7 @@ MQTT support on version 4 for the ESP32 platform.
 
 MightyOhm Geiger Counter DIY kit with GM tube and clear case (https://www.adafruit.com/products/483 and https://mightyohm.com/blog/products/geiger-counter/).
 
-Either Feather Huzzah ESP8266 (https://www.adafruit.com/product/2821) or Feather Huzzah ESP32 v2 (https://www.adafruit.com/product/5400).
+Either Feather Huzzah ESP8266 (https://www.adafruit.com/product/2821) or Feather Huzzah ESP32 v2 (https://www.adafruit.com/product/5400), ( https://core-electronics.com.au/adafruit-esp32-feather-v2-8mb-flash-2-mb-psram-stemma-qt.html )
 
 Featherwing 128x64 OLED (https://www.adafruit.com/product/4650).
 
