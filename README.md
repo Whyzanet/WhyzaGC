@@ -193,7 +193,7 @@ mqttpub: Publish MQTT sensor data together with WiFi online and last radmon uplo
 
 radmon: Once per minute, flash the NeoPixel purple (ESP32), perform the HTTP Get with radmon.org, and flash the NeoPixel (ESP32) red or green based on the result. Radmon will reject uploads if attempting to update before 30 seconds has expired since the last update. "Too soon" will appear in the log output ( TLOG and syslog ) if this occurs. 
 
-handleRootPath: Configure the web diagnostics on the HTTP server.
+handleRootPath: Configure the web diagnostics & upgrades with the HTTP server.
 
 logstats: Send Unix syslog messages each hour.
 
@@ -239,9 +239,11 @@ Blue Heartbeat LED/Neopixel is triggered by an EOL from the Geiger serial output
 
 Feather Huzzah ESP32 v2 Neopixel will flash purple every 60 secs when starting the radmon.org update and then will flash green when having completed a successful update, or red when detecting an unsuccessful update.
 
-OTA upgrading of compiled sketch .bin via WiFi using the following URL: http://whyzagc-esp.local/upload
+OTA upgrading of compiled sketch .bin via WiFi using the following URL: http://whyzagc-esp.local/upload using WebServer.h. 
 
 To locate the correct binary for upload, within the Arduino IDE interface, select Sketch -> Export Compiled Binary, which will drop the compiled binary into the same location as the ino sketch file.
+
+Alternately, version 4 software has  ArduinoOTA.h WiFi upgrade support and as such should show up as a network port in the Arduino IDE via mDNS where you can simply use Sketch --> Upload. Select Tools --> Ports -> WHyzaGC at a.b.c.d
 
 WiFi (OTA) software updates, HTTP server diagnostics, and MightyOhm serial port redirection over telnet/HTTP all work around limitations with the USB serial port being inaccessible when the Huzzah is mounted in the MightyOhm's original AA battery location, preventing USB serial port access to upgrades, diagnostics, and MightyOhm raw data.
 
