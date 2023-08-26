@@ -21,7 +21,7 @@ As such, I would recommend the Feather Huzzah ESP32 v2 over the original ESP8266
 
 I have packed as many software features as I can think of in an attempt to learn as much as possible about ESP software development.
 
-I also discovered Radmon.org, which seemed like a worthwhile project to contribute data to. It has a very simple and easy registration process and runs on solar power! Your data will be retained by radmon.org for 2 years. If you donate your data will be retainied for 5 years.
+I also discovered Radmon.org, which seemed like a worthwhile project to contribute data to. It has a very simple and easy registration process and runs on solar power! Your data will be retained by radmon.org for 2 years. If you donate your data will be retained for 5 years.
 
 While waiting for delivery, I checked a number of forums looking for ideas on how to interface with the counter for both the Raspberry Pi and Arduino platforms. I found a dated project using the Feather Huzzah ESP8266 and the MightyOhm for inspiration, but it was not going to compile on the current libraries. So, I decided to do my own Arduino project from scratch as I also wanted to increase my Arduino coding skills. I also found some good ideas for interfacing with the Raspberry Pi, which I also cover.
 
