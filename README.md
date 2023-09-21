@@ -247,7 +247,7 @@ Alternately, version 4 software has  ArduinoOTA.h WiFi upgrade support and as su
 
 WiFi (OTA) software updates, HTTP server diagnostics, and MightyOhm serial port redirection over telnet/HTTP all work around limitations with the USB serial port being inaccessible when the Huzzah is mounted in the MightyOhm's original AA battery location, preventing USB serial port access to upgrades, diagnostics, and MightyOhm raw data.
 
-MQTT support on version 4 publishes the following subscriptions to the MQTT-configured broker which HomeAssitant digests
+MQTT support on version 4 publishes the following subscriptions to the MQTT-configured broker which HomeAssistant digests
 
 WhyzaGC/CPM: Average of count per minute published every 60 secs.
 
