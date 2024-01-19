@@ -137,27 +137,31 @@ At the top of the sketch are the variables that will need changing for your spec
 
 The following libraries are available via the Arduino Library Manager and will need to be installed. I have listed the version that I tested under.
 
-ESPSoftwareSerial(6.16.1)
+ESPSoftwareSerial(8.03)
+
+ArduinoHttpClient(0.4.0)
 
 Tlog(1.03) , Logs output to serial, telnet and http simultaneously
 
 NTPClient(3.2.1)
 
-Adafruit_GFX(1.11.1)
+Adafruit_GFX(1.11.5)
 
-Adafruit_SH110X(2.1.6)
+Adafruit_SH110X(2.1.8)
 
 Adafruit Feather OLED(2.0.2)
 
-Adafruit NeoPixel (ESP32)(1.10.6)
+Adafruit NeoPixel (ESP32)(1.11.0)
 
 Uptime Library(1.0.0)
 
-CircularBuffer(1.3.3).
+CircularBuffer(1.3.3)
+
+PubSubClient(2.8)
 
 The following libraries will need to be downloaded to your library directory:
 
-movingAvg(3.2.1): [https://github.com/JChristensen/movingAvg]
+movingAvg(2.3.1): [https://github.com/JChristensen/movingAvg]
 
 Syslog(2.0.0): [https://github.com/arcao/Syslog]
 
