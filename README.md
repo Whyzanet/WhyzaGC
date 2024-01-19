@@ -13,7 +13,7 @@ This project is about building your own DIY wireless Adafruit Arduino Feather HU
 
 I am always on the lookout for unique and interesting kits to build, which led me to discover the MightyOhm Geiger kit.
 
-While there are a couple of other Geiger kits around, the fact that the MightyOhm was in stock, included a commonly used detector tube (for relative data comparisons), had serial data output, and sported steampunk looks, had me sold.
+While there are a couple of other Geiger kits around, the fact that the MightyOhm included a commonly used detector tube (for relative data comparisons), had serial data output, and sported steampunk looks, had me sold.
 
 Initially, I started with the ESP8266 and then 'upgraded' to the ESP32 to take advantage of the dual-core as I ran into limitations multitasking on the ESP8266, as discussed below.
 
