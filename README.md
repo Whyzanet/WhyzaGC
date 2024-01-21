@@ -5,7 +5,7 @@ permlink: /README.md/
 title: README
 ---
 
-This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with the Adafruit Featherwing 128x64 OLED display add-on to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. Additionally, I have included an optional random number generator based on the timing of the radiation counts for education and fun.
+This project is about building your own DIY wireless Adafruit Arduino Feather HUZZAH ESP8266 or ESP32 v2 microprocessor with the Adafruit Featherwing 128x64 OLED display add-on to interface with the self-assembled DIY MightyOhm Geiger Counter Kit. Additionally, I have included an optional random number generator based on the random timing of the radiation counts for education and fun.
 
 ![WhyzaGC-histogram1](https://user-images.githubusercontent.com/109115488/192123691-52e77460-48d9-4fd2-a95f-41f3cf3bae22.jpg)
 
