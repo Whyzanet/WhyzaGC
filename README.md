@@ -131,7 +131,7 @@ Latest version available at https://github.com/Whyzanet/WhyzaGC
 
 Download the correct C++ ino sketch file for your hardware, either ESP8266 or ESP32.
 
-Note: The Feather Huzzah ESP8266 will require the CPU Frequency set to 160MHz to accommodate high values of CPS/CPM.
+Note: The Feather Huzzah ESP8266 will require the  Frequency set to 160MHz to accommodate high values of CPS/CPM.
 
 At the top of the sketch are the variables that will need changing for your specific environment. Register with radmon.org first so you have your required credentials.
 
@@ -193,7 +193,7 @@ grabgraphdata: Grab current data for histogram circularBuffer.
 
 averagedata: Average CPM data for radmon update.
 
-mqttpub: Publish MQTT sensor data together with WiFi online and last radmon upload status. There are separate timers for each if you want to customize. Image below of HomeAssistant intergration via mosquitto MQTT broker.
+mqttpub: Publish MQTT sensor data together with WiFi online and last radmon upload status. There are separate timers for each if you want to customize. Image below of HomeAssistant intergration via mosquitto MQTT broker. Pinned to CPU0 and only on the ESP32.
 
 radmon: Once per minute, flash the NeoPixel purple (ESP32), perform the HTTP Get with radmon.org, and flash the NeoPixel (ESP32) red or green based on the result. Radmon will reject uploads if attempting to update before 30 seconds has expired since the last update. "Too soon" will appear in the log output ( TLOG and syslog ) if this occurs. 
 
@@ -307,9 +307,9 @@ As noted above, the Feather Huzzah ESP8266 will require the CPU Frequency set to
 
 Other than the expected differences in libraries for the ESP8266 & ESP32, respectively (ESP8266WiFi.h/WiFi.h, ESP8266WebServer.h/WebServer.h, and ESP8266mDNS/ESPmDNS), the 2nd LED differences (Blue LED vs. Neopixel RGB LED), and pinout changes, the Feather Huzzah ESP32 CPU is also dual-core.
 
-As such, in the ESP32 code, I have set both the radmon.org update and randomise functions to utilize CPU0 rather than CPU1, which all other code runs on by default.
+As such, in the ESP32 code, I have set both the radmon.org update, MQTT publish and randomise functions to utilize CPU0 rather than CPU1, which all other code runs on by default.
 
-This solves two issues on the ESP8266 platform due to its single CPU. Firstly, while performing the TCP connection setup and GET request for the radmon.org update, the (single) CPU is unavailable for other tasks. Since the typical TCP setup, data exchange, and teardown takes at least 1.5+ seconds in my environment (and up to N secs!), resulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not a significant issue as the code is reading the MightyOhm CPM (Counts per Minute) value, which is itself averaged and uploading the resulting Arduino-calculated 1-minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266....
+This solves two issues on the ESP8266 platform due to its single CPU and my less than proficient programming skills. Firstly, while performing the TCP connection setup and GET request for the radmon.org update, the (single) CPU is unavailable for other tasks. Since the typical TCP setup, data exchange, and teardown takes at least 1.5+ seconds in my environment (and up to N secs!), resulting in the ESP8266 missing N lines of serial data from the MightyOhm, one per second. This is not a significant issue as the code is reading the MightyOhm CPM (Counts per Minute) value, which is itself averaged and uploading the resulting Arduino-calculated 1-minute rolling average. So the impact of missing a couple of average values is negligible overall. It explains why the code is measuring the upload time and showing it in the web diagnostics. I did try schedulers and yield() without success on the ESP8266....
 
 Secondly, because the roulette wheel function generating the random data is time-critical, any sharing of CPU will corrupt the random data. My initial tests confirm this.
 
