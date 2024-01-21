@@ -396,6 +396,9 @@ See this link for the Perl script. Read the whole page before starting:
 https://mightyohm.com/forum/viewtopic.php?t=3504
 
 Finally, I also have the MightyOhm pulse pin (J6 pin 2) connected to pin 35 on the Pi 4, so that a bash script can look for a rising edge on GPIO 19. I use this to log occurrences of high CPS (Counts per Second) for when I need to reconfirm the randomness of the universe.
+
+## Images
+
 MightyOhm with connections to Raspberry Pi pictured below. Red is 5V supply, Orange is serial TX, Yellow is pulse, and brown is GND
 
 ![WhyzaGC-rpi_wiring](https://user-images.githubusercontent.com/109115488/192123370-be4c7772-94e3-4354-a41b-df52f2c8204f.jpg)
