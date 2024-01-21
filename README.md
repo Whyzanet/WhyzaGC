@@ -65,7 +65,7 @@ Unix syslog status messages to your syslog server.
 
 Random number generator at a rate of 1 character per two pulses detected.
 
-Bootup animation logo.
+Customisable Bootup animation logo.
 
 MQTT support on version 4 for the ESP32 platform.
 
