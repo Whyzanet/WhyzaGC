@@ -323,7 +323,7 @@ It is worth mentioning this link again if you are interested in how random numbe
 
 https://www.fourmilab.ch/hotbits/how3.html
 
-I was also inspired by this project, which has some good ideas and tools for use in generating random numbers:
+I was also inspired by this project, which has some good ideas and explained the tools for use in validating random numbers:
 
 https://github.com/gbonacini/nuclear_random_number_generator
 
