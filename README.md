@@ -359,7 +359,7 @@ will analyze the data per bit.
 
 The manpage for 'ent' describes the tests performed.
 
-I collected random data from the Huzzah via the following command on my Linux desktop:
+I collected random data from the Huzzah via the telnet data output using the following command on my Linux desktop:
 
 nc whyzagc-esp.local 23 | tee -a rnd_nums.txt
 
@@ -383,7 +383,7 @@ I have attached my ESP32 scatter graph below.
 
 I have initially found that the ESP8266 platform does not pass the Chi-square distribution test under ent and is visibly not random when inspecting the scatter graph. This is no doubt due to the limitations of only one CPU where you cannot dedicate the time-critical randomize counter to a spare CPU. On the ESP32 hardware, I have pinned the randomize function to the previously underutilized CPU0. CPU0 was only performing the once per minute Radmon & MQTT uploads, so other than these uploads, which will pause the randomize function, it is available for dedicated use.
 
-So with the ESP32, a $40 micro marvel of today's world, it is reassuring to be able to actually confirm that the universe really IS composed of such truly random events or occurrences of quantum tunneling, which can't be explained by our classical understanding of physics, despite even Einstein believing, 'God does not play dice with the universe.' If Einstein could ask today's AI, 'What are the implications and observations that can be made when understanding the universe is based on random quantum events?' he would see a list of several fascinating observations and interpretations that we can now make since Einstein's ( 1879 - 1955 ) time.
+So with the ESP32, a $40 micro marvel of today's world, it is reassuring to be able to actually confirm that the universe really IS composed of such truly random events or occurrences of quantum tunneling, which can't be explained by our classical understanding of physics, despite even Einstein believing, 'God does not play dice with the universe.' If Einstein could ask today's AI, 'What are the implications and observations that can be made when understanding the universe is based on random quantum events?' he would see a list of several fascinating observations and interpretations that we can now make since Einstein's ( 1879 - 1955 ) time. Look it up yourself for a good read.
 
 ## Additional Connections:
 
