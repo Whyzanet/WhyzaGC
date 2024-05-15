@@ -19,7 +19,7 @@ const char* ntpHostname = "pool.ntp.org";  // NTP server hostname. pool.ntp.org
 bool MQTTEnable = false;                   // set startup mqtt client behaviour
 bool MQTT_Use_Hostname = true;            // Set to true to use and attempt to resolve via DNS the MQTT broker hostname. Set to false to use IPAddress instead.
 const char* mqtthostname = "mqtt.lan";    // mqtt broker hostname.
-IPAddress mqtt_server(192, 168, 0, 138);  // Optionally set mqtt broker IP if not using hostname.
+IPAddress mqtt_serverIP(192, 168, 0, 138);  // Optionally set mqtt broker IP if not using hostname.
 const char* mqtt_user = "XXXX";          // Set mqtt username
 const char* mqtt_password = "YYYY";       // Set mqtt password
 const char* mqtt_path = "WhyzaGC/CPM";    // Set mqtt publish path for CPM sensor data
