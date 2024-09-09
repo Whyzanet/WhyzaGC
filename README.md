@@ -455,7 +455,7 @@ Adafruit Feather Huzzah ESP8266 pinout
 
 ![FeatherHuzzahESP8266pinout](https://user-images.githubusercontent.com/109115488/183532848-67e19153-23b0-45d9-b821-0f4a29993b36.png)
 
-Adafruit Feather Huzzah ESP32 v2 pinout. ADC2 is used by WiFi if enabled and not available for IO. Pin 32 is also not available as it is used by the ABC buttons on the screen.
+Adafruit Feather Huzzah ESP32 v2 pinout. ADC2 is used by WiFi if enabled and not available for IO. Pin 32 is also not available as it is used by the ABC buttons on the OLED screen feather.
 
 ![FeatherHuzzahESP32pinout](https://user-images.githubusercontent.com/109115488/183532850-095e769c-4976-42ac-ab86-83e7bfbfaed9.png)
 
